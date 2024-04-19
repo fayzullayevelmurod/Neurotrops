@@ -1,12 +1,12 @@
 /* Core style */
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 a,
@@ -17,34 +17,44 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-	text-decoration: none;
-	line-height: 1.2;
+  margin: 0;
+  text-decoration: none;
+  line-height: 1.2;
 }
 
 textarea:focus,
 select:focus {
-	outline: none !important;
-	-webkit-appearance: none;
-	box-shadow: none !important;
+  outline: none !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
 }
 
 button {
-	border: none;
-	background: none;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 input:focus {
-	outline: none !important;
+  outline: none !important;
 }
 
 a:active,
 a:focus {
-	outline: 0;
-	border: none;
-	-moz-outline-style: none;
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
 }
-
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .wrapper {
-	overflow: hidden;
+  overflow: hidden;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
 }

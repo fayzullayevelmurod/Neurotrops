@@ -1,0 +1,37 @@
+.yellow__btn {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 20px;
+  background: #cfee13;
+  border-radius: 50px;
+  box-shadow: 0px 0px 32px 0px #cfee13bf;
+  color: #000;
+  height: 46px;
+  line-height: 46px;
+  transition: box-shadow 0.2s linear;
+
+  &:hover {
+    box-shadow: 0px 0px 12px 0px #cfee13bf;
+  }
+}
+.outline__btn {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 20px;
+  border-radius: 50px;
+  color: #fff;
+  background: #ffffff0d;
+  border: 1px solid #fff;
+  height: 46px;
+  line-height: 46px;
+  transition: all 0.2s linear;
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
