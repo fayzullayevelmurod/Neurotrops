@@ -417,10 +417,18 @@
 .about {
   background: #000;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   margin-top: -298px;
   padding-top: 298px;
 
+  &__slide-title {
+    font-family: "TT Autonomous Trl Bold", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
   .desc {
     max-width: 820px;
     padding-bottom: 80px;
@@ -428,16 +436,62 @@
   .sub__title {
     margin-bottom: 40px;
   }
-  .about-swiper {
-    .swiper-slide {
+  .about__swiper {
+    border-radius: 10px;
+    .slide__box {
       height: 400px;
-			position: relative;
-			z-index: 1;
-      img {
+      position: relative;
+      z-index: 1;
+      border-radius: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      &:hover {
+        .slide__img {
+          transform: scale(1.05);
+          &.hover__show {
+            opacity: 1;
+          }
+          &.hover__hide {
+            opacity: 0;
+          }
+        }
+        .slide__content-title {
+          color: #cfee13;
+        }
+        .slide__content-desc {
+          opacity: 1;
+        }
+        .yellow__btn {
+          transform: translateY(0);
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.55;
+        z-index: 2;
+        background: #000;
+      }
+      .slide__img {
         border-radius: 10px;
         width: 100%;
         height: 100%;
-				object-fit: cover;
+        object-fit: cover;
+        transition: all 0.3s linear;
+
+        &.hover__show {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -445,6 +499,36 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-		position: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    box-sizing: border-box;
+
+    &-title {
+      font-family: "TT Autonomous Trl Bold", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 38.4px;
+      transition: all 0.3s linear;
+    }
+    &-desc {
+      font-size: 24px;
+      line-height: 38.4px;
+      padding-top: 20px;
+      color: #fff;
+      opacity: 25%;
+      max-width: 360px;
+      transition: all 0.3s linear;
+    }
+    .yellow__btn {
+      width: fit-content;
+      transition: all 0.2s linear;
+      transform: translateY(100px);
+    }
   }
+  padding-bottom: 100px;
 }

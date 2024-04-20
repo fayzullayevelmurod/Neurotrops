@@ -36,7 +36,16 @@ var swiper = new Swiper(".product__img-swiper", {
   // effect: "fade",
   speed: 700,
 });
-
+// about__swiper
+var swiper = new Swiper(".about__swiper", {
+  slidesPerview: 3.4,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  speed: 700,
+});
 // products
 const products = document.querySelectorAll(".product__img");
 
@@ -47,24 +56,10 @@ products.forEach((product) => {
   });
 });
 
-// products
-// const productFavouriteBtns = document.querySelectorAll(".product__favourite");
-// productFavouriteBtns.forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     btn.classList.toggle("active"); // Har bir bosgan tugmachaga "active" klassini qo'shish yoki o'chirish
-//     productFavouriteBtns.forEach(
-//       (item) => item !== btn && item.classList.remove("active")
-//     ); // Boshqa tugmalar uchun "active" klassini o'chirish
-//   });
-// });
-
-// // products.forEach((product) => {
-// // });
-
-// fixed question btn 
+// fixed question btn
 const questionBtn = document.querySelector(".question__box-btn");
 const socialMediaBox = document.querySelector(".socail__media");
 
-questionBtn.addEventListener('click', () => {
-  socialMediaBox.classList.toggle('show')
-})
+questionBtn.addEventListener("click", () => {
+  socialMediaBox.classList.toggle("show");
+});
