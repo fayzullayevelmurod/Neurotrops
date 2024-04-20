@@ -94,12 +94,14 @@ body {
   height: 46px;
   line-height: 46px;
   transition: box-shadow 0.2s linear;
+  display: inline-block;
 }
 .yellow__btn:hover {
   box-shadow: 0px 0px 12px 0px rgba(207, 238, 19, 0.7490196078);
 }
 
 .outline__btn {
+  display: inline-block;
   font-size: 16px;
   font-weight: 300;
   padding: 0 20px;
@@ -210,6 +212,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 100;
 }
 .question__box-btn {
   border-radius: 50%;
@@ -613,6 +616,17 @@ body {
 .about .about__swiper {
   border-radius: 10px;
 }
+.about .about__swiper .swiper-pagination {
+  margin-top: 40px;
+}
+.about .about__swiper .swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: 0.25 !important;
+}
+.about .about__swiper .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: radial-gradient(50% 50% at 50% 50%, #cfee13 0%, #cee73c 100%) !important;
+}
 .about .about__swiper .slide__box {
   height: 400px;
   position: relative;
@@ -698,6 +712,77 @@ body {
   width: fit-content;
   transition: all 0.2s linear;
   transform: translateY(100px);
+}
+
+.products__two {
+  background: #000;
+}
+.products__two .title {
+  padding-bottom: 40px;
+}
+.products__two .product {
+  position: relative;
+  height: 400px;
+  z-index: 1;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.products__two .product::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s linear;
+  z-index: -1;
+}
+.products__two .product:hover::before {
+  opacity: 0.75;
+}
+.products__two .product:hover .btns {
+  transform: translateY(0);
+}
+.products__two .product:hover .desc {
+  opacity: 1;
+}
+.products__two .product:hover .product__img {
+  transform: scale(1.1);
+}
+.products__two .product:hover .title__sm {
+  color: #cee73c;
+}
+.products__two .product__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  z-index: -2;
+  opacity: 0.75;
+}
+.products__two .product .title__sm {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 51.2px;
+  color: #fff;
+}
+.products__two .product .desc {
+  font-size: 24px;
+  line-height: 38.4px;
+  margin-top: 20px;
+  opacity: 0.25;
+  color: #fff;
+  transition: all 0.2s linear;
+  padding-bottom: 40px;
+}
+.products__two .btns {
+  transform: translateY(500%);
+  transition: all 0.2s linear;
 }
 
 .swiper-pagination {

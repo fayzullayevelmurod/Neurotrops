@@ -28,7 +28,7 @@ var swiper = new Swiper(".products__swiper", {
 });
 // product__img-swiper
 var swiper = new Swiper(".product__img-swiper", {
-  slidesPerview: 1,
+  // slidesPerview: 1,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -47,14 +47,14 @@ var swiper = new Swiper(".about__swiper", {
   speed: 700,
 });
 // products
-const products = document.querySelectorAll(".product__img");
+// const products = document.querySelectorAll(".product__img");
 
-products.forEach((product) => {
-  const productFavouriteBtn = product.querySelector(".product__favourite");
-  productFavouriteBtn.addEventListener("click", function () {
-    this.classList.toggle("active");
-  });
-});
+// products.forEach((product) => {
+//   const productFavouriteBtn = product.querySelector(".product__favourite");
+//   productFavouriteBtn.addEventListener("click", function () {
+//     this.classList.toggle("active");
+//   });
+// });
 
 // fixed question btn
 const questionBtn = document.querySelector(".question__box-btn");
