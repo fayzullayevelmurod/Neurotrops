@@ -1,8 +1,17 @@
 .card__page {
   background: url(../images/card-bg.png) no-repeat, #000 !important;
   background-size: 100% 60% !important;
+
   &.products__page {
     background: none;
+  }
+  &.card__two {
+    background: url(../images/card-two__bg.png) no-repeat, #000 !important;
+    background-position: 10% 0 !important;
+  }
+  &.card__three {
+    background-position: 10% 0 !important;
+    background: url(../images/card-three__bg.png) no-repeat, #000 !important;
   }
 }
 .card__bg {
@@ -242,7 +251,8 @@
 
 // tabs
 .tabs {
-	background: #000;
+  // padding-top: 1px;
+  background: #000;
 }
 .tab__items {
   display: flex;
@@ -292,6 +302,11 @@
     display: flex;
     align-items: start;
     gap: 20px;
+    .line {
+      width: 2px;
+      height: 188px;
+      background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+    }
     .left__box {
       max-width: 380px;
       width: 100%;

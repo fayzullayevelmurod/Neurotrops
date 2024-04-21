@@ -377,6 +377,14 @@ body {
 .card__page.products__page {
   background: none;
 }
+.card__page.card__two {
+  background: url(../images/card-two__bg.png) no-repeat, #000 !important;
+  background-position: 10% 0 !important;
+}
+.card__page.card__three {
+  background-position: 10% 0 !important;
+  background: url(../images/card-three__bg.png) no-repeat, #000 !important;
+}
 
 .card__bg {
   transition: all 0.2s linear;
@@ -654,6 +662,11 @@ body {
   display: flex;
   align-items: start;
   gap: 20px;
+}
+.tab__content .flex__box .line {
+  width: 2px;
+  height: 188px;
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
 }
 .tab__content .flex__box .left__box {
   max-width: 380px;
