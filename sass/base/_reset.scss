@@ -84,7 +84,7 @@ main {
       transition: all 0.2s linear;
     }
     &:hover {
-      background: #cfee13;
+      background: #cfee13 !important;
       border-color: transparent;
       box-shadow: 0px 0px 12px 0px #cfee13bf;
       path {
@@ -145,5 +145,14 @@ main {
         }
       }
     }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

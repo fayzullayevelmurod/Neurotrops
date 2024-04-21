@@ -91,7 +91,7 @@ main {
   transition: all 0.2s linear;
 }
 .social__media a:hover {
-  background: #cfee13;
+  background: #cfee13 !important;
   border-color: transparent;
   box-shadow: 0px 0px 12px 0px rgba(207, 238, 19, 0.7490196078);
 }
@@ -149,6 +149,14 @@ main {
   fill: #000;
 }
 
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Aeroport", sans-serif;
   font-weight: 300;
@@ -176,6 +184,7 @@ body {
 .desc {
   font-size: 24px;
   line-height: 38.4px;
+  font-weight: 300;
 }
 
 .sub__title {
@@ -361,6 +370,351 @@ body {
   width: fit-content;
 }
 
+.card__page {
+  background: url(../images/card-bg.png) no-repeat, #000 !important;
+  background-size: 100% 60% !important;
+}
+.card__page.products__page {
+  background: none;
+}
+
+.card__bg {
+  transition: all 0.2s linear;
+  position: relative;
+}
+.card__bg::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%);
+}
+
+.card__content {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.card .go__back {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #fff;
+  width: fit-content;
+}
+.card .go__back path {
+  transition: all 0.2s linear;
+}
+.card .go__back:hover {
+  color: #cfee13;
+}
+.card .go__back:hover path {
+  stroke: #cfee13;
+}
+.card__img {
+  position: relative;
+  height: 610px;
+  max-width: 610px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card__img .swiper {
+  z-index: 0;
+  height: 100%;
+}
+.card__img .swiper-pagination {
+  bottom: 40px;
+  left: 40px;
+}
+.card__img .swiper-pagination-bullet {
+  width: 32px !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+  background: #000 !important;
+  opacity: 0.25 !important;
+}
+.card__img .swiper-pagination .swiper-pagination-bullet-active {
+  width: 32px !important;
+  height: 4px !important;
+}
+.card__img .card__date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 19.2px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 0 0 0;
+  z-index: 2;
+}
+.card__img .favourite__box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+.card__img .discount {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  font-family: "TT Autonomous Trl Bold";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 28.8px;
+  z-index: 1;
+  background-image: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card__img .discount .line {
+  background: #000;
+  width: 40px;
+  height: 6px;
+  overflow: hidden;
+  display: block;
+}
+.card__img img {
+  width: 100%;
+  height: 100%;
+}
+.card__info {
+  flex: 1 1 0;
+}
+.card .new__price {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+  color: #cfee13;
+}
+.card span {
+  display: block;
+}
+.card .old__price {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 51.2px;
+  color: #fff;
+  opacity: 0.25;
+  text-decoration: line-through;
+}
+.card .weight__box {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+.card .weight__box button {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.6px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  color: #fff;
+}
+.card .weight__box button:hover, .card .weight__box button.active {
+  border-color: transparent;
+  background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
+  color: #000;
+}
+.card .title__sm {
+  padding-bottom: 10px;
+}
+.card .counter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 20px;
+}
+.card .counter .yellow__btn {
+  margin-left: 10px;
+}
+.card .counter .decrement,
+.card .counter .increment {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #252526;
+}
+.card .counter .decrement .line,
+.card .counter .increment .line {
+  width: 15px;
+  height: 2px;
+  background: #fff;
+}
+.card .counter .decrement.disabled,
+.card .counter .increment.disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+.card .counter .count {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  border: 1px solid #cfee13;
+}
+.card .counter .count .bg__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  opacity: 0.1;
+}
+.card .counter .count__number {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #cfee13;
+}
+
+.tabs {
+  background: #000;
+}
+
+.tab__items {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 20px;
+  margin: 40px 0 20px 0;
+  position: relative;
+}
+.tab__items::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1580px;
+  height: 2px;
+  background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
+  opacity: 0.1;
+}
+.tab__items .tab__item {
+  cursor: pointer;
+}
+.tab__items .tab__item.active h4 {
+  text-shadow: 0px 0 32px rgba(207, 238, 19, 0.7490196078);
+  color: #cfee13;
+}
+.tab__items .tab__item h4 {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+}
+
+.tab__content {
+  animation: fade 0.3s linear;
+}
+.tab__content .reviews__tab {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.tab__content.hide {
+  display: none;
+}
+.tab__content .flex__box {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.tab__content .flex__box .left__box {
+  max-width: 380px;
+  width: 100%;
+}
+.tab__content .flex__box .tab__title {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.6px;
+  color: #cfee13;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.tab__content .accordion__box {
+  gap: 20px;
+}
+.tab__content .accordion__box .accordion__title {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+.tab__content .reviews__swiper {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 54px;
+}
+.tab__content .reviews__swiper .reviews__content {
+  max-width: 616px;
+  width: 100%;
+}
+.tab__content .reviews__swiper .user__name {
+  font-size: 20px;
+  line-height: 32px;
+}
+.tab__content .reviews__swiper .date {
+  padding: 0;
+}
+.tab__content .reviews__swiper .social__media {
+  padding: 10px 0 0 0;
+  gap: 0;
+}
+.tab__content .reviews__swiper .social__media a {
+  background: #000;
+}
+.tab__content .reviews__swiper .social__media a:nth-child(2) {
+  transform: translateX(-5px);
+}
+.tab__content .reviews__swiper .social__media a:last-child {
+  transform: translateX(-10px);
+}
+.tab__content .reviews__swiper .desc {
+  margin-top: 40px;
+  position: relative;
+}
+.tab__content .reviews__swiper .desc .quote__bg {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -437,7 +791,7 @@ body {
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  background: linear-gradient(152.04deg, #424242 9.25%, #000000 184.13%);
 }
 .footer__title {
   font-family: "TT Autonomous Trl Bold", sans-serif;
