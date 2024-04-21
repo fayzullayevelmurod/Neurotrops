@@ -51,10 +51,42 @@ ol {
   padding: 0;
   list-style: none;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .wrapper {
   overflow: hidden;
 }
 .container {
   max-width: 1240px;
   margin: 0 auto;
+}
+.social__media {
+  display: flex;
+  gap: 20px;
+  a {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s linear;
+
+    path {
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      background: #cfee13;
+      border-color: transparent;
+      box-shadow: 0px 0px 12px 0px #cfee13bf;
+      path {
+        fill: #000;
+      }
+    }
+  }
 }

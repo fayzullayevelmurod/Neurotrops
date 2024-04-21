@@ -38,13 +38,46 @@ var swiper = new Swiper(".product__img-swiper", {
 });
 // about__swiper
 var swiper = new Swiper(".about__swiper", {
-  slidesPerview: 3.4,
+  slidesPerView: 2.8,
   spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  speed: 700,
+});
+// blog__swiper
+var swiper = new Swiper(".blog__swiper", {
+  slidesPerView: 2,
+  grid: {
+    rows: 2,
+  },
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+// events__swiper
+var swiper = new Swiper(".events__swiper", {
+  slidesPerview: 1,
+  navigation: {
+    nextEl: ".next__btn2",
+    prevEl: ".prev__btn2",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  speed: 600,
+});
+// reviews__swiper
+var swiper = new Swiper(".reviews__swiper", {
+  slidesPerView: 2.8,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 // products
 // const products = document.querySelectorAll(".product__img");
@@ -63,3 +96,13 @@ const socialMediaBox = document.querySelector(".socail__media");
 questionBtn.addEventListener("click", () => {
   socialMediaBox.classList.toggle("show");
 });
+
+// accordion
+const accordion = document.querySelectorAll('.accordion');
+
+accordion.forEach(item => {
+  const accordionBtn = item.querySelector(".accordion__arrow");
+  accordionBtn.addEventListener('click', () => {
+    item.classList.toggle('is__open')
+  })
+})
