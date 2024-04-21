@@ -47,8 +47,8 @@ try {
   var swiper = new Swiper(".about__swiper", {
     slidesPerView: 2.8,
     spaceBetween: 20,
-    el: ".swiper-pagination",
     pagination: {
+      el: ".swiper-pagination",
       clickable: true,
     },
   });
@@ -123,41 +123,43 @@ accordion.forEach((item) => {
   });
 });
 
-// counter
-const countNumber = document.querySelector(".count__number");
-const decrement = document.querySelector(".decrement");
-const increment = document.querySelector(".increment");
+try {
+  // counter
+  const countNumber = document.querySelector(".count__number");
+  const decrement = document.querySelector(".decrement");
+  const increment = document.querySelector(".increment");
 
-const MAX_COUNT = 3;
-const MIN_COUNT = 1;
+  const MAX_COUNT = 3;
+  const MIN_COUNT = 1;
 
-decrement.addEventListener("click", () => {
-  let count = parseInt(countNumber.textContent);
-  if (count > MIN_COUNT) {
-    count--;
-    countNumber.textContent = count;
-  }
-  if (count <= MIN_COUNT) {
-    decrement.classList.add("disabled");
-  }
-  if (count < MAX_COUNT) {
-    increment.classList.remove("disabled");
-  }
-});
+  decrement.addEventListener("click", () => {
+    let count = parseInt(countNumber.textContent);
+    if (count > MIN_COUNT) {
+      count--;
+      countNumber.textContent = count;
+    }
+    if (count <= MIN_COUNT) {
+      decrement.classList.add("disabled");
+    }
+    if (count < MAX_COUNT) {
+      increment.classList.remove("disabled");
+    }
+  });
 
-increment.addEventListener("click", () => {
-  let count = parseInt(countNumber.textContent);
-  if (count < MAX_COUNT) {
-    count++;
-    countNumber.textContent = count;
-  }
-  if (count >= MAX_COUNT) {
-    increment.classList.add("disabled");
-  }
-  if (count > MIN_COUNT) {
-    decrement.classList.remove("disabled");
-  }
-});
+  increment.addEventListener("click", () => {
+    let count = parseInt(countNumber.textContent);
+    if (count < MAX_COUNT) {
+      count++;
+      countNumber.textContent = count;
+    }
+    if (count >= MAX_COUNT) {
+      increment.classList.add("disabled");
+    }
+    if (count > MIN_COUNT) {
+      decrement.classList.remove("disabled");
+    }
+  });
+} catch (error) {}
 
 try {
   // tabs
@@ -184,6 +186,4 @@ try {
       showTabs(idx);
     });
   });
-} catch (error) {
-  throw error;
-}
+} catch (error) {}

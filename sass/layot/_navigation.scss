@@ -1,5 +1,7 @@
 .nav {
   padding-bottom: 84px;
+  position: relative;
+  z-index: 10;
   &__list {
     display: flex;
     gap: 20px;

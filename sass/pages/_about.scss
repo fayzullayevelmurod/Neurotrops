@@ -1,0 +1,25 @@
+.about__page {
+  background: url(../images/about-page-bg.png) no-repeat, #000;
+  background-size: 100% 28.5%;
+  .about {
+    padding-bottom: 0;
+    background: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 17%;
+      opacity: 17%;
+      right: 0;
+      width: 1580px;
+      background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
+      height: 2px;
+    }
+  }
+  .events {
+    background: url(../images/quality-bg.png) no-repeat;
+    padding: 82px 0 291px;
+    background-size: 100% 100%;
+  }
+}
