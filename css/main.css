@@ -69,6 +69,10 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 auto;
 }
 
+main {
+  padding-top: 124px;
+}
+
 .social__media {
   display: flex;
   gap: 20px;
@@ -92,6 +96,56 @@ input[type=number]::-webkit-outer-spin-button {
   box-shadow: 0px 0px 12px 0px rgba(207, 238, 19, 0.7490196078);
 }
 .social__media a:hover path {
+  fill: #000;
+}
+
+.question__box {
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+}
+.question__box-btn {
+  border-radius: 50%;
+  background: #cfee13;
+  box-shadow: 0px 0px 0px 0px rgba(207, 238, 19, 0.2509803922);
+  border: 2px solid #cfee13;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.question__box .socail__media {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: all 0.2s linear;
+}
+.question__box .socail__media.show {
+  transform: scaleX(1);
+}
+.question__box .socail__media a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  background-image: linear-gradient(149.04deg, rgba(66, 66, 66, 0.75) 31.25%, rgba(0, 0, 0, 0.75) 93.13%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.question__box .socail__media a:hover {
+  border-color: transparent;
+  background: #cfee13;
+}
+.question__box .socail__media a:hover svg path {
   fill: #000;
 }
 
@@ -130,17 +184,17 @@ body {
   color: #cfee13;
 }
 
-.list {
+.tab {
   display: flex;
   gap: 20px;
 }
-.list__link {
+.tab__link {
   font-size: 24px;
   line-height: 38.4px;
   color: #fff;
   transition: all 0.2s linear;
 }
-.list__link:hover, .list__link.active {
+.tab__link:hover, .tab__link.active {
   color: #cfee13;
 }
 
@@ -469,60 +523,16 @@ body {
   color: #cfee13;
 }
 
-.question__box {
-  position: fixed;
-  bottom: 50px;
-  right: 40px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 100;
+.home__page main {
+  padding-top: 0;
 }
-.question__box-btn {
-  border-radius: 50%;
-  background: #cfee13;
-  box-shadow: 0px 0px 0px 0px rgba(207, 238, 19, 0.2509803922);
-  border: 2px solid #cfee13;
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.question__box .socail__media {
-  display: flex;
-  gap: 10px;
-  overflow: hidden;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: all 0.2s linear;
-}
-.question__box .socail__media.show {
-  transform: scaleX(1);
-}
-.question__box .socail__media a {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: inline-block;
-  border: 1px solid #ffffff;
-  background-image: linear-gradient(149.04deg, rgba(66, 66, 66, 0.75) 31.25%, rgba(0, 0, 0, 0.75) 93.13%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.question__box .socail__media a:hover {
-  border-color: transparent;
-  background: #cfee13;
-}
-.question__box .socail__media a:hover svg path {
-  fill: #000;
+.home__page .intro {
+  padding-top: 124px;
 }
 
 .intro {
   background: url(../../images/hero-bg.png) no-repeat;
   background-size: 100% 100%;
-  padding-top: 124px;
   position: relative;
 }
 .intro::before {
@@ -766,7 +776,11 @@ body {
   line-height: 19.2px;
   color: #fff;
   padding: 10px;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 0;
+}
+.products .product__img .product__date.yellow__box {
+  background: #cfee13;
+  color: #000;
 }
 .products .product__weight-box {
   display: flex;
@@ -796,6 +810,7 @@ body {
   line-height: 38.4px;
   color: #cfee13;
   position: relative;
+  width: fit-content;
 }
 .products .product__name::before {
   content: "";
@@ -830,6 +845,7 @@ body {
   font-size: 20px;
   line-height: 32px;
   opacity: 0.25;
+  text-decoration: line-through;
 }
 .products .swiper-pagination.mt {
   margin-top: 40px;
@@ -1073,20 +1089,8 @@ body {
   background: #000;
   padding: 80px 0 5px 0;
 }
-.blog__list {
-  padding-top: 40px;
-  display: flex;
-  gap: 20px;
-  padding-bottom: 40px;
-}
-.blog__link {
-  color: #fff;
-  transition: all 0.2s linear;
-  font-size: 24px;
-  line-height: 38.4px;
-}
-.blog__link:hover, .blog__link.active {
-  color: #cee73c;
+.blog .list {
+  padding: 40px 0;
 }
 .blog__card {
   position: relative;
@@ -1157,7 +1161,7 @@ body {
   background-size: cover;
   padding: 80px 0 78px 0;
 }
-.events .list {
+.events .tab {
   padding-top: 20px;
 }
 .events .events__swiper {
@@ -1247,30 +1251,7 @@ body {
   margin-top: 40px;
 }
 .reviews__swiper .social__media {
-  display: flex;
-  gap: 20px;
   padding: 40px 0 20px 0;
-}
-.reviews__swiper .social__media a {
-  border: 1px solid #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  transition: all 0.3s linear;
-}
-.reviews__swiper .social__media a svg path {
-  transition: all 0.3s linear;
-}
-.reviews__swiper .social__media a:hover {
-  box-shadow: 0px 0px 12px 0px rgba(207, 238, 19, 0.7490196078);
-  background: #cfee13;
-  border-color: #cfee13;
-}
-.reviews__swiper .social__media a:hover svg path {
-  fill: #000;
 }
 .reviews__swiper .user__name {
   color: #cfee13;
@@ -1315,6 +1296,47 @@ body {
 }
 .feedback .sub__title {
   padding-bottom: 40px;
+}
+
+.products__page {
+  background: url(../images/product-page__bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.products__page .products__bg {
+  background: url(../images/product-bg.png) no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+}
+.products__page .products__bg .nav {
+  padding-bottom: 0;
+}
+.products__page .products {
+  background: none;
+  padding-top: 40px;
+}
+.products__page .products::before {
+  background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
+  opacity: 0.1;
+  top: 127px;
+}
+.products__page .products__list-item {
+  color: #fff;
+}
+.products__page .products__list-item.active, .products__page .products__list-item:hover {
+  color: #cfee13;
+}
+.products__page .products .title {
+  -webkit-text-fill-color: #fff;
+}
+.products__page .products .product__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+.products__page .products .product__sub-title {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
 }
 
 .swiper-pagination {

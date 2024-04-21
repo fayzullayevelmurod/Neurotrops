@@ -1,61 +1,14 @@
-.question__box {
-  position: fixed;
-  bottom: 50px;
-  right: 40px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 100;
-  &-btn {
-    border-radius: 50%;
-    background: #cfee13;
-    box-shadow: 0px 0px 0px 0px #cfee1340;
-    border: 2px solid #cfee13;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.home__page {
+  main {
+    padding-top: 0;
   }
-  .socail__media {
-    display: flex;
-    gap: 10px;
-    overflow: hidden;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: all 0.2s linear;
-    &.show {
-      transform: scaleX(1);
-    }
-    a {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: inline-block;
-      border: 1px solid #ffffff;
-      background-image: linear-gradient(
-        149.04deg,
-        rgba(66, 66, 66, 0.75) 31.25%,
-        rgba(0, 0, 0, 0.75) 93.13%
-      );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &:hover {
-        border-color: transparent;
-        background: #cfee13;
-        svg path {
-          fill: #000;
-        }
-      }
-    }
+  .intro {
+    padding-top: 124px;
   }
 }
 .intro {
   background: url(../../images/hero-bg.png) no-repeat;
   background-size: 100% 100%;
-  padding-top: 124px;
   position: relative;
 
   &::before {
@@ -316,7 +269,11 @@
       line-height: 19.2px;
       color: #fff;
       padding: 10px;
-      border-radius: 10px 0 0 10px;
+      border-radius: 10px 0 0 0;
+      &.yellow__box {
+        background: #cfee13;
+        color: #000;
+      }
     }
   }
   .product__weight-box {
@@ -349,6 +306,7 @@
     line-height: 38.4px;
     color: #cfee13;
     position: relative;
+    width: fit-content;
 
     &::before {
       content: "";
@@ -384,6 +342,7 @@
         font-size: 20px;
         line-height: 32px;
         opacity: 0.25;
+        text-decoration: line-through;
       }
     }
   }
@@ -652,22 +611,8 @@
 .blog {
   background: #000;
   padding: 80px 0 5px 0;
-  &__list {
-    padding-top: 40px;
-    display: flex;
-    gap: 20px;
-    padding-bottom: 40px;
-  }
-  &__link {
-    color: #fff;
-    transition: all 0.2s linear;
-    font-size: 24px;
-    line-height: 38.4px;
-
-    &:hover,
-    &.active {
-      color: #cee73c;
-    }
+  .list {
+    padding: 40px 0;
   }
   &__card {
     position: relative;
@@ -742,7 +687,7 @@
   background-size: cover;
   padding: 80px 0 78px 0;
 
-  .list {
+  .tab {
     padding-top: 20px;
   }
   .events__swiper {
@@ -835,30 +780,7 @@
       margin-top: 40px;
     }
     .social__media {
-      display: flex;
-      gap: 20px;
       padding: 40px 0 20px 0;
-      a {
-        border: 1px solid #fff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        transition: all 0.3s linear;
-        svg path {
-          transition: all 0.3s linear;
-        }
-        &:hover {
-          box-shadow: 0px 0px 12px 0px #cfee13bf;
-          background: #cfee13;
-          border-color: #cfee13;
-          svg path {
-            fill: #000;
-          }
-        }
-      }
     }
     .user__name {
       color: #cfee13;
