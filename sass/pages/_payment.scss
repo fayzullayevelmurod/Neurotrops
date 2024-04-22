@@ -6,18 +6,19 @@
   position: relative;
   padding-bottom: 44px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 7%;
-    right: 0;
-    width: 1580px;
-    background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
-    height: 2px;
-    opacity: 0.1;
-  }
   .title {
     padding-bottom: 42px;
+    position: relative;
+    &.line::before {
+      content: "";
+      position: absolute;
+      top: 83px;
+      left: 0;
+      width: 1580px;
+      background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
+      height: 2px;
+      opacity: 0.1;
+    }
   }
   .steps {
     padding-top: 60px;
