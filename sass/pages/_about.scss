@@ -5,21 +5,29 @@
     padding-bottom: 0;
     background: none;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 17%;
-      opacity: 17%;
-      right: 0;
-      width: 1580px;
-      background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
-      height: 2px;
-    }
   }
   .events {
     background: url(../images/quality-bg.png) no-repeat;
     padding: 82px 0 291px;
     background-size: 100% 100%;
+  }
+  .sub__title {
+    padding-top: 42px;
+  }
+  .title.line {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 88px;
+      left: 0;
+      width: 1580px;
+      height: 2px;
+      background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
+      opacity: 0.1;
+    }
+  }
+  .btns {
+    margin-top: 40px;
   }
 }

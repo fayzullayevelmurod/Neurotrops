@@ -1898,20 +1898,29 @@ body {
   background: none;
   position: relative;
 }
-.about__page .about::before {
-  content: "";
-  position: absolute;
-  top: 17%;
-  opacity: 17%;
-  right: 0;
-  width: 1580px;
-  background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
-  height: 2px;
-}
 .about__page .events {
   background: url(../images/quality-bg.png) no-repeat;
   padding: 82px 0 291px;
   background-size: 100% 100%;
+}
+.about__page .sub__title {
+  padding-top: 42px;
+}
+.about__page .title.line {
+  position: relative;
+}
+.about__page .title.line::before {
+  content: "";
+  position: absolute;
+  top: 88px;
+  left: 0;
+  width: 1580px;
+  height: 2px;
+  background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
+  opacity: 0.1;
+}
+.about__page .btns {
+  margin-top: 40px;
 }
 
 .payment__page {
@@ -2636,6 +2645,18 @@ body {
     left: 20px;
     bottom: 20px;
   }
+  .about__page .title.line::before {
+    top: 44px;
+  }
+  .about__page {
+    background-size: 100% 12.5%;
+  }
+  .about__page .events {
+    padding: 40px 0;
+  }
+  .about__page .sub__title {
+    padding: 10px 0 20px 0;
+  }
 }
 @media screen and (max-width: 700px) {
   .meida__menu .menu__bottom {
@@ -2736,6 +2757,17 @@ body {
   }
   .card__page.card__three {
     background-size: 110% 19% !important;
+  }
+  .about__page {
+    background-size: 100% 5.5%;
+  }
+  .about__page .events {
+    margin: 40px 0;
+    padding: 0;
+  }
+  .about__page .btns {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
