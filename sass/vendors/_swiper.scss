@@ -65,3 +65,19 @@
 .swiper-button-disabled {
   opacity: 0.25;
 }
+
+@media screen and (max-width: 1024px) {
+  .swiper-pagination .swiper-pagination-bullet,
+  .swiper-pagination.two .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .intro .swiper-slide,
+  .events .swiper-slide {
+    opacity: 1;
+  }
+}

@@ -11,6 +11,14 @@ try {
       clickable: true,
     },
     speed: 600,
+    breakpoints: {
+      1024: {
+        spaceBetween: 0,
+      },
+      0: {
+        spaceBetween: 30,
+      },
+    },
   });
 } catch (error) {}
 
@@ -18,16 +26,28 @@ try {
   // products swiper
   var swiper = new Swiper(".products__swiper", {
     slidesPerView: 3,
+    spaceBetween: 20,
     grid: {
       rows: 2,
     },
-    // slidesPerColumn: 3,
-    spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
     allowTouchMove: false,
+    breakpoints: {
+      1024: {
+        grid: {
+          rows: 2,
+        },
+      },
+      0: {
+        grid: {
+          rows: 1,
+        },
+        slidesPerView: 2.2,
+      },
+    },
   });
 } catch (error) {}
 try {
@@ -51,6 +71,14 @@ try {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      1024: {
+        slidesPerView: 2.8,
+      },
+      744: {
+        slidesPerView: 2,
+      },
+    },
   });
 } catch (error) {}
 
@@ -66,12 +94,25 @@ try {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      1024: {
+        grid: {
+          rows: 2,
+        },
+      },
+      0: {
+        grid: {
+          rows: 1,
+        },
+      },
+    },
   });
 } catch (error) {}
 try {
   // events__swiper
   var swiper = new Swiper(".events__swiper", {
     slidesPerview: 1,
+    spaceBetween: 20,
     navigation: {
       nextEl: ".next__btn2",
       prevEl: ".prev__btn2",
@@ -81,6 +122,14 @@ try {
       clickable: true,
     },
     speed: 600,
+    breakpoints: {
+      1024: {
+        slidesPerView: 2.8,
+      },
+      744: {
+        slidesPerView: 2,
+      },
+    },
   });
 } catch (error) {}
 
@@ -92,6 +141,14 @@ try {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 2.8,
+      },
+      744: {
+        slidesPerView: 2,
+      },
     },
   });
 } catch (error) {}
@@ -187,3 +244,15 @@ try {
     });
   });
 } catch (error) {}
+
+// menu
+const mediaMenu = document.querySelector(".meida__menu");
+const closeBtn = document.querySelector(".close__btn");
+const openMenu = document.querySelector(".open__menu");
+
+openMenu.addEventListener("click", () => {
+  mediaMenu.classList.add("active");
+});
+closeBtn.addEventListener("click", () => {
+  mediaMenu.classList.remove("active");
+});
