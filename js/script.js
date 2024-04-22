@@ -195,7 +195,7 @@ try {
   const mediaSwiper = document.querySelector(".media__swiper");
   const reviewsTab = document.querySelector(".tabslide");
   if (window.innerWidth < 1024) {
-    console.log('sloom');
+    console.log("sloom");
     mediaSwiper.classList.add("swiper");
     reviewsTab.classList.add("swiper-wrapper");
     reviewsTab.classList.remove("reviews__tab");
@@ -324,3 +324,15 @@ if (showMoreBtn) {
     showMoreBtn.style.display = "none";
   });
 }
+
+try {
+  // const productImg = document.querySelectorAll(".product__img");
+  // productImg.forEach((item) => {
+  //   const favouriteBtn = item.querySelector(".product__favourite");
+  //   if (favouriteBtn) {
+  //     favouriteBtn.addEventListener("click", () => {
+  //       favouriteBtn.classList.toggle("active");
+  //     });
+  //   }
+  // });
+} catch (error) {}
