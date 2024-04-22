@@ -13,6 +13,9 @@
     background-position: 10% 0 !important;
     background: url(../images/card-three__bg.png) no-repeat, #000 !important;
   }
+  .products {
+    padding-bottom: 0 !important;
+  }
 }
 .card__bg {
   transition: all 0.2s linear;
@@ -41,7 +44,7 @@
     align-items: center;
     gap: 20px;
     font-size: 24px;
-    margin-bottom: 40px;
+    margin: 40px 0;
     color: #fff;
     width: fit-content;
 
@@ -252,6 +255,7 @@
 // tabs
 .tabs {
   // padding-top: 1px;
+  padding-bottom: 80px;
   background: #000;
 }
 .tab__items {
@@ -369,4 +373,7 @@
       }
     }
   }
+}
+.media__block {
+  display: none;
 }
