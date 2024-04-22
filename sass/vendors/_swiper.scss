@@ -71,6 +71,8 @@
   .swiper-pagination.two .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
+    padding: 0;
+    margin: 0 !important;
   }
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: 20px !important;
@@ -80,4 +82,5 @@
   .events .swiper-slide {
     opacity: 1;
   }
+ 
 }

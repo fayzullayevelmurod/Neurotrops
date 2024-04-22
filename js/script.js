@@ -41,11 +41,17 @@ try {
           rows: 2,
         },
       },
-      0: {
+      744: {
         grid: {
           rows: 1,
         },
         slidesPerView: 2.2,
+      },
+      0: {
+        grid: {
+          rows: 1,
+        },
+        slidesPerView: 1,
       },
     },
   });
@@ -78,6 +84,9 @@ try {
       744: {
         slidesPerView: 2,
       },
+      0: {
+        slidesPerView: 1,
+      },
     },
   });
 } catch (error) {}
@@ -100,7 +109,11 @@ try {
           rows: 2,
         },
       },
+      744: {
+        slidesPerView: 2,
+      },
       0: {
+        slidesPerView: 1,
         grid: {
           rows: 1,
         },
@@ -129,6 +142,9 @@ try {
       744: {
         slidesPerView: 2,
       },
+      0: {
+        slidesPerView: 1,
+      },
     },
   });
 } catch (error) {}
@@ -148,6 +164,9 @@ try {
       },
       744: {
         slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 1,
       },
     },
   });
