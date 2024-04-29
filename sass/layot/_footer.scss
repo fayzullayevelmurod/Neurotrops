@@ -41,6 +41,11 @@
       display: block;
       font-weight: 300;
       padding-top: 20px;
+      display: inline-block;
+      transition: all 0.2s linear;
+      &:hover {
+        color: #cfee13;
+      }
     }
     .email {
       font-family: Aeroport;
@@ -49,6 +54,12 @@
       display: block;
       line-height: 25.6px;
       color: #fff;
+      transition: all 0.2s linear;
+      display: block;
+      width: fit-content;
+      &:hover {
+        color: #cfee13;
+      }
     }
   }
   &__right {
@@ -67,6 +78,10 @@
         font-weight: 300;
         line-height: 32px;
         color: #fff;
+        transition: all 0.2s linear;
+        &:hover {
+          color: #cfee13;
+        }
       }
     }
   }

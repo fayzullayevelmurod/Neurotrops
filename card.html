@@ -193,7 +193,7 @@
 										<span class="line"></span>
 										<span>10%</span>
 									</div>
-									<button class="favourite__box">
+									<button class="favourite__box product__favourite">
 										<svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<mask id="path-1-inside-1_2013_231" fill="white">
 												<path fill-rule="evenodd" clip-rule="evenodd"
@@ -265,7 +265,7 @@
 												<path d="M10 0L10 20" stroke="#fff" stroke-width="2" />
 											</svg>
 										</button>
-										<button class="yellow__btn">В корзину</button>
+										<button class="yellow__btn product__cart-open">В корзину</button>
 									</div>
 								</div>
 							</div>
@@ -301,12 +301,7 @@
 												</div>
 												<div class="accordion__content">
 													<p class="desc">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias. Illo a praesentium
-														totam,
-														aut,
-														libero molestias labore, ab iure numquam et saepe nemo corrupti. Aperiam voluptates dolorem
-														dolore
-														quam!
+														100гр молотых шляпок, расчетный курс на 3 месяца.
 													</p>
 												</div>
 											</div>
@@ -319,12 +314,7 @@
 												</div>
 												<div class="accordion__content">
 													<p class="desc">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias. Illo a praesentium
-														totam,
-														aut,
-														libero molestias labore, ab iure numquam et saepe nemo corrupti. Aperiam voluptates dolorem
-														dolore
-														quam!
+														0.4 грамма 1-2 раза в день, в зависимости от собственновыверенной дозировки и целей. 
 													</p>
 												</div>
 											</div>
@@ -337,12 +327,7 @@
 												</div>
 												<div class="accordion__content">
 													<p class="desc">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias. Illo a praesentium
-														totam,
-														aut,
-														libero molestias labore, ab iure numquam et saepe nemo corrupti. Aperiam voluptates dolorem
-														dolore
-														quam!
+														Краткое описание ответа.
 													</p>
 												</div>
 											</div>
@@ -600,6 +585,32 @@
 		<button class="question__box-btn" aria-label="question box button">
 			<img src="images/icons/question.svg" alt="question icon" width="22" height="24">
 		</button>
+	</div>
+
+	<div class="modal favourite__modal">
+		<div class="modal__content">
+			<div class="modal__header">
+				<h4>Товар в избранном:</h4>
+				<button class="close__modal favourite__modal-close">
+					<img src="images/icons/close.svg" alt="close" width="20" height="20">
+				</button>
+			</div>
+			<p>Молотый</p>
+			<h5>Ежовик + Мухомор красный</h5>
+		</div>
+	</div>
+	<!-- product__cart modal -->
+	<div class="modal product__cart">
+		<div class="modal__content">
+			<div class="modal__header">
+				<h4>Товар в корзине:</h4>
+				<button class="close__modal product__cart-close">
+					<img src="images/icons/close.svg" alt="close" width="20" height="20">
+				</button>
+			</div>
+			<p>Молотый</p>
+			<h5>Ежовик + Мухомор красный</h5>
+		</div>
 	</div>
 
 	<!-- swiper js -->

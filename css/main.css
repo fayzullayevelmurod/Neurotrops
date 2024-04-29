@@ -169,6 +169,9 @@ body {
   font-weight: 300;
   color: #fff;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 .title {
   color: #fff;
@@ -226,6 +229,7 @@ body {
   line-height: 46px;
   transition: box-shadow 0.2s linear;
   display: inline-block;
+  text-transform: uppercase;
 }
 .yellow__btn:hover {
   box-shadow: 0px 0px 12px 0px rgba(207, 238, 19, 0.7490196078);
@@ -236,6 +240,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   padding: 0 20px;
+  text-transform: uppercase;
   border-radius: 50px;
   color: #fff;
   background: rgba(255, 255, 255, 0.0509803922);
@@ -273,9 +278,12 @@ body {
   gap: 40px;
 }
 
+.accordion {
+  overflow: hidden;
+}
 .accordion.is__open .accordion__content {
-  transform: scaleY(1);
   height: auto;
+  max-height: 100%;
 }
 .accordion.is__open .accordion__arrow {
   transform: rotate(45deg);
@@ -307,10 +315,10 @@ body {
 }
 .accordion__content {
   padding-top: 10px;
-  transform: scaleY(0);
   transform-origin: top;
   height: 0;
   transition: all 0.2s linear;
+  max-height: 0;
 }
 
 .feedback__form .form__boxes {
@@ -397,6 +405,9 @@ body {
 .card__page.products__page {
   background: none;
 }
+.card__page .title__sm {
+  text-transform: capitalize;
+}
 .card__page.card__two {
   background: url(../images/card-two__bg.png) no-repeat, #000 !important;
   background-position: 10% 0 !important;
@@ -428,6 +439,9 @@ body {
   align-items: start;
   justify-content: space-between;
   gap: 20px;
+}
+.card .title__sm {
+  text-transform: capitalize;
 }
 .card .go__back {
   display: flex;
@@ -474,19 +488,25 @@ body {
   width: 32px !important;
   height: 4px !important;
 }
+.card__img .swiper-pagination {
+  gap: 10px;
+}
+.card__img .swiper-pagination .swiper-pagination-bullet {
+  margin: 0;
+}
 .card__img .card__date {
   position: absolute;
   bottom: 0;
   right: 0;
   background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
   font-family: "TT Autonomous Trl Bold", sans-serif;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 19.2px;
   color: #fff;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 10px 0 0 0;
   z-index: 2;
+  line-height: 28.8px;
 }
 .card__img .favourite__box {
   position: absolute;
@@ -659,6 +679,7 @@ body {
 }
 .tab__items .tab__item {
   cursor: pointer;
+  text-transform: uppercase;
 }
 .tab__items .tab__item.active h4 {
   text-shadow: 0px 0 32px rgba(207, 238, 19, 0.7490196078);
@@ -756,14 +777,111 @@ body {
   display: none;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: none;
+  background: linear-gradient(149.04deg, rgba(66, 66, 66, 0.75) 31.25%, rgba(0, 0, 0, 0.75) 93.13%);
+}
+.modal.show {
+  display: block;
+}
+.modal.product__cart .modal__content, .modal.favourite__modal .modal__content {
+  padding: 20px;
+  max-width: 744px;
+  width: 100%;
+  background: url(../images/x-one.svg) no-repeat, linear-gradient(149.04deg, rgba(66, 66, 66, 0.95) 31.25%, rgba(0, 0, 0, 0.95) 93.13%);
+  background-position: bottom right;
+}
+.modal.product__cart p, .modal.favourite__modal p {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+}
+.modal.product__cart h4, .modal.favourite__modal h4 {
+  color: #cfee13;
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.6px;
+}
+.modal.product__cart h5, .modal.favourite__modal h5 {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+  color: #cfee13;
+}
+.modal.favourite__modal .modal__content {
+  background: linear-gradient(149.04deg, rgba(66, 66, 66, 0.95) 31.25%, rgba(0, 0, 0, 0.95) 93.13%) !important;
+}
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.call__back-modal .modal__content {
+  background: #000;
+  padding: 40px;
+  max-width: 1180px;
+  width: 100%;
+}
+.call__back-modal .modal__header {
+  align-items: start;
+  padding-bottom: 20px;
+}
+.call__back-modal .line {
+  background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
+  width: 100%;
+  height: 2px;
+  opacity: 10%;
+}
+.call__back-modal .modal__title {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 67.2px;
+  text-transform: uppercase;
+}
+.call__back-modal .tab {
+  padding: 20px 0 40px 0;
+}
+.call__back-modal .tab__header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.call__back-modal .tab__item {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+}
+.call__back-modal .tab__item.active {
+  text-shadow: 0px 0 32px rgba(207, 238, 19, 0.7490196078);
+  color: #cfee13;
+}
+
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   padding: 20px 0;
-  background: linear-gradient(149.04deg, rgba(66, 66, 66, 0.75) 31.25%, rgba(0, 0, 0, 0.75) 93.13%);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  background: linear-gradient(179deg, rgba(66, 66, 66, 0.75) 31.25%, rgba(0, 0, 0, 0.75) 93.13%);
   z-index: 999;
 }
 .header .container {
@@ -778,10 +896,13 @@ body {
 }
 .header__right .phone__number {
   color: #fff;
-  font-family: Aeroport;
   font-size: 24px;
   font-weight: 300;
   line-height: 38.4px;
+  transition: all 0.2s linear;
+}
+.header__right .phone__number:hover {
+  color: #cfee13;
 }
 .header .favourite__box {
   position: relative;
@@ -967,6 +1088,11 @@ body {
   display: block;
   font-weight: 300;
   padding-top: 20px;
+  display: inline-block;
+  transition: all 0.2s linear;
+}
+.footer .col .phone__number:hover {
+  color: #cfee13;
 }
 .footer .col .email {
   font-family: Aeroport;
@@ -975,6 +1101,12 @@ body {
   display: block;
   line-height: 25.6px;
   color: #fff;
+  transition: all 0.2s linear;
+  display: block;
+  width: fit-content;
+}
+.footer .col .email:hover {
+  color: #cfee13;
 }
 .footer__right {
   display: flex;
@@ -993,6 +1125,10 @@ body {
   font-weight: 300;
   line-height: 32px;
   color: #fff;
+  transition: all 0.2s linear;
+}
+.footer__right ul a:hover {
+  color: #cfee13;
 }
 .footer__bottom {
   border-top: 1px solid #fff;
@@ -1041,37 +1177,38 @@ body {
   background-size: 100% 100%;
   position: relative;
 }
-.intro::before {
-  content: "";
-  position: absolute;
-  top: 38%;
-  left: 0;
-  max-width: 580px;
-  width: 100%;
+.intro .swiper-scrollbar {
+  top: 287px;
   height: 2px;
+  width: 580px;
+  left: 0;
   background: rgba(255, 255, 255, 0.1019607843);
 }
-.intro::after {
-  content: "";
-  position: absolute;
-  top: 38%;
-  left: 0;
-  max-width: 194px;
-  width: 100%;
-  height: 2px;
+.intro .swiper-btns button path {
+  transition: all 0.2s linear;
+}
+.intro .swiper-btns button:hover path {
+  stroke: rgba(207, 238, 19, 0.7490196078);
+  box-shadow: 0px 0px 32px 0px rgba(207, 238, 19, 0.7490196078);
+}
+.intro .swiper-btns .swiper-button-disabled:hover path {
+  stroke: #fff;
+}
+.intro .swiper-scrollbar-drag {
   background: #cfee13;
+  width: 194px;
 }
-.intro__swiper .content {
-  max-width: 820px;
-  width: 100%;
-  padding-bottom: 60px;
-}
-.intro__swiper .company__name {
+.intro .company__name {
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
   text-transform: uppercase;
   font-family: "TT Autonomous Trl Bold", "Autonomous", sans-serif;
+}
+.intro__swiper .content {
+  max-width: 820px;
+  width: 100%;
+  padding-bottom: 60px;
 }
 .intro__swiper .sub__title {
   font-family: "TT Autonomous Trl Bold", "Autonomous", sans-serif;
@@ -1081,8 +1218,10 @@ body {
   color: #cfee13;
   margin: 20px 0 10px 0;
   text-transform: uppercase;
+  user-select: none;
 }
 .intro__swiper .title {
+  user-select: none;
   margin-bottom: 20px;
 }
 .intro__swiper .desc {
@@ -1091,6 +1230,7 @@ body {
   line-height: 51.2px;
   color: #fff;
   margin-bottom: 40px;
+  user-select: none;
 }
 .intro .swiper-pagination {
   padding-bottom: 30px;
@@ -1158,6 +1298,10 @@ body {
   font-weight: 300;
   line-height: 38.4px;
   color: #000;
+  transition: all 0.2s ease-out;
+}
+.products__list-item:hover {
+  opacity: 0.5;
 }
 .products__list-item.disabled {
   opacity: 0.5;
@@ -1316,7 +1460,7 @@ body {
 .products .product__weight-box .product__weight {
   border: 1px solid #fff;
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: "TT Autonomous Trl Bold", sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -1332,7 +1476,7 @@ body {
 .products .product__name {
   font-family: "TT Autonomous Trl Bold", sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 38.4px;
   color: #cfee13;
   position: relative;
@@ -1353,6 +1497,7 @@ body {
   font-size: 20px;
   line-height: 32px;
   color: #fff;
+  font-weight: 300;
 }
 .products .product__price {
   display: flex;
@@ -1444,14 +1589,22 @@ body {
 }
 .about .about__swiper .swiper-pagination {
   margin-top: 40px;
+  height: 24px;
 }
 .about .about__swiper .swiper-pagination-bullet {
   background: #fff !important;
   opacity: 0.25 !important;
+  transition: all 0.2s linear;
+}
+.about .about__swiper .swiper-pagination-bullet:hover {
+  background: #cfee13 !important;
+  box-shadow: 0px 0px 8px 0px rgba(207, 238, 19, 0.7490196078) !important;
+  opacity: 1 !important;
 }
 .about .about__swiper .swiper-pagination-bullet-active {
   opacity: 1 !important;
   background: radial-gradient(50% 50% at 50% 50%, #cfee13 0%, #cee73c 100%) !important;
+  box-shadow: 0px 0px 8px 0px rgba(207, 238, 19, 0.2509803922) !important;
 }
 .about .about__swiper .slide__box {
   height: 400px;
@@ -1463,12 +1616,6 @@ body {
 }
 .about .about__swiper .slide__box:hover .slide__img {
   transform: scale(1.05);
-}
-.about .about__swiper .slide__box:hover .slide__img.hover__show {
-  opacity: 1;
-}
-.about .about__swiper .slide__box:hover .slide__img.hover__hide {
-  opacity: 0;
 }
 .about .about__swiper .slide__box:hover .slide__content-title {
   color: #cfee13;
@@ -1484,8 +1631,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 105%;
+  height: 105%;
   opacity: 0.65;
   z-index: 2;
   background: #000;
@@ -1496,14 +1643,6 @@ body {
   height: 100%;
   object-fit: cover;
   transition: all 0.3s linear;
-}
-.about .about__swiper .slide__box .slide__img.hover__show {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 .about .slide__content {
   display: flex;
@@ -1524,6 +1663,7 @@ body {
   font-weight: 700;
   line-height: 38.4px;
   transition: all 0.3s linear;
+  text-transform: uppercase;
 }
 .about .slide__content-desc {
   font-size: 24px;
@@ -1569,7 +1709,7 @@ body {
   opacity: 0.75;
 }
 .products__two .product:hover .btns {
-  transform: translateY(0);
+  transform: translateY(46px);
 }
 .products__two .product:hover .desc {
   opacity: 1;
@@ -1638,6 +1778,7 @@ body {
   z-index: -1;
   border-radius: 10px;
   background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  transition: all 0.2s linear;
 }
 .blog__card-img {
   position: absolute;
@@ -1651,10 +1792,18 @@ body {
   object-fit: cover;
   transition: all 0.3s linear;
 }
+.blog__card:hover::before {
+  background: linear-gradient(149.04deg, #424242 45.25%, #000000 104.13%);
+}
 .blog__card:hover .blog__card-img {
   transform: scale(1.1);
 }
+.blog__card:hover .blog__title {
+  -webkit-text-fill-color: #cee73c;
+}
 .blog__title {
+  transition: all 0.2s linear;
+  text-transform: uppercase;
   background-image: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1663,6 +1812,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
+  position: relative;
 }
 .blog__date {
   color: #cfee13;
@@ -1709,6 +1859,7 @@ body {
   gap: 20px;
 }
 .events .events__swiper .slide__top span {
+  text-transform: uppercase;
   font-family: "TT Autonomous Trl Bold", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -1740,6 +1891,16 @@ body {
   position: absolute;
 }
 
+.user__img {
+  border: 6px solid transparent;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
+.user__img:hover {
+  border-color: #cee73c;
+  box-shadow: 0px 0px 10px 0px rgba(207, 238, 19, 0.7490196078);
+}
+
 .reviews {
   background: #000;
   padding: 80px 0;
@@ -1764,15 +1925,6 @@ body {
   height: 2px;
   background: #cfee13;
 }
-.reviews .user__img {
-  border: 6px solid transparent;
-  border-radius: 50%;
-  transition: all 0.2s linear;
-}
-.reviews .user__img:hover {
-  border-color: #cee73c;
-  box-shadow: 0px 0px 10px 0px rgba(207, 238, 19, 0.7490196078);
-}
 .reviews__swiper {
   padding-top: 50px;
 }
@@ -1784,6 +1936,7 @@ body {
 }
 .reviews__swiper .user__name {
   color: #cfee13;
+  text-transform: uppercase;
   font-family: "TT Autonomous Trl Bold", sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -1905,7 +2058,10 @@ body {
   background-size: 100% 100%;
 }
 .about__page .sub__title {
-  padding-top: 42px;
+  padding-bottom: 40px;
+}
+.about__page .events .desc {
+  max-width: 600px;
 }
 .about__page .title.line {
   position: relative;
@@ -2108,6 +2264,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
+  text-transform: uppercase;
 }
 .contact__bg .contact__box .desc {
   color: #fff;
@@ -2134,6 +2291,9 @@ body {
   box-shadow: 0px 0px 12px 0px rgba(207, 238, 19, 0.7490196078);
   background: radial-gradient(50% 50% at 50% 50%, #cfee13 0%, #cee73c 100%);
 }
+.swiper-pagination.two {
+  height: 25px;
+}
 .swiper-pagination.two .swiper-pagination-bullet {
   width: 16px;
   height: 16px;
@@ -2141,6 +2301,12 @@ body {
   border-radius: 50%;
   margin: 0;
   opacity: 0.25;
+  transition: all 0.2s linear;
+}
+.swiper-pagination.two .swiper-pagination-bullet:hover {
+  opacity: 1;
+  background: #cfee13;
+  box-shadow: 0px 0px 8px 0px rgba(207, 238, 19, 0.7490196078);
 }
 .swiper-pagination.two .swiper-pagination-bullet-active {
   background: radial-gradient(50% 50% at 50% 50%, #cfee13 0%, #cee73c 100%);
@@ -2163,6 +2329,7 @@ body {
 .intro .swiper-slide,
 .events .swiper-slide {
   opacity: 0.1;
+  transition: all 0.6s ease-out;
 }
 
 .swiper-button-disabled {
@@ -2186,6 +2353,23 @@ body {
     opacity: 1;
   }
 }
+.prev__btn2,
+.next__btn2 {
+  padding: 0;
+}
+.prev__btn2 path,
+.next__btn2 path {
+  transition: all 0.2s linear;
+}
+.prev__btn2:hover.swiper-button-disabled path,
+.next__btn2:hover.swiper-button-disabled path {
+  stroke: #fff;
+}
+.prev__btn2:hover path,
+.next__btn2:hover path {
+  stroke: #cee73c;
+}
+
 @media screen and (max-width: 1240px) {
   .products {
     background-position: center bottom;

@@ -18,6 +18,7 @@
     }
   }
   &.two {
+    height: 25px;
     .swiper-pagination-bullet {
       width: 16px;
       height: 16px;
@@ -25,6 +26,12 @@
       border-radius: 50%;
       margin: 0;
       opacity: 0.25;
+      transition: all 0.2s linear;
+      &:hover {
+        opacity: 1;
+        background: #cfee13;
+        box-shadow: 0px 0px 8px 0px #cfee13bf;
+      }
 
       &-active {
         background: radial-gradient(
@@ -61,6 +68,7 @@
 .intro .swiper-slide,
 .events .swiper-slide {
   opacity: 0.1;
+  transition: all 0.6s ease-out;
 }
 .swiper-button-disabled {
   opacity: 0.25;
@@ -82,5 +90,22 @@
   .events .swiper-slide {
     opacity: 1;
   }
- 
+}
+
+.prev__btn2,
+.next__btn2 {
+  padding: 0;
+  path {
+    transition: all 0.2s linear;
+  }
+  &:hover {
+    &.swiper-button-disabled {
+      path {
+        stroke: #fff;
+      }
+    }
+    path {
+      stroke: #cee73c;
+    }
+  }
 }

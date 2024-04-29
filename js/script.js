@@ -2,6 +2,9 @@
 try {
   var swiper = new Swiper(".intro__swiper", {
     slidesPerview: 1,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
     navigation: {
       nextEl: ".next__btn",
       prevEl: ".prev__btn",
@@ -10,7 +13,7 @@ try {
       el: ".swiper-pagination",
       clickable: true,
     },
-    speed: 600,
+    speed: 800,
     breakpoints: {
       1024: {
         spaceBetween: 0,
@@ -134,8 +137,11 @@ try {
       el: ".swiper-pagination",
       clickable: true,
     },
-    speed: 600,
+    speed: 700,
     breakpoints: {
+      1025: {
+        slidesPerView: 1,
+      },
       1024: {
         slidesPerView: 2.8,
       },
@@ -195,7 +201,6 @@ try {
   const mediaSwiper = document.querySelector(".media__swiper");
   const reviewsTab = document.querySelector(".tabslide");
   if (window.innerWidth < 1024) {
-    console.log("sloom");
     mediaSwiper.classList.add("swiper");
     reviewsTab.classList.add("swiper-wrapper");
     reviewsTab.classList.remove("reviews__tab");
@@ -235,7 +240,7 @@ try {
   const decrement = document.querySelector(".decrement");
   const increment = document.querySelector(".increment");
 
-  const MAX_COUNT = 3;
+  const MAX_COUNT = 20;
   const MIN_COUNT = 1;
 
   decrement.addEventListener("click", () => {
@@ -335,4 +340,72 @@ try {
   //     });
   //   }
   // });
+} catch (error) {}
+
+// modal
+try {
+  const cartModal = document.querySelector(".product__cart");
+  const openProductCartModal = document.querySelectorAll(".product__cart-open");
+  const closeProductCartModal = document.querySelector(".product__cart-close");
+
+  function hideCartModal() {
+    cartModal.classList.remove("show");
+    document.body.classList.remove("no-scroll");
+  }
+  function showCartModal() {
+    cartModal.classList.add("show");
+    document.body.classList.add("no-scroll");
+  }
+  openProductCartModal.forEach((btn) =>
+    btn.addEventListener("click", showCartModal)
+  );
+  closeProductCartModal.addEventListener("click", hideCartModal);
+  cartModal.addEventListener("click", (e) => {
+    if (e.target && e.target.classList.contains("product__cart")) {
+      hideCartModal();
+    }
+  });
+} catch (error) {}
+
+try {
+  const favouriteModal = document.querySelector(".favourite__modal");
+  const favouriteModalClose = document.querySelector(".favourite__modal-close");
+  const openFavouriteModal = document.querySelectorAll(".product__favourite");
+
+  function hideFavouriteModal() {
+    favouriteModal.classList.remove("show");
+    document.body.classList.remove("no-scroll");
+  }
+  function showFavouriteModal() {
+    favouriteModal.classList.add("show");
+    document.body.classList.add("no-scroll");
+  }
+  openFavouriteModal.forEach((btn) =>
+    btn.addEventListener("click", showFavouriteModal)
+  );
+  favouriteModalClose.addEventListener("click", hideFavouriteModal);
+  favouriteModal.addEventListener("click", (e) => {
+    if (e.target && e.target.classList.contains("favourite__modal")) {
+      hideFavouriteModal();
+    }
+  });
+} catch (error) {}
+
+try {
+  const productCards = document.querySelectorAll(".product__card");
+
+  productCards.forEach((card) => {
+    const productWeightList = card.querySelectorAll(".product__weight");
+
+    productWeightList.forEach((weight) => {
+      weight.addEventListener("click", () => {
+        weight.classList.add("active");
+        productWeightList.forEach((w) => {
+          if (w !== weight) {
+            w.classList.remove("active");
+          }
+        });
+      });
+    });
+  });
 } catch (error) {}

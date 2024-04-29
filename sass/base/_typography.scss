@@ -2,6 +2,10 @@ body {
   font-family: "Aeroport", sans-serif;
   font-weight: 300;
   color: #fff;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 .title {
   color: #fff;
