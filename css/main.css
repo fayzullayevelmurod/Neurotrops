@@ -783,7 +783,7 @@ body.no-scroll {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 101;
   display: none;
   background: linear-gradient(149.04deg, rgba(66, 66, 66, 0.75) 31.25%, rgba(0, 0, 0, 0.75) 93.13%);
 }
@@ -856,23 +856,115 @@ body.no-scroll {
   line-height: 67.2px;
   text-transform: uppercase;
 }
-.call__back-modal .tab {
-  padding: 20px 0 40px 0;
+.call__back-modal .tab__box {
+  padding: 20px 0 0 0;
+}
+.call__back-modal .tab__box__header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.call__back-modal .tab__el {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+  cursor: pointer;
+}
+.call__back-modal .tab__el.active, .call__back-modal .tab__el:first-child {
+  text-shadow: 0px 0 32px rgba(207, 238, 19, 0.7490196078);
+  color: #cfee13;
 }
 .call__back-modal .tab__header {
   display: flex;
   align-items: center;
   gap: 40px;
+  padding-bottom: 40px;
 }
-.call__back-modal .tab__item {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+.call__back-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.call__back-modal form input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: "Aeroport";
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 38.4px;
+  padding-bottom: 10px;
+  color: #fff;
+  margin-top: 10px;
+  position: relative;
 }
-.call__back-modal .tab__item.active {
-  text-shadow: 0px 0 32px rgba(207, 238, 19, 0.7490196078);
+.call__back-modal form input::placeholder {
+  opacity: 0.25;
+}
+.call__back-modal form label {
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.6px;
+}
+.call__back-modal form label span {
   color: #cfee13;
+}
+.call__back-modal form .form__box {
+  position: relative;
+}
+.call__back-modal form .form__box::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+}
+.call__back-modal form p {
+  margin-top: -20px;
+  font-family: "Aeroport", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25.6px;
+}
+.call__back-modal form .yellow__btn {
+  width: fit-content;
+}
+
+.cookies__modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8980392157);
+  padding: 20px 0 30px 0;
+  z-index: 102;
+  width: 100%;
+  transform: scaleY(0);
+  transition: all 0.2s linear;
+  transform-origin: bottom;
+}
+.cookies__modal.show {
+  transform: scaleY(1);
+}
+.cookies__modal .content {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.cookies__modal .flex__box {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.cookies__modal .flex__box p {
+  font-family: "Aeroport", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 38.4px;
 }
 
 .header {
