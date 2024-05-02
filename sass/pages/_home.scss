@@ -1,16 +1,55 @@
 .home__page {
   main {
-    padding-top: 0;
-  }
-  .intro {
-    padding-top: 124px;
+    padding: 0;
+    .intro {
+      padding-top: 124px;
+    }
   }
 }
 .intro {
-  background: url(../../images/hero-bg.png) no-repeat;
+  background: url(../../images/img-slider-bg.png) no-repeat;
   background-size: 100% 100%;
   position: relative;
-
+  &__bg {
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    transform: translateX(-40px);
+    .bottom__photo {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .right__photo {
+      position: absolute;
+      right: 29px;
+      bottom: 0;
+    }
+    .white__light {
+      width: 256px;
+      height: 256px;
+      position: absolute;
+      opacity: 0.25;
+      background-color: #fff;
+      bottom: 149px;
+      right: 620px;
+      border-radius: 50%;
+      filter: blur(10px);
+    }
+    .yellow__light {
+      width: 64px;
+      height: 64px;
+      opacity: 0.75;
+      background-color: #cfee13;
+      filter: blur(8px);
+      bottom: 446px;
+      right: 289px;
+      z-index: 2;
+      position: absolute;
+      border-radius: 50%;
+    }
+  }
   // swiper-scrollbar
   .swiper-scrollbar {
     top: 287px;
@@ -105,6 +144,16 @@
   padding: 80px 0;
   position: relative;
   z-index: 1;
+
+  .product__tab-content {
+    display: none;
+    animation: fade 0.2s linear;
+
+    &.show {
+      display: block;
+    }
+  }
+
   .media__block-basket {
     width: 48px;
     height: 48px;
@@ -286,6 +335,9 @@
       cursor: pointer;
       svg linearGradient stop {
         transition: all 0.2s linear;
+      }
+      &.active svg path {
+        fill: #ea12ee;
       }
       &.active linearGradient stop {
         stop-color: #ea12ee;
@@ -877,6 +929,13 @@
   .sub__title {
     padding-bottom: 40px;
   }
+  .form__box {
+    display: flex;
+    flex-direction: column;
+    #check__status {
+      font-family: "TT Autonomous Trl Bold";
+    }
+  }
 }
 
 .product__img
@@ -891,4 +950,13 @@
   .swiper-pagination
   .swiper-pagination-bullet-active {
   opacity: 1 !important;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

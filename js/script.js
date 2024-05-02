@@ -1,3 +1,39 @@
+// input phone mask
+const iMaskInput = document.querySelectorAll("#ImaskInput");
+iMaskInput.forEach((maskedInput) => {
+  const maskOptions = {
+    mask: "+{7}(000)000-00-00",
+  };
+  const mask = IMask(maskedInput, maskOptions);
+});
+
+// live validator script
+function validation() {
+  let form = document.getElementById("form");
+  let email = document.getElementById("email").value;
+  let text = document.getElementById("check__status");
+  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+  if (email.match(pattern)) {
+    form.classList.add("valid");
+    form.classList.remove("invalid");
+    text.innerHTML = "Your Email Address in valid";
+    text.style.color = "#00ff00";
+  } else {
+    form.classList.remove("valid");
+    form.classList.add("invalid");
+    text.innerHTML = "Please Enter Valid Email Address";
+    text.style.color = "#ff0000";
+  }
+
+  if (email == "") {
+    form.classList.remove("valid");
+    form.classList.remove("invalid");
+    text.innerHTML = "";
+    text.style.color = "#00ff00";
+  }
+}
+
 // intro swiper
 try {
   var swiper = new Swiper(".intro__swiper", {
@@ -460,8 +496,109 @@ try {
   });
 } catch (error) {}
 
-// const element = document.querySelector("input[tel]");
-// const maskOptions = {
-//   mask: "+{7}(000)000-00-00",
-// };
-// const mask = IMask(element, maskOptions);
+// // live validator script
+// // function validation() {
+// //   let form = document.getElementById('form')
+// //   let email = document.getElementById('email').value
+// //   let text = document.getElementById('check__status')
+// //   let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+// //   if (email.match(pattern)) {
+// //     form.classList.add('valid')
+// //     form.classList.remove('invalid')
+// //     text.innerHTML = "Your Email Address in valid"
+// //     text.style.color = '#00ff00'
+// //   } else {
+// //     form.classList.remove('valid')
+// //     form.classList.add('invalid')
+// //     text.innerHTML = "Please Enter Valid Email Address"
+// //     text.style.color = '#ff0000'
+// //   }
+
+// //   if (email == '') {
+// //     form.classList.remove('valid')
+// //     form.classList.remove('invalid')
+// //     text.innerHTML = ""
+// //     text.style.color = '#00ff00'
+// //   }
+// // }
+// const liveEmailVal =  (form, email, checkStatus) => {
+//   let parent = document.getElementById(`${form}`)
+//   let input = document.getElementById(`${email}`).value
+//   let text = document.getElementById(`${checkStatus}`)
+//   let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+//   if (input.match(pattern)) {
+//     parent.classList.add('valid')
+//     parent.classList.remove('invalid')
+//     text.innerHTML = "Your Email Address in valid"
+//     text.style.color = '#00ff00'
+//   } else {
+//     parent.classList.remove('valid')
+//     parent.classList.add('invalid')
+//     text.innerHTML = "Please Enter Valid Email Address"
+//     text.style.color = '#ff0000'
+//   }
+
+//   if (input == '') {
+//     parent.classList.remove('valid')
+//     parent.classList.remove('invalid')
+//     text.innerHTML = ""
+//     text.style.color = '#00ff00'
+//   }
+// }
+
+// const emailInput = document.querySelectorAll('input[tyoe="email"]');
+// console.log(emailInput);
+
+// freeze
+try {
+  const freeze = (status) => {
+    status
+      ? (document.body.style.overflowY = "hidden")
+      : (document.body.style.overflowY = "auto");
+  };
+
+  // show modal
+  const showModal = (openModal, modal, closeModal) => {
+    const openM = document.querySelector(`${openModal}`),
+      closeM = document.querySelector(`${closeModal}`),
+      m = document.querySelector(`${modal}`);
+
+    openM.addEventListener("click", (e) => {
+      e.preventDefault();
+      m.classList.add("show");
+      freeze(true);
+    });
+    // close
+    closeM.addEventListener("click", () => {
+      m.classList.remove("show");
+      freeze(false);
+    });
+  };
+  showModal("#sendDate", ".successfull__modal", ".close__success-modal");
+} catch (error) {}
+
+// tabs
+try {
+  const tabListItem = document.querySelectorAll(".products__list-item");
+  const productTab = document.querySelectorAll(".product__tab-content");
+
+  function hideTab() {
+    tabListItem.forEach((item) => item.classList.remove("disabled"));
+    productTab.forEach((el) => el.classList.remove("show"));
+  }
+  function showTab(idx = 0) {
+    tabListItem[idx].classList.add("disabled");
+    productTab[idx].classList.add("show");
+  }
+  hideTab();
+  showTab();
+
+  tabListItem.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      hideTab();
+      showTab(index);
+    });
+  });
+} catch (error) {}
