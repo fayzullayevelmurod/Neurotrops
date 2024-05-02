@@ -207,14 +207,14 @@ body.no-scroll {
   display: flex;
   gap: 20px;
 }
-.tab__item, .tab__link {
+.tab__item, .tab__link, .tab__item-three {
   cursor: pointer;
   font-size: 24px;
   line-height: 38.4px;
   color: #fff;
   transition: all 0.2s linear;
 }
-.tab__item:hover, .tab__item.active, .tab__link:hover, .tab__link.active {
+.tab__item:hover, .tab__item.active, .tab__link:hover, .tab__link.active, .tab__item-three:hover, .tab__item-three.active {
   color: #cfee13;
 }
 
@@ -1203,6 +1203,7 @@ body.no-scroll {
   font-weight: 700;
   line-height: 38.4px;
   color: #fff;
+  text-transform: uppercase;
 }
 .meida__menu ul a.active {
   color: #cfee13;
@@ -1400,6 +1401,26 @@ body.no-scroll {
   background: url(../../images/img-slider-bg.png) no-repeat;
   background-size: 100% 100%;
   position: relative;
+}
+.intro .company__log {
+  position: absolute;
+  top: -78px;
+  left: -75px;
+  width: 463.28px;
+  height: 400px;
+}
+.intro .relative__box {
+  position: relative;
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 70px;
+  width: 2px;
+  height: 200px;
+  background: #cfee13;
+  transform: rotate(45deg);
 }
 .intro__bg {
   position: absolute;
@@ -2050,6 +2071,16 @@ body.no-scroll {
   cursor: pointer;
 }
 
+.tab__content-two,
+.tab__content-three {
+  display: none;
+  animation: fade 0.2s linear;
+}
+.tab__content-two.show,
+.tab__content-three.show {
+  display: block;
+}
+
 .blog {
   background: #000;
   padding: 80px 0 5px 0;
@@ -2059,13 +2090,6 @@ body.no-scroll {
 }
 .blog .tab {
   padding: 40px 0;
-}
-.blog .tab__content-two {
-  display: none;
-  animation: fade 0.2s linear;
-}
-.blog .tab__content-two.show {
-  display: block;
 }
 .blog__card {
   position: relative;
@@ -2727,6 +2751,26 @@ body.no-scroll {
   stroke: #cee73c;
 }
 
+@media screen and (max-width: 1770px) {
+  .products {
+    background-position: 0 60%;
+  }
+  .products .altay__text {
+    bottom: 29%;
+    left: 34%;
+    font-size: 213px;
+  }
+  .products .osmon__bg {
+    width: 1770px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 1358px) {
+  .products .altay__text {
+    left: 23%;
+  }
+}
 @media screen and (max-width: 1300px) {
   .successfull__content {
     width: 90%;
@@ -2742,8 +2786,11 @@ body.no-scroll {
   }
 }
 @media screen and (max-width: 1240px) {
+  .products .altay__text {
+    left: 14%;
+  }
   .products {
-    background-position: center bottom;
+    background-position: 0 62%;
   }
   .products .swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
   .products .swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -2753,6 +2800,25 @@ body.no-scroll {
   .call__back-modal .modal__content {
     max-width: 100%;
     height: 100vh;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .card__img {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .intro {
+    background-size: cover;
+  }
+  .intro::before {
+    display: none;
+  }
+  .intro .company__log {
+    width: 306.92px;
+    height: 265px;
+    top: -70px;
+    left: 0;
   }
   .intro__bg .right__photo {
     width: 630px;
@@ -2772,15 +2838,8 @@ body.no-scroll {
     bottom: 233px;
     right: 31px;
   }
-}
-@media screen and (max-width: 1150px) {
-  .card__img {
-    max-width: 500px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .intro {
-    background-size: cover;
+  .intro__bg .bottom__photo {
+    height: 93px;
   }
   .nav {
     display: none;
@@ -2790,11 +2849,25 @@ body.no-scroll {
     gap: 20px;
     top: 27%;
   }
+  .intro .company__name {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .home__page main .intro {
+    padding-top: 88px;
+  }
+  .intro .swiper-scrollbar {
+    width: 140px;
+    top: 130px;
+  }
+  .intro .swiper-btns {
+    padding: 0 20px 0 0;
+  }
   .intro .swiper-btns button {
     width: 16px;
     height: 16px;
   }
-  .intro .swiper-btns button img {
+  .intro .swiper-btns button svg {
     width: 100%;
     height: 100%;
   }
@@ -2810,6 +2883,7 @@ body.no-scroll {
   .desc,
   .intro__swiper .desc {
     font-size: 18px;
+    max-width: 528px;
     line-height: 28px;
   }
   .intro__swiper .title {
@@ -2833,10 +2907,6 @@ body.no-scroll {
   .intro__swiper .sub__title {
     margin: 59px 0 0 0;
   }
-  .intro::before {
-    width: 140px;
-    top: 127px;
-  }
   .intro::after {
     width: 47px;
     top: 127px;
@@ -2852,17 +2922,11 @@ body.no-scroll {
   }
   .products {
     padding-top: 20px;
-    background: none;
     padding-bottom: 0;
+    background-position: 0 56%;
   }
   .products .media__bg {
     position: relative;
-  }
-  .media__img {
-    width: 100%;
-    height: 410px;
-    background: url(../../images/about-bg.png) no-repeat;
-    background-size: 100% 100%;
   }
   .products .product__name {
     font-size: 20px;
@@ -2891,20 +2955,44 @@ body.no-scroll {
     padding-right: 20px !important;
   }
   .products .title.line::before {
-    top: 72px;
+    top: 57px;
+  }
+  .products .media__bg {
+    padding-bottom: 570px;
+  }
+  .products .altay__text {
+    font-size: 106px;
+    bottom: 38%;
+    left: 37%;
+    line-height: normal;
+  }
+  .products__two .product:hover .btns {
+    transform: translateY(0);
+  }
+  .sub__title {
+    padding: 10px 0;
+  }
+  .products .osmon__bg {
+    width: 100%;
+    bottom: 22%;
   }
   .products__list-item {
     font-size: 18px;
     line-height: 28.8px;
   }
   .products .product__info {
-    background: #000;
+    background: url(../images/img-logo-dark2.png) no-repeat, #000;
+    background-size: 240px 207px;
+    background-position: 100% 50px;
     padding: 0 20px;
     margin-top: -1px;
   }
   .products .product__info .content {
     max-width: 100%;
-    padding-top: 100px;
+    padding-top: 0;
+  }
+  .about__info.desc {
+    max-width: 100% !important;
   }
   .about__info.desc p {
     font-size: 18px;
@@ -2974,7 +3062,7 @@ body.no-scroll {
   }
   .blog .swiper-pagination {
     display: flex;
-    padding-top: 20px;
+    padding-top: 30px;
   }
   .blog .swiper-pagination .swiper-pagination-bullet {
     background: #fff;
@@ -2984,8 +3072,12 @@ body.no-scroll {
     opacity: 1;
   }
   .blog .tab {
-    padding: 10px 0 20px 0;
+    padding: 0 0 20px 0;
   }
+  .blog__title {
+    -webkit-text-fill-color: #cfee13;
+  }
+  .tab__item,
   .tab__link {
     font-size: 18px;
     line-height: 28.8px;
@@ -3017,6 +3109,17 @@ body.no-scroll {
   .events .events__swiper .slide__top .date,
   .events .events__swiper .slide__top span {
     font-size: 12px;
+    text-transform: capitalize;
+  }
+  .blog__card {
+    min-height: 240px;
+  }
+  .swiper-pagination.two {
+    margin-top: 20px;
+  }
+  .social__media a {
+    width: 48px;
+    height: 48px;
   }
   .events {
     background-size: 100% 100%;
@@ -3030,6 +3133,15 @@ body.no-scroll {
   }
   .answers {
     padding-bottom: 20px;
+  }
+  .feedback {
+    padding-top: 40px;
+  }
+  .accordion.is__open .accordion__header {
+    padding-bottom: 29px;
+  }
+  .accordion__content .desc {
+    max-width: 100%;
   }
   .feedback .sub__title {
     padding-top: 10px;
@@ -3062,6 +3174,7 @@ body.no-scroll {
   }
   .reviews {
     margin-top: -2px;
+    padding: 40px 0;
   }
   .reviews::before,
   .reviews::after {

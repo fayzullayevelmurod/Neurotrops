@@ -84,7 +84,7 @@ try {
         grid: {
           rows: 1,
         },
-        slidesPerView: 2.2,
+        slidesPerView: 2,
       },
       0: {
         grid: {
@@ -120,7 +120,7 @@ try {
       1024: {
         slidesPerView: 2.8,
       },
-      744: {
+      600: {
         slidesPerView: 2,
       },
       0: {
@@ -150,6 +150,9 @@ try {
       },
       744: {
         slidesPerView: 2,
+        grid: {
+          rows: 1,
+        },
       },
       0: {
         slidesPerView: 1,
@@ -206,6 +209,7 @@ try {
       },
       744: {
         slidesPerView: 2,
+        spaceBetween: 20,
       },
       0: {
         slidesPerView: 1,
@@ -310,29 +314,27 @@ try {
 
 try {
   // tabs
-  const tabItems = document.querySelectorAll(".tab__item");
-  const tabContent = document.querySelectorAll(".tab__content");
-
-  function hideTabs() {
-    tabItems.forEach((item) => item.classList.remove("active"));
-    tabContent.forEach((content) => content.classList.remove("show"));
-    tabContent.forEach((content) => content.classList.add("hide"));
-  }
-  function showTabs(idx = 0) {
-    tabItems[idx].classList.add("active");
-    tabContent[idx].classList.remove("hide");
-    tabContent[idx].classList.add("show");
-  }
-
-  hideTabs();
-  showTabs();
-
-  tabItems.forEach((btn, idx) => {
-    btn.addEventListener("click", (e) => {
-      hideTabs();
-      showTabs(idx);
-    });
-  });
+  // const tabItems = document.querySelectorAll(".tab__item");
+  // const tabContent = document.querySelectorAll(".tab__content");
+  // // console.log(tabItems[2]);
+  // function hideTabs() {
+  //   tabItems.forEach((item) => item.classList.remove("active"));
+  //   tabContent.forEach((content) => content.classList.remove("show"));
+  //   tabContent.forEach((content) => content.classList.add("hide"));
+  // }
+  // function showTabs(idx = 0) {
+  //   tabItems[idx].classList.add("active");
+  //   tabContent[idx].classList.remove("hide");
+  //   tabContent[idx].classList.add("show");
+  // }
+  // hideTabs();
+  // showTabs();
+  // tabItems.forEach((btn, idx) => {
+  //   btn.addEventListener("click", (e) => {
+  //     hideTabs();
+  //     showTabs(idx);
+  //   });
+  // });
 } catch (error) {}
 
 // menu
@@ -621,13 +623,36 @@ try {
   function showTabContent(idx = 0) {
     tabItemTwo[idx].classList.add("active");
     tabContentTwo[idx].classList.add("show");
+    console.log(tabItemTwo[1]);
   }
   hideTabContent();
-  showTabContent();
+  showTabContent(0);
   tabItemTwo.forEach((btn, idx) => {
     btn.addEventListener("click", () => {
       hideTabContent();
       showTabContent(idx);
+    });
+  });
+} catch (error) {}
+try {
+  const tabItemThree = document.querySelectorAll(".tab__item-three");
+  const tabContentThree = document.querySelectorAll(".tab__content-three");
+
+  function hideTabContentThree() {
+    tabItemThree.forEach((item) => item.classList.remove("active"));
+    tabContentThree.forEach((content) => content.classList.remove("show"));
+  }
+  function showTabContentThree(idx = 0) {
+    tabItemThree[idx].classList.add("active");
+    tabContentThree[idx].classList.add("show");
+    console.log(tabItemThree[1]);
+  }
+  hideTabContentThree();
+  showTabContentThree(0);
+  tabItemThree.forEach((btn, idx) => {
+    btn.addEventListener("click", () => {
+      hideTabContentThree();
+      showTabContentThree(idx);
     });
   });
 } catch (error) {}

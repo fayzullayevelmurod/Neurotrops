@@ -10,6 +10,27 @@
   background: url(../../images/img-slider-bg.png) no-repeat;
   background-size: 100% 100%;
   position: relative;
+  .company__log {
+    position: absolute;
+    top: -78px;
+    left: -75px;
+    width: 463.28px;
+    height: 400px;
+  }
+  .relative__box {
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+    width: 2px;
+    height: 200px;
+    background: #cfee13;
+    transform: rotate(45deg);
+  }
+
   &__bg {
     position: absolute;
     width: 100%;
@@ -712,6 +733,14 @@
 .open__video-btn {
   cursor: pointer;
 }
+.tab__content-two,
+.tab__content-three {
+  display: none;
+  animation: fade 0.2s linear;
+  &.show {
+    display: block;
+  }
+}
 // blog
 .blog {
   background: #000;
@@ -722,13 +751,7 @@
   .tab {
     padding: 40px 0;
   }
-  .tab__content-two {
-    display: none;
-    animation: fade 0.2s linear;
-    &.show {
-      display: block;
-    }
-  }
+
   &__card {
     position: relative;
     padding: 20px 20px 117px 20px;
