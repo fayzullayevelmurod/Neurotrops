@@ -566,7 +566,6 @@ try {
     const openM = document.querySelector(`${openModal}`),
       closeM = document.querySelector(`${closeModal}`),
       m = document.querySelector(`${modal}`);
-    console.log(closeM);
     openM.addEventListener("click", (e) => {
       e.preventDefault();
       m.classList.add("show");

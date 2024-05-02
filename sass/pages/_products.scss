@@ -1,6 +1,9 @@
 .products__page {
   background: url(../images/product-page__bg.png) no-repeat;
   background-size: 100% 100%;
+  .answers {
+    padding-top: 40px;
+  }
   .products__bg {
     background: url(../images/product-bg.png) no-repeat;
     background-size: contain;
@@ -11,7 +14,7 @@
   }
   .products {
     background: none;
-    padding-top: 40px;
+    padding: 40px 0;
     &::before {
       background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
       opacity: 0.1;

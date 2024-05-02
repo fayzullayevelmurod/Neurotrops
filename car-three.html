@@ -17,7 +17,7 @@
 	<!-- font TT Autonomous Trl -->
 	<link rel="stylesheet" href="fonts/tt-autonomous/style.css">
 	<!-- swiper -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="libs/swiper/swiper.min.css">
 	<!-- normalize css -->
 	<link rel="stylesheet" href="./css/normalize.css">
 	<!-- custom css -->
@@ -26,7 +26,7 @@
 
 <body>
 
-	<div class="wrapper products__page card__page card__three">
+	<div class="wrapper products__page card__page">
 
 		<!-- header -->
 		<header class="header">
@@ -149,6 +149,7 @@
 		<!-- main -->
 		<main class="main">
 			<div class="card__bg">
+				<img class="card__bg-img" src="images/card-bg-3.png" alt="card-bg">
 				<div class="container">
 					<nav class="nav">
 						<ul class="nav__list">
@@ -168,8 +169,7 @@
 
 				<section class="products">
 					<div class="container">
-						<h1 class="title line">Мухомор красный</h1>
-
+						<h1 class="title line">Ежовик гребенчатый</h1>
 						<div class="card">
 							<a class="go__back" href="index.html">
 								<svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -181,20 +181,15 @@
 							<div class="card__content">
 								<div class="media__block">
 									<div class="flex__box">
-										<span class="new__price">2.500 руб.</span>
-										<span class="old__price">2.500 руб.</span>
+										<span class="new__price">2.160 руб.</span>
 									</div>
-									<div class="weight__box">
-										<button class="active">50 гр.</button>
-										<button>100 гр.</button>
+									<div class="weight__box product__weight-box">
+										<button class="product__weight active">50 гр.</button>
+										<button class="product__weight">100 гр.</button>
 									</div>
 								</div>
 								<div class="card__img">
-									<div class="discount">
-										<span class="line"></span>
-										<span>10%</span>
-									</div>
-									<button class="favourite__box">
+									<button class="favourite__box product__favourite">
 										<svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<mask id="path-1-inside-1_2013_231" fill="white">
 												<path fill-rule="evenodd" clip-rule="evenodd"
@@ -226,31 +221,26 @@
 									<div class="swiper product__img-swiper">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<img src="images/product-img-2.png" alt="product img">
+												<img src="images/product-img-8.png" alt="product img">
 											</div>
 											<div class="swiper-slide">
-												<img src="images/product-img-2.png" alt="product img">
-											</div>
-											<div class="swiper-slide">
-												<img src="images/product-img-2.png" alt="product img">
+												<img src="images/product-img-8.png" alt="product img">
 											</div>
 										</div>
 										<div class="swiper-pagination"></div>
 									</div>
 								</div>
-								<div class="card__info">
-									<div class="media__none">
-										<span class="new__price">2.500 руб.</span>
-										<span class="old__price">2.500 руб.</span>
-										<div class="weight__box">
-											<button class="active">50 гр.</button>
-											<button>100 гр.</button>
+								<div class="card__info product__card">
+									<div class="media__none ">
+										<span class="new__price">2.160 руб.</span>
+										<div class="weight__box product__weight-box">
+											<button class="product__weight active">100 гр.</button>
 										</div>
 									</div>
-									<div class="product__sub-title desc">Молотый</div>
-									<h4 class="title__sm">Мухомор пантерный</h4>
+									<div class="product__sub-title desc">Плодовые тела</div>
+									<h4 class="title__sm">Ежовик гребенчатый</h4>
 									<p class="desc">
-										Мухомор пантерный (Amanita pantherina) мелкодисперсный порошок шляпок.
+										Ежовик гребенчатый - 100% плодовых тел, гериценоны 6,5%
 									</p>
 									<div class="counter">
 										<button class="decrement disabled">
@@ -266,7 +256,7 @@
 												<path d="M10 0L10 20" stroke="#fff" stroke-width="2" />
 											</svg>
 										</button>
-										<button class="yellow__btn">В корзину</button>
+										<button class="yellow__btn product__cart-open">В корзину</button>
 									</div>
 								</div>
 							</div>
@@ -287,7 +277,7 @@
 									<div class="left__box">
 										<h5 class="tab__title">Состав</h5>
 										<p class="desc">
-											Мухомор пантерный (Amanita pantherina) мелкодисперсный порошок шляпок.
+											Ежовик гребенчатый - 100% плодовых тел, гериценоны 6,5%.
 										</p>
 									</div>
 									<div class="line"></div>
@@ -302,12 +292,7 @@
 												</div>
 												<div class="accordion__content">
 													<p class="desc">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias. Illo a praesentium
-														totam,
-														aut,
-														libero molestias labore, ab iure numquam et saepe nemo corrupti. Aperiam voluptates dolorem
-														dolore
-														quam!
+														100гр молотых шляпок, расчетный курс на 3 месяца.
 													</p>
 												</div>
 											</div>
@@ -320,12 +305,7 @@
 												</div>
 												<div class="accordion__content">
 													<p class="desc">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias. Illo a praesentium
-														totam,
-														aut,
-														libero molestias labore, ab iure numquam et saepe nemo corrupti. Aperiam voluptates dolorem
-														dolore
-														quam!
+														0.4 грамма 1-2 раза в день, в зависимости от собственновыверенной дозировки и целей.
 													</p>
 												</div>
 											</div>
@@ -338,12 +318,7 @@
 												</div>
 												<div class="accordion__content">
 													<p class="desc">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, alias. Illo a praesentium
-														totam,
-														aut,
-														libero molestias labore, ab iure numquam et saepe nemo corrupti. Aperiam voluptates dolorem
-														dolore
-														quam!
+														Краткое описание ответа.
 													</p>
 												</div>
 											</div>
@@ -373,7 +348,7 @@
 															fill="white" />
 													</svg>
 												</a>
-												<a class="last" href="#!">
+												<a class="last open__video-btn">
 													<svg width="14" height="16" viewBox="0 0 14 16" fill="none"
 														xmlns="http://www.w3.org/2000/svg">
 														<path d="M13.9287 8L0.0722656 16L0.0722663 0L13.9287 8Z" fill="white" />
@@ -412,7 +387,7 @@
 															fill="white" />
 													</svg>
 												</a>
-												<a class="last" href="#!">
+												<a class="last open__video-btn">
 													<svg width="14" height="16" viewBox="0 0 14 16" fill="none"
 														xmlns="http://www.w3.org/2000/svg">
 														<path d="M13.9287 8L0.0722656 16L0.0722663 0L13.9287 8Z" fill="white" />
@@ -451,7 +426,7 @@
 															fill="white" />
 													</svg>
 												</a>
-												<a class="last" href="#!">
+												<a class="last open__video-btn">
 													<svg width="14" height="16" viewBox="0 0 14 16" fill="none"
 														xmlns="http://www.w3.org/2000/svg">
 														<path d="M13.9287 8L0.0722656 16L0.0722663 0L13.9287 8Z" fill="white" />
@@ -503,7 +478,7 @@
 										fill="white" />
 								</svg>
 							</a>
-							<a href="#!">
+							<a class="last open__video-btn">
 								<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M13.9287 8L0.0722656 16L0.0722663 0L13.9287 8Z" fill="white" />
 								</svg>
@@ -603,8 +578,42 @@
 		</button>
 	</div>
 
+	<div class="modal favourite__modal">
+		<div class="modal__content">
+			<div class="modal__header">
+				<h4>Товар в избранном:</h4>
+				<button class="close__modal favourite__modal-close">
+					<img src="images/icons/close.svg" alt="close" width="20" height="20">
+				</button>
+			</div>
+			<p>Молотый</p>
+			<h5>Ежовик + Мухомор красный</h5>
+		</div>
+	</div>
+	<!-- product__cart modal -->
+	<div class="modal product__cart">
+		<div class="modal__content">
+			<div class="modal__header">
+				<h4>Товар в корзине:</h4>
+				<button class="close__modal product__cart-close">
+					<img src="images/icons/close.svg" alt="close" width="20" height="20">
+				</button>
+			</div>
+			<p>Молотый</p>
+			<h5>Ежовик + Мухомор красный</h5>
+		</div>
+	</div>
+	<div class="video__modal">
+		<img class="bro-img" src="images/bro.png" alt="bro">
+		<button class="close__btn close__video-modal">
+			<img src="images/icons/close.svg" alt="close">
+		</button>
+		<button class="watch__video">
+			Смотреть
+		</button>
+	</div>
 	<!-- swiper js -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="libs/swiper/swiper.min.js"></script>
 	<!-- custom js -->
 	<script src="./js/script.js"></script>
 </body>
