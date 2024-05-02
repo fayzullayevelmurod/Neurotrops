@@ -314,27 +314,27 @@ try {
 
 try {
   // tabs
-  // const tabItems = document.querySelectorAll(".tab__item");
-  // const tabContent = document.querySelectorAll(".tab__content");
-  // // console.log(tabItems[2]);
-  // function hideTabs() {
-  //   tabItems.forEach((item) => item.classList.remove("active"));
-  //   tabContent.forEach((content) => content.classList.remove("show"));
-  //   tabContent.forEach((content) => content.classList.add("hide"));
-  // }
-  // function showTabs(idx = 0) {
-  //   tabItems[idx].classList.add("active");
-  //   tabContent[idx].classList.remove("hide");
-  //   tabContent[idx].classList.add("show");
-  // }
-  // hideTabs();
-  // showTabs();
-  // tabItems.forEach((btn, idx) => {
-  //   btn.addEventListener("click", (e) => {
-  //     hideTabs();
-  //     showTabs(idx);
-  //   });
-  // });
+  const tabItems = document.querySelectorAll(".tab__item");
+  const tabContent = document.querySelectorAll(".tab__content");
+  // console.log(tabItems[2]);
+  function hideTabs() {
+    tabItems.forEach((item) => item.classList.remove("active"));
+    tabContent.forEach((content) => content.classList.remove("show"));
+    tabContent.forEach((content) => content.classList.add("hide"));
+  }
+  function showTabs(idx = 0) {
+    tabItems[idx].classList.add("active");
+    tabContent[idx].classList.remove("hide");
+    tabContent[idx].classList.add("show");
+  }
+  hideTabs();
+  showTabs();
+  tabItems.forEach((btn, idx) => {
+    btn.addEventListener("click", (e) => {
+      hideTabs();
+      showTabs(idx);
+    });
+  });
 } catch (error) {}
 
 // menu

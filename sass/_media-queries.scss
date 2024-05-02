@@ -67,12 +67,23 @@
     max-width: 500px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
   .intro {
     background-size: cover;
 
     &::before {
       display: none;
+    }
+  }
+  .card__bg-img {
+    object-fit: cover;
+    top: 0;
+  }
+  .contact__bg {
+    .sub__title {
+      br {
+        display: none;
+      }
     }
   }
   .intro .company__log {
@@ -193,7 +204,7 @@
   .products {
     padding-top: 20px;
     padding-bottom: 0;
-    background-position: 0 56%;
+    background-position: 0 67%;
     // background-size: 100% 215px;
 
     .media__bg {
@@ -231,11 +242,11 @@
     top: 57px;
   }
   .products .media__bg {
-    padding-bottom: 570px;
+    padding-bottom: 460px;
   }
   .products .altay__text {
     font-size: 106px;
-    bottom: 38%;
+    bottom: 31%;
     left: 37%;
     line-height: normal;
   }
@@ -246,8 +257,11 @@
     padding: 10px 0;
   }
   .products .osmon__bg {
-    width: 100%;
-    bottom: 22%;
+    width: 102%;
+    bottom: 16%;
+  }
+  .products .product__img .add__cart {
+    display: none;
   }
   .products__list-item {
     font-size: 18px;
@@ -372,7 +386,10 @@
   }
   .events {
     padding: 40px 0;
+    // background: url(../images/events-bg.png) no-repeat;
+    // background-size: contain;
   }
+
   .events .events__swiper {
     padding-top: 20px;
   }
@@ -403,13 +420,40 @@
   .accordion__title {
     font-size: 18px;
     line-height: 28px;
+    width: 80%;
+    word-wrap: break-word;
   }
   .answers {
     padding-bottom: 20px;
   }
-
+  .about__page .company__log {
+    width: 231.64px;
+    height: 200px;
+    opacity: 0.5;
+    top: -8px;
+    left: 13px;
+  }
+  .successfull__content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .feedback {
     padding-top: 40px;
+    background: url(../images/media-form-bg.png) no-repeat, #000;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #000000 100%);
+      opacity: 0.25;
+      z-index: -1;
+    }
   }
   .accordion.is__open .accordion__header {
     padding-bottom: 29px;
@@ -732,17 +776,73 @@
       }
     }
   }
+  .about__page .events .mushroom__img {
+    width: 372px;
+    height: 222.79px;
+    bottom: 0;
+    top: auto;
+  }
+  .about__page .events {
+    padding: 40px 0 20px 0;
+    margin-top: 20px;
+  }
+  .about__page .events .desc {
+    max-width: 500px;
+  }
+  .about__page {
+    .answers {
+      padding-top: 40px;
+    }
+  }
+  .about__page .events .bottom__grass {
+    height: 130px;
+  }
+  .about__page {
+    .footer::before {
+      background: linear-gradient(
+        149.04deg,
+        #424242 50.25%,
+        #000000 93.13%
+      ) !important;
+    }
+  }
+  .card__img .card__date {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .call__back-modal .modal__content {
+    padding: 20px;
+  }
+  .call__back-modal form p {
+    margin-top: -20px;
+  }
+  .call__back-modal form .yellow__btn {
+    position: absolute;
+    bottom: 20px;
+  }
 }
 @media screen and (max-width: 800px) {
+  .products .media__bg {
+    background: url(../images/about-bg.png) no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+  }
+  .products .media__bg {
+    padding-bottom: 210px;
+  }
+  .products .osmon__bg,
+  .products .altay__text {
+    display: none;
+  }
   .successfull__content {
     border-radius: 10px 10px 0px 0px;
     height: auto;
     width: 100%;
-    top: unset;
-    left: unset;
-    transform: translate(0, 0);
+    left: 0;
+    transform: translateX(0);
     bottom: 0;
     padding: 20px;
+    height: fit-content;
     .modal__title {
       font-size: 24px;
       line-height: 38px;
@@ -764,7 +864,6 @@
       }
     }
   }
-  // intro__bg
 }
 @media screen and (max-width: 700px) {
   .meida__menu .menu__bottom {
@@ -773,11 +872,6 @@
   .home__page .intro {
     padding-top: 124px;
   }
-  // .intro {
-  //   background: url(../images/intro-bg__mobile.png) no-repeat,
-  //     linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
-  //   background-size: 100% 100%;
-  // }
   .intro__swiper .sub__title {
     margin-top: 39px;
   }
@@ -812,12 +906,6 @@
   }
   .products .product__img {
     height: 280px;
-  }
-  .home__page {
-    .media__img {
-      height: 263px;
-      margin-top: -72px;
-    }
   }
   .products .product__info .content {
     padding-top: 0;
