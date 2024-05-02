@@ -187,7 +187,7 @@ body.no-scroll {
   font-size: 32px;
   font-weight: 700;
   line-height: 51.2px;
-  color: #CFEE13;
+  color: #cfee13;
   text-transform: uppercase;
 }
 
@@ -207,13 +207,14 @@ body.no-scroll {
   display: flex;
   gap: 20px;
 }
-.tab__link {
+.tab__item, .tab__link {
+  cursor: pointer;
   font-size: 24px;
   line-height: 38.4px;
   color: #fff;
   transition: all 0.2s linear;
 }
-.tab__link:hover, .tab__link.active {
+.tab__item:hover, .tab__item.active, .tab__link:hover, .tab__link.active {
   color: #cfee13;
 }
 
@@ -244,7 +245,7 @@ body.no-scroll {
   border-radius: 50px;
   color: #fff;
   background: rgba(255, 255, 255, 0.0509803922);
-  border: 1px solid #fff;
+  border: 1px solid #fff !important;
   height: 46px;
   line-height: 46px;
   transition: all 0.2s linear;
@@ -289,7 +290,7 @@ body.no-scroll {
   transform: rotate(45deg);
 }
 .accordion.is__open .accordion__header {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .accordion.is__open .accordion__title {
   opacity: 0.55;
@@ -314,7 +315,6 @@ body.no-scroll {
   text-transform: uppercase;
 }
 .accordion__content {
-  padding-top: 10px;
   transform-origin: top;
   height: 0;
   transition: all 0.2s linear;
@@ -1031,6 +1031,53 @@ body.no-scroll {
   line-height: 160%;
 }
 
+.video__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #000;
+  display: none;
+}
+.video__modal.show {
+  display: flex;
+}
+.video__modal .bro-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  object-fit: cover;
+}
+.video__modal .close__btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.video__modal .watch__video {
+  background: #cfee13;
+  cursor: pointer;
+  box-shadow: 0px 0px 32px 0px rgba(207, 238, 19, 0.7490196078);
+  width: 123px;
+  height: 123px;
+  border-radius: 50%;
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  z-index: 1;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -1321,10 +1368,10 @@ body.no-scroll {
   color: #cfee13;
 }
 
-main .home__page {
-  padding-top: 0;
+.home__page main {
+  padding: 0;
 }
-main .intro {
+.home__page main .intro {
   padding-top: 124px;
 }
 
@@ -1448,12 +1495,33 @@ main .intro {
 }
 
 .products {
-  background: url(../../images/about-bg.png) no-repeat;
-  background-position: 0 82%;
+  background: url(../../images/osmon.png) no-repeat;
+  background-position: 0 50%;
   background-size: 100%;
   padding: 80px 0;
   position: relative;
   z-index: 1;
+}
+.products .osmon__bg {
+  position: absolute;
+  z-index: -1;
+  bottom: 11%;
+  left: 0;
+  width: 100%;
+}
+.products .osmon__bg img {
+  width: 100%;
+}
+.products .altay__text {
+  position: absolute;
+  bottom: 31%;
+  left: 31%;
+  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-size: 280px;
+  font-weight: 700;
+  line-height: 302.4px;
+  z-index: -2;
+  color: #fff;
 }
 .products .product__tab-content {
   display: none;
@@ -1957,6 +2025,10 @@ main .intro {
   transition: all 0.2s linear;
 }
 
+.open__video-btn {
+  cursor: pointer;
+}
+
 .blog {
   background: #000;
   padding: 80px 0 5px 0;
@@ -1966,6 +2038,13 @@ main .intro {
 }
 .blog .tab {
   padding: 40px 0;
+}
+.blog .tab__content-two {
+  display: none;
+  animation: fade 0.2s linear;
+}
+.blog .tab__content-two.show {
+  display: block;
 }
 .blog__card {
   position: relative;
@@ -2183,7 +2262,7 @@ main .intro {
   padding-bottom: 80px;
 }
 .feedback .sub__title {
-  padding-bottom: 40px;
+  padding: 0 0 40px 0 !important;
 }
 .feedback .form__box {
   display: flex;
@@ -2234,6 +2313,7 @@ main .intro {
   color: #fff;
 }
 .products__page .products__list-item.active, .products__page .products__list-item:hover {
+  opacity: 1;
   color: #cfee13;
 }
 .products__page .products .title {
@@ -2268,18 +2348,50 @@ main .intro {
   background: url(../images/about-page-bg.png) no-repeat, #000;
   background-size: 100% 28.5%;
 }
+.about__page .company__log {
+  position: absolute;
+  z-index: -1;
+  height: 600px;
+  width: 694.92px;
+  top: -77px;
+  left: -74px;
+}
+.about__page .container {
+  position: relative;
+  z-index: 1;
+}
 .about__page .about {
   padding-bottom: 0;
   background: none;
   position: relative;
 }
 .about__page .events {
-  background: url(../images/quality-bg.png) no-repeat;
+  background: url(../../images/img-slider-bg2.png) no-repeat;
   padding: 82px 0 291px;
   background-size: 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+.about__page .events .bottom__grass {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.about__page .events .mushroom__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  max-width: 1138px;
+  width: 100%;
+  max-height: 682px;
+  height: 100%;
 }
 .about__page .sub__title {
-  padding-bottom: 40px;
+  padding: 42px 0 40px 0;
+  margin-bottom: 0;
 }
 .about__page .events .desc {
   max-width: 600px;

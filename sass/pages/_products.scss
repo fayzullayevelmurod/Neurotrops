@@ -21,6 +21,7 @@
       color: #fff;
       &.active,
       &:hover {
+        opacity: 1;
         color: #cfee13;
       }
     }

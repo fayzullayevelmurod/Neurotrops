@@ -138,12 +138,34 @@
 
 // products section
 .products {
-  background: url(../../images/about-bg.png) no-repeat;
-  background-position: 0 82%;
+  background: url(../../images/osmon.png) no-repeat;
+  background-position: 0 50%;
   background-size: 100%;
   padding: 80px 0;
   position: relative;
   z-index: 1;
+
+  .osmon__bg {
+    position: absolute;
+    z-index: -1;
+    bottom: 11%;
+    left: 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .altay__text {
+    position: absolute;
+    bottom: 31%;
+    left: 31%;
+    font-family: "TT Autonomous Trl Bold", sans-serif;
+    font-size: 280px;
+    font-weight: 700;
+    line-height: 302.4px;
+    z-index: -2;
+    color: #fff;
+  }
 
   .product__tab-content {
     display: none;
@@ -687,7 +709,9 @@
     transition: all 0.2s linear;
   }
 }
-
+.open__video-btn {
+  cursor: pointer;
+}
 // blog
 .blog {
   background: #000;
@@ -697,6 +721,13 @@
   }
   .tab {
     padding: 40px 0;
+  }
+  .tab__content-two {
+    display: none;
+    animation: fade 0.2s linear;
+    &.show {
+      display: block;
+    }
   }
   &__card {
     position: relative;
@@ -927,7 +958,7 @@
   padding-bottom: 80px;
 
   .sub__title {
-    padding-bottom: 40px;
+    padding: 0 0 40px 0 !important;
   }
   .form__box {
     display: flex;
