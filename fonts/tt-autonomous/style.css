@@ -80,8 +80,10 @@
     url("TT Autonomous Trial DemiBold Italic.woff") format("woff");
 }
 
+/*  */
 @font-face {
-  font-family: "TT Autonomous Trl Bold";
+  /* font-family: "TT Autonomous Trl Bold"; */
+  font-family: "TT Autonomous";
   font-style: normal;
   font-weight: normal;
   src: local("TT Autonomous Trl Bold"),
@@ -95,6 +97,7 @@
   src: local("TT Autonomous Trl Bold It"),
     url("TT Autonomous Trial Bold Italic.woff") format("woff");
 }
+/*  */
 
 @font-face {
   font-family: "TT Autonomous Trl ExtraBold";

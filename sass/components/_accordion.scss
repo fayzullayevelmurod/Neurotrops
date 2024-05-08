@@ -7,14 +7,14 @@
   overflow: hidden;
   &.is__open {
     .accordion__content {
-      height: auto;
-      max-height: 100%;
+      opacity: 1;
+      // padding-top: 20px;
     }
     .accordion__arrow {
       transform: rotate(45deg);
     }
     .accordion__header {
-      padding-bottom: 20px;
+      // padding-bottom: 20px;
     }
     .accordion__title {
       opacity: 0.55;
@@ -33,7 +33,7 @@
     transition: all 0.2s linear;
   }
   &__title {
-    font-family: "TT Autonomous Trl Bold", sans-serif;
+    font-family: "TT Autonomous", sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 38.4px;
@@ -41,9 +41,17 @@
   }
   &__content {
     // padding-top: 10px;
-    transform-origin: top;
-    height: 0;
-    transition: all 0.2s linear;
+    // transform-origin: top;
+    // height: 0;
+    // transition: all 0.2s linear;
+    // max-height: 0;
+
+    // padding: 0 20px;
+    padding-top: 20px;
     max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+    opacity: 0;
   }
 }

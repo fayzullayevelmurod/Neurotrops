@@ -175,7 +175,7 @@ body.no-scroll {
 
 .title {
   color: #fff;
-  font-family: "TT Autonomous Trl Bold", "Autonomous", sans-serif;
+  font-family: "TT Autonomous", "Autonomous", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 67.2px;
@@ -183,7 +183,7 @@ body.no-scroll {
 }
 
 .title__sm {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 51.2px;
@@ -283,14 +283,10 @@ body.no-scroll {
   overflow: hidden;
 }
 .accordion.is__open .accordion__content {
-  height: auto;
-  max-height: 100%;
+  opacity: 1;
 }
 .accordion.is__open .accordion__arrow {
   transform: rotate(45deg);
-}
-.accordion.is__open .accordion__header {
-  padding-bottom: 20px;
 }
 .accordion.is__open .accordion__title {
   opacity: 0.55;
@@ -308,17 +304,19 @@ body.no-scroll {
   transition: all 0.2s linear;
 }
 .accordion__title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
   text-transform: uppercase;
 }
 .accordion__content {
-  transform-origin: top;
-  height: 0;
-  transition: all 0.2s linear;
+  padding-top: 20px;
   max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  opacity: 0;
 }
 
 .feedback__form .form__boxes {
@@ -327,7 +325,7 @@ body.no-scroll {
   gap: 40px;
 }
 .feedback__form .form__name {
-  font-family: "TT Autonomous Trl Bold";
+  font-family: "TT Autonomous";
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
@@ -396,6 +394,9 @@ body.no-scroll {
 }
 .feedback__form .yellow__btn {
   width: fit-content;
+}
+.feedback__form .validate__label.invalid::after, .feedback__form .validate__label.invalid::before {
+  background: #ea13ee;
 }
 
 .card__page .product__card {
@@ -523,7 +524,7 @@ body.no-scroll {
   bottom: 0;
   right: 0;
   background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
@@ -543,7 +544,7 @@ body.no-scroll {
   position: absolute;
   top: 20px;
   left: 0;
-  font-family: "TT Autonomous Trl Bold";
+  font-family: "TT Autonomous";
   font-size: 40px;
   font-weight: 700;
   line-height: 28.8px;
@@ -571,7 +572,7 @@ body.no-scroll {
   flex: 1 1 0;
 }
 .card .new__price {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -581,7 +582,7 @@ body.no-scroll {
   display: block;
 }
 .card .old__price {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 51.2px;
@@ -595,7 +596,7 @@ body.no-scroll {
   padding: 20px 0;
 }
 .card .weight__box button {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
@@ -664,7 +665,7 @@ body.no-scroll {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
@@ -672,7 +673,7 @@ body.no-scroll {
   opacity: 0.1;
 }
 .card .counter .count__number {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
@@ -710,7 +711,7 @@ body.no-scroll {
   color: #cfee13;
 }
 .tab__items .tab__item h4 {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -739,7 +740,7 @@ body.no-scroll {
   width: 100%;
 }
 .tab__content .flex__box .tab__title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
@@ -829,13 +830,13 @@ body.no-scroll {
 }
 .modal.product__cart h4, .modal.favourite__modal h4 {
   color: #cfee13;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
 }
 .modal.product__cart h5, .modal.favourite__modal h5 {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -880,7 +881,7 @@ body.no-scroll {
   opacity: 10%;
 }
 .call__back-modal .modal__title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 67.2px;
@@ -895,7 +896,7 @@ body.no-scroll {
   gap: 40px;
 }
 .call__back-modal .tab__el {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -934,7 +935,7 @@ body.no-scroll {
   opacity: 0.25;
 }
 .call__back-modal form label {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
@@ -1038,7 +1039,7 @@ body.no-scroll {
 }
 .successfull__content .modal__title {
   color: #cfee13;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 140%;
@@ -1089,7 +1090,7 @@ body.no-scroll {
   width: 123px;
   height: 123px;
   border-radius: 50%;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 12px;
   font-weight: 700;
   display: flex;
@@ -1112,6 +1113,16 @@ body.no-scroll {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.header__logo svg,
+.header__logo path {
+  transition: all 0.2s linear;
+}
+.header__logo:hover svg {
+  filter: drop-shadow(0px 1px 4px #cfee13);
+}
+.header__logo:hover svg path {
+  fill: #cfee13;
 }
 .header__right {
   display: flex;
@@ -1202,7 +1213,7 @@ body.no-scroll {
   display: none;
 }
 .meida__menu ul .accordion__title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px !important;
   font-weight: 700;
   line-height: 38.4px !important;
@@ -1210,7 +1221,7 @@ body.no-scroll {
   text-transform: uppercase;
 }
 .meida__menu ul a {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -1225,7 +1236,7 @@ body.no-scroll {
   padding-top: 50px;
 }
 .meida__menu .bottom__title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
@@ -1283,6 +1294,10 @@ body.no-scroll {
     right: 0;
   }
 }
+.products .swiper-pagination.mt {
+  display: none;
+}
+
 .footer {
   background: #000;
   padding: 40px 0 80px 0;
@@ -1298,7 +1313,7 @@ body.no-scroll {
   background: linear-gradient(152.04deg, #424242 9.25%, #000000 184.13%);
 }
 .footer__title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -1313,7 +1328,7 @@ body.no-scroll {
 }
 .footer .col p {
   padding: 20px 0;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
@@ -1450,6 +1465,10 @@ body.no-scroll {
   position: absolute;
   right: 29px;
   bottom: 0;
+  display: block;
+}
+.intro__bg .right__photo.media__block {
+  display: none;
 }
 .intro__bg .white__light {
   width: 256px;
@@ -1481,6 +1500,9 @@ body.no-scroll {
   left: 0;
   background: rgba(255, 255, 255, 0.1019607843);
 }
+.intro .swiper-btns .media__btn {
+  display: none;
+}
 .intro .swiper-btns button path {
   transition: all 0.2s linear;
 }
@@ -1500,7 +1522,7 @@ body.no-scroll {
   font-weight: 700;
   line-height: 38.4px;
   text-transform: uppercase;
-  font-family: "TT Autonomous Trl Bold", "Autonomous", sans-serif;
+  font-family: "TT Autonomous", "Autonomous", sans-serif;
 }
 .intro__swiper .content {
   max-width: 820px;
@@ -1508,7 +1530,7 @@ body.no-scroll {
   padding-bottom: 60px;
 }
 .intro__swiper .sub__title {
-  font-family: "TT Autonomous Trl Bold", "Autonomous", sans-serif;
+  font-family: "TT Autonomous", "Autonomous", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
@@ -1570,7 +1592,7 @@ body.no-scroll {
   position: absolute;
   bottom: 31%;
   left: 31%;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 280px;
   font-weight: 700;
   line-height: 302.4px;
@@ -1677,7 +1699,7 @@ body.no-scroll {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
   color: #000;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 19.2px;
@@ -1730,7 +1752,7 @@ body.no-scroll {
   position: absolute;
   top: 20px;
   left: 0;
-  font-family: "TT Autonomous Trl Bold";
+  font-family: "TT Autonomous";
   font-size: 18px;
   font-weight: 700;
   line-height: 28.8px;
@@ -1767,7 +1789,7 @@ body.no-scroll {
   bottom: 0;
   right: 0;
   background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 19.2px;
@@ -1789,7 +1811,7 @@ body.no-scroll {
   border: 1px solid #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 19.2px;
@@ -1802,7 +1824,7 @@ body.no-scroll {
   color: #000;
 }
 .products .product__name {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 38.4px;
@@ -1834,7 +1856,7 @@ body.no-scroll {
   margin-top: 60px;
 }
 .products .product__price .price {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
@@ -1898,7 +1920,7 @@ body.no-scroll {
   padding-bottom: 100px;
 }
 .about__slide-title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 56px;
@@ -1986,7 +2008,7 @@ body.no-scroll {
   box-sizing: border-box;
 }
 .about .slide__content-title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -2059,7 +2081,7 @@ body.no-scroll {
   opacity: 0.75;
 }
 .products__two .product .title__sm {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 51.2px;
@@ -2142,6 +2164,10 @@ body.no-scroll {
 }
 .blog__card:hover .blog__title {
   -webkit-text-fill-color: #cee73c;
+  background-image: linear-gradient(#cee73c, #cee73c);
+  background-size: 0% 20px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 .blog__title {
   transition: all 0.2s linear;
@@ -2150,15 +2176,17 @@ body.no-scroll {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 20px 0;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
   position: relative;
+  display: inline-block;
+  text-decoration: underline;
 }
 .blog__date {
   color: #cfee13;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 19.2px;
@@ -2202,7 +2230,7 @@ body.no-scroll {
 }
 .events .events__swiper .slide__top span {
   text-transform: uppercase;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 25.6px;
@@ -2279,7 +2307,7 @@ body.no-scroll {
 .reviews__swiper .user__name {
   color: #cfee13;
   text-transform: uppercase;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -2326,7 +2354,8 @@ body.no-scroll {
   flex-direction: column;
 }
 .feedback .form__box #check__status {
-  font-family: "TT Autonomous Trl Bold";
+  font-family: "TT Autonomous";
+  padding-top: 10px;
 }
 
 .product__img .swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -2524,7 +2553,7 @@ body.no-scroll {
   opacity: 1;
 }
 .payment .steps .step__title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 51.2px;
@@ -2587,7 +2616,7 @@ body.no-scroll {
   display: none;
 }
 .points__tab .tab__item a {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -2643,7 +2672,7 @@ body.no-scroll {
   bottom: 0;
   left: 0;
   text-transform: uppercase;
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 128px;
   font-weight: 700;
   line-height: 95px;
@@ -2670,7 +2699,7 @@ body.no-scroll {
   color: #cfee13;
 }
 .contact__bg .contact__box .contact__title {
-  font-family: "TT Autonomous Trl Bold", sans-serif;
+  font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
@@ -3547,6 +3576,9 @@ body.no-scroll {
     position: absolute;
     bottom: 20px;
   }
+  .products .swiper-pagination.mt {
+    display: flex;
+  }
 }
 @media screen and (max-width: 800px) {
   .products .media__bg {
@@ -3709,6 +3741,51 @@ body.no-scroll {
   .intro__bg .yellow__light {
     bottom: 312px;
     right: 50px;
+  }
+  .intro__bg .bottom__photo {
+    width: 744px;
+  }
+  .intro__bg .white__light {
+    width: 128px;
+    height: 128px;
+    bottom: 174px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.7490196078);
+    box-shadow: 0px 0px 40px 0px rgba(255, 255, 255, 0.7490196078);
+    opacity: 0.25;
+  }
+  .home__page main .intro {
+    padding-top: 124px;
+  }
+  .intro .swiper-scrollbar {
+    top: 161px;
+  }
+  .intro .swiper-btns {
+    top: 21%;
+  }
+  .intro .media__none-btn {
+    display: none;
+  }
+  .intro .media__btn {
+    display: block !important;
+  }
+  .intro__bg .yellow__light {
+    width: 32px;
+    height: 32px;
+    box-shadow: 0px 0px 40px 0px rgba(207, 238, 19, 0.7490196078);
+    bottom: 326px;
+    right: 23px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .intro__bg .right__photo.media__block {
+    display: block;
+    left: -133px;
+    right: auto;
+    object-fit: contain;
+  }
+  .intro__bg .right__photo.media__none {
+    display: none;
   }
 }
 

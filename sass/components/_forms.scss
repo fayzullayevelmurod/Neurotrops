@@ -5,7 +5,7 @@
     gap: 40px;
   }
   .form__name {
-    font-family: "TT Autonomous Trl Bold";
+    font-family: "TT Autonomous";
     font-size: 16px;
     font-weight: 700;
     line-height: 25.6px;
@@ -77,5 +77,13 @@
   }
   .yellow__btn {
     width: fit-content;
+  }
+  .validate__label {
+    &.invalid {
+      &::after,
+      &::before {
+        background: #ea13ee;
+      }
+    }
   }
 }

@@ -13,17 +13,21 @@ function validation() {
   let email = document.getElementById("email").value;
   let text = document.getElementById("check__status");
   let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  let validateLabel = document.querySelector(".validate__label");
 
   if (email.match(pattern)) {
     form.classList.add("valid");
     form.classList.remove("invalid");
-    text.innerHTML = "Your Email Address in valid";
+    // text.innerHTML = "Your Email Address in valid";
+    text.style.display = "none";
     text.style.color = "#00ff00";
+    validateLabel.classList.remove("invalid");
   } else {
     form.classList.remove("valid");
     form.classList.add("invalid");
-    text.innerHTML = "Please Enter Valid Email Address";
-    text.style.color = "#ff0000";
+    validateLabel.classList.add("invalid");
+    text.innerHTML = "Введите корректные данные";
+    text.style.color = "#EA13EE";
   }
 
   if (email == "") {
@@ -262,16 +266,6 @@ const socialMediaBox = document.querySelector(".socail__media");
 
 questionBtn.addEventListener("click", () => {
   socialMediaBox.classList.toggle("show");
-});
-
-// accordion
-const accordion = document.querySelectorAll(".accordion");
-
-accordion.forEach((item) => {
-  const accordionBtn = item.querySelector(".accordion__arrow");
-  accordionBtn.addEventListener("click", () => {
-    item.classList.toggle("is__open");
-  });
 });
 
 try {
@@ -670,5 +664,45 @@ try {
 
   closeVideoModal.addEventListener("click", () => {
     videoModal.classList.remove("show");
+  });
+} catch (error) {}
+
+// accordion
+// const accordion = document.querySelectorAll(".accordion");
+
+// accordion.forEach((item) => {
+//   const accordionBtn = item.querySelector(".accordion__arrow");
+//   accordionBtn.addEventListener("click", () => {
+//     item.classList.toggle("is__open");
+//   });
+// });
+
+try {
+  const accordions = document.querySelectorAll(".accordion");
+
+  const openAccordion = (accordion) => {
+    const content = accordion.querySelector(".accordion__content");
+    accordion.classList.add("is__open");
+    content.style.maxHeight = content.scrollHeight + "px";
+  };
+
+  const closeAccordion = (accordion) => {
+    const content = accordion.querySelector(".accordion__content");
+    accordion.classList.remove("is__open");
+    content.style.maxHeight = null;
+  };
+
+  accordions.forEach((accordion) => {
+    const intro = accordion.querySelector(".accordion__header");
+    const content = accordion.querySelector(".accordion__content");
+
+    intro.onclick = () => {
+      if (content.style.maxHeight) {
+        closeAccordion(accordion);
+      } else {
+        accordions.forEach((accordion) => closeAccordion(accordion));
+        openAccordion(accordion);
+      }
+    };
   });
 } catch (error) {}
