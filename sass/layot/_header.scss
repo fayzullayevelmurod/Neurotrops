@@ -106,6 +106,27 @@
   padding: 20px;
   transition: all 0.2s linear;
   z-index: 10;
+  .accordion.is__open {
+    .accordion__header {
+      padding-bottom: 15px;
+    }
+    .accordion__title {
+      opacity: 1;
+      color: #CFEE13;
+    }
+  }
+  .accordion__content {
+    padding-top: 0;
+    ul {
+      gap: 15px;
+    }
+    a {
+      font-family: "Aeroport", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 28.8px;
+    }
+  }
   &.active {
     right: 0;
   }
@@ -186,7 +207,7 @@
     font-size: 16px;
     line-height: 25.6px;
     color: #cfee13;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
 }
 .media__right {

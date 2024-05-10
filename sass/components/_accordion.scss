@@ -7,7 +7,7 @@
   overflow: hidden;
   &.is__open {
     .accordion__content {
-      opacity: 1;
+      opacity: 1 !important;
       // padding-top: 20px;
     }
     .accordion__arrow {

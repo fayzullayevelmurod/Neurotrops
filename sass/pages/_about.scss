@@ -1,6 +1,7 @@
 .about__page {
   background: url(../images/about-page-bg.png) no-repeat, #000;
-  background-size: 100% 28.5%;
+  background-size: 1920px 28.5%;
+  background-position: 97% 0%;
 
   .company__log {
     position: absolute;
@@ -42,12 +43,12 @@
       position: absolute;
       bottom: -1px;
       left: 0;
-      width: 100%;
+      width: 1920px;
       z-index: -1;
     }
     .mushroom__img {
       position: absolute;
-      top: 0;
+      top: 40px;
       right: 0;
       z-index: -2;
       max-width: 1138px;

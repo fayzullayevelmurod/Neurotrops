@@ -67,7 +67,7 @@
     gap: 20px;
   }
   .title__sm {
-    text-transform: capitalize;
+    text-transform: none;
   }
   .go__back {
     display: flex;
@@ -352,6 +352,13 @@
     .left__box {
       max-width: 380px;
       width: 100%;
+      .accordion__arrow {
+        display: none;
+      }
+      .desc {
+        opacity: 1;
+        max-height: fit-content;
+      }
     }
     .tab__title {
       font-family: "TT Autonomous", sans-serif;
@@ -372,11 +379,15 @@
   }
 
   // reviews
+
   .reviews__swiper {
     padding: 0;
     display: flex;
     align-items: center;
     gap: 54px;
+    &.media__block {
+      display: none;
+    }
     .reviews__content {
       max-width: 616px;
       width: 100%;

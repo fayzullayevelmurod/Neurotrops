@@ -33,6 +33,7 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  padding: 0;
 }
 
 input:focus {
@@ -117,10 +118,12 @@ main {
     gap: 10px;
     overflow: hidden;
     transform-origin: right;
-    transform: scaleX(0);
+    // transform: scaleX(0);
     transition: all 0.2s linear;
+    display: none;
     &.show {
-      transform: scaleX(1);
+      // transform: scaleX(1);
+      display: flex;
     }
     a {
       width: 48px;
