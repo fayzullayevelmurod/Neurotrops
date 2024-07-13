@@ -14,6 +14,14 @@ body {
   font-weight: 700;
   line-height: 67.2px;
   text-transform: uppercase;
+
+  sub {
+    font-family: "Aeroport", sans-serif;
+    color: #cfee13;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 38.4px;
+  }
 }
 .title__sm {
   font-family: "TT Autonomous", sans-serif;
@@ -22,6 +30,10 @@ body {
   line-height: 51.2px;
   color: #cfee13;
   text-transform: uppercase;
+
+  &.white__text {
+    color: #fff;
+  }
 }
 .desc {
   font-size: 24px;

@@ -165,6 +165,20 @@ main {
     padding-right: 20px;
   }
 }
+.bg-black {
+  background: #000;
+}
+
+.company__logo {
+  width: 694.92px;
+  height: 600px;
+  opacity: 0.25px;
+  position: absolute;
+  top: 0;
+  left: -78px;
+  z-index: -1;
+}
+
 body {
   font-family: "Aeroport", sans-serif;
   font-weight: 300;
@@ -182,6 +196,13 @@ body.no-scroll {
   line-height: 67.2px;
   text-transform: uppercase;
 }
+.title sub {
+  font-family: "Aeroport", sans-serif;
+  color: #cfee13;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 38.4px;
+}
 
 .title__sm {
   font-family: "TT Autonomous", sans-serif;
@@ -190,6 +211,9 @@ body.no-scroll {
   line-height: 51.2px;
   color: #cfee13;
   text-transform: uppercase;
+}
+.title__sm.white__text {
+  color: #fff;
 }
 
 .desc {
@@ -398,6 +422,56 @@ body.no-scroll {
 }
 .feedback__form .validate__label.invalid::after, .feedback__form .validate__label.invalid::before {
   background: #ea13ee;
+}
+
+.form__box .form__box-input {
+  font-size: 24px;
+  line-height: 38.4px;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  position: relative;
+  display: block;
+}
+.form__box .form__box-input::placeholder {
+  color: #fff;
+  opacity: 0.25;
+}
+.form__box .form__box-input:focus + .input__box::after {
+  transform: scaleX(1);
+}
+.form__box .input__box {
+  position: relative;
+  height: 1px;
+  padding: 0;
+  display: block;
+  padding-top: 10px;
+}
+.form__box .input__box::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+}
+.form__box .input__box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #cfee13;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 0.3s linear;
 }
 
 .card__page .product__card {
@@ -3024,6 +3098,174 @@ body.no-scroll {
 }
 .empty__basket-page .empty__basket-box .btns {
   margin-bottom: 80px;
+}
+
+.basket__page .nav {
+  padding-bottom: 149px;
+}
+.basket__page .basket {
+  padding-bottom: 80px;
+}
+.basket__page .company__logo {
+  top: -180px;
+}
+.basket__page .container {
+  position: relative;
+  z-index: 1;
+}
+.basket__page .basket__boxes {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+.basket__page .basket__boxes .title__sm {
+  margin-bottom: 40px;
+}
+.basket__page .product__list-box {
+  flex: 1 1 800px;
+}
+.basket__page .price__list {
+  flex: 1 1 400px;
+}
+.basket__page .price__list .price__list-box {
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, #000000 108.73%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  background: url(../../images/img-payment-header-bg.png) no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.basket__page .price__list .price__list-box .box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.basket__page .price__list .price__list-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basket__page .price__list .price__list-box .total,
+.basket__page .price__list .price__list-box .price {
+  font-family: "TT Autonomous", "Autonomous", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.basket__page .price__list .price__list-box .price {
+  color: #cfee13;
+}
+.basket__page .price__list .remove__products-btn {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25.6px;
+  color: #ea13ee;
+}
+.basket__page .price__list button {
+  width: fit-content;
+}
+.basket__page .products {
+  padding: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.basket__page .products .product__img {
+  max-width: 150px;
+  height: 150px;
+}
+.basket__page .products .product__img .product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.basket__page .products .product__card {
+  justify-content: start;
+  gap: 20px;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2509803922);
+  background: url(../../images/trasparent-category-bg.png) no-repeat;
+  background-size: cover;
+}
+.basket__page .products .weight__box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.basket__page .products .weight__box span {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25.6px;
+}
+.basket__page .products .product__name {
+  font-size: 20px;
+  line-height: 32px;
+}
+.basket__page .products .price.old__price {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+.basket__page .products .product__price {
+  margin-top: 0;
+}
+.basket__page .products .top__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.basket__page .products .w-full {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: unset;
+}
+.basket__page .products .counter {
+  padding-top: 0;
+}
+.basket__page .products .product__info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.basket__page .products .count {
+  width: 40px;
+  height: 40px;
+}
+.basket__page .products .count .bg__text {
+  font-size: 25px;
+}
+.basket__page .products .count__number {
+  font-size: 14px;
+  line-height: 22px;
+}
+.basket__page .products .product__card:hover .product__img img {
+  transform: scale(1);
+}
+.basket__page .flex__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basket__page .flex__box .total__price {
+  font-family: "TT Autonomous", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.basket__page .product__img .product__discount {
+  font-size: 12px;
+  line-height: 19.2px;
+}
+.basket__page .product__img .product__discount .line {
+  height: 2px;
 }
 
 .swiper-pagination {
