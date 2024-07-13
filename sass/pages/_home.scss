@@ -7,7 +7,7 @@
   }
 }
 .intro {
-  background: url(../../images/img-slider-bg.png) no-repeat;
+  background: url(../images/img-slider-bg.png) no-repeat;
   background-size: 100% 100%;
   position: relative;
   .company__log {
@@ -166,7 +166,7 @@
 
 // products section
 .products {
-  background: url(../../images/osmon.png) no-repeat;
+  background: url(../images/osmon.png) no-repeat;
   background-position: 0 50%;
   background-size: 100%;
   padding: 80px 0;
@@ -506,7 +506,7 @@
     margin-left: auto;
     max-width: 1620px;
     padding: 40px 0 40px 40px;
-    background: url(../../images/logo-dark.png) no-repeat top right,
+    background: url(../images/logo-dark.png) no-repeat top right,
       linear-gradient(180deg, rgba(20, 23, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
     width: 100%;
     background-size: contain;

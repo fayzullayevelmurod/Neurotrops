@@ -1237,7 +1237,7 @@ body.no-scroll {
   top: 0;
   right: -100%;
   width: 100%;
-  background: url(../../images/menu-bg.png) no-repeat;
+  background: url(../images/menu-bg.png) no-repeat;
   background-size: cover;
   height: 100vh;
   overflow-y: auto;
@@ -1250,7 +1250,7 @@ body.no-scroll {
 }
 .meida__menu .accordion.is__open .accordion__title {
   opacity: 1;
-  color: #CFEE13;
+  color: #cfee13;
 }
 .meida__menu .accordion__content {
   padding-top: 0;
@@ -1581,7 +1581,7 @@ body.no-scroll {
 }
 
 .intro {
-  background: url(../../images/img-slider-bg.png) no-repeat;
+  background: url(../images/img-slider-bg.png) no-repeat;
   background-size: 100% 100%;
   position: relative;
 }
@@ -1727,7 +1727,7 @@ body.no-scroll {
 }
 
 .products {
-  background: url(../../images/osmon.png) no-repeat;
+  background: url(../images/osmon.png) no-repeat;
   background-position: 0 50%;
   background-size: 100%;
   padding: 80px 0;
@@ -2041,7 +2041,7 @@ body.no-scroll {
   margin-left: auto;
   max-width: 1620px;
   padding: 40px 0 40px 40px;
-  background: url(../../images/logo-dark.png) no-repeat top right, linear-gradient(180deg, rgba(20, 23, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+  background: url(../images/logo-dark.png) no-repeat top right, linear-gradient(180deg, rgba(20, 23, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
   width: 100%;
   background-size: contain;
 }
@@ -2643,7 +2643,7 @@ body.no-scroll {
   position: relative;
 }
 .about__page .events {
-  background: url(../../images/img-slider-bg2.png) no-repeat;
+  background: url(../images/img-slider-bg2.png) no-repeat;
   padding: 82px 0 291px;
   background-size: 100% 100%;
   position: relative;
@@ -2979,7 +2979,7 @@ body.no-scroll {
 }
 
 .contact__bg {
-  background: url(../../images/contact-bg.png) no-repeat, #000 !important;
+  background: url(../images/contact-bg.png) no-repeat, #000 !important;
   background-size: cover;
 }
 .contact__bg .delivery__page {
@@ -3008,6 +3008,16 @@ body.no-scroll {
   color: #fff;
   display: block;
   padding-top: 10px;
+}
+
+.empty__basket-page {
+  background: #000;
+}
+.empty__basket-page .empty__basket-box .title__sm {
+  color: #fff;
+}
+.empty__basket-page .empty__basket-box .desc {
+  padding: 20px 0 40px 0;
 }
 
 .swiper-pagination {
