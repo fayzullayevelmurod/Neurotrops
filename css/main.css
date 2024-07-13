@@ -3013,11 +3013,17 @@ body.no-scroll {
 .empty__basket-page {
   background: #000;
 }
+.empty__basket-page .empty__basket {
+  padding-bottom: 80px;
+}
 .empty__basket-page .empty__basket-box .title__sm {
   color: #fff;
 }
 .empty__basket-page .empty__basket-box .desc {
   padding: 20px 0 40px 0;
+}
+.empty__basket-page .empty__basket-box .btns {
+  margin-bottom: 80px;
 }
 
 .swiper-pagination {
