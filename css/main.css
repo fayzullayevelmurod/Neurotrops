@@ -251,6 +251,20 @@ body.no-scroll {
   color: #cfee13;
 }
 
+.desc__sm {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  color: #fff;
+}
+.desc__sm.green {
+  color: #cfee13;
+}
+.desc__sm.tt__font {
+  font-family: "TT Autonomous", sans-serif;
+  font-weight: 700;
+}
+
 .yellow__btn {
   font-size: 16px;
   font-weight: 300;
@@ -3127,11 +3141,11 @@ body.no-scroll {
   margin-bottom: 80px;
 }
 
-.basket__page .nav {
-  padding-bottom: 149px;
-}
 .basket__page .basket {
   padding-bottom: 80px;
+}
+.basket__page .basket .nav {
+  padding-bottom: 149px;
 }
 .basket__page .company__logo {
   top: -180px;
@@ -3620,6 +3634,398 @@ body.no-scroll {
 .order__completed-page .payment__order .summary .price {
   color: #cfee13;
   font-family: "TT Autonomous", sans-serif;
+}
+
+.persona__area .tabs {
+  display: flex;
+  gap: 20px;
+}
+.persona__area .tab__content {
+  width: 100%;
+}
+.persona__area .tab {
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+}
+.persona__area .tab__item {
+  font-family: "TT Autonomous", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+}
+.persona__area .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.persona__area .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid transparent;
+  background: #f2f2f2;
+  background-clip: padding-box;
+  border: 1px solid #424242;
+}
+.persona__area .card .links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.persona__area .card .links a {
+  color: #fff;
+}
+.persona__area .card .outline__btn {
+  width: fit-content;
+}
+.persona__area .stock__box {
+  background: url(../../images/stock-bg.png) no-repeat;
+  background-size: cover;
+  border: none;
+}
+.persona__area .private__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.persona__area .private__cards .private__card {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1490196078);
+  border: 1px solid #424242;
+  border-radius: 10px;
+  padding: 24px;
+  transition: all 0.2s ease-out;
+}
+.persona__area .private__cards .private__card .green__path,
+.persona__area .private__cards .private__card .desc__sm {
+  transition: all 0.2s ease-out;
+}
+.persona__area .private__cards .private__card:hover {
+  border-color: #cfee13;
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+}
+.persona__area .private__cards .private__card:hover .green__path {
+  fill: #cfee13;
+}
+.persona__area .private__cards .private__card:hover .desc__sm {
+  color: #cfee13;
+}
+.persona__area .private__cards .desc__sm {
+  padding: 16px 0 8px;
+}
+.persona__area .private__cards .product__status-text {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.persona__area .private__cards .product__status-text:hover {
+  color: #cfee13;
+}
+.persona__area .form__box .clue {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28.8px;
+  margin-top: 10px;
+  display: block;
+}
+.persona__area .outline__btn:disabled {
+  border: 1px solid #ffffff;
+  width: fit-content;
+  opacity: 0.5;
+  cursor: auto;
+}
+.persona__area .outline__btn:disabled:hover {
+  background: rgba(255, 255, 255, 0.0509803922);
+  color: #fff;
+}
+.persona__area .row__box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.persona__area .row__box .private__card {
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  border: none;
+}
+.persona__area .row__box .private__card .desc__sm {
+  color: #cfee13;
+}
+.persona__area .row__box .form__name {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+.persona__area .active__orders {
+  width: 100%;
+}
+.persona__area .active__orders .card {
+  gap: 16px;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #000;
+}
+.persona__area .active__orders .left__box {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.persona__area .active__orders .right__box,
+.persona__area .active__orders .img__boxes {
+  display: flex;
+  gap: 12px;
+}
+.persona__area .active__orders .img__box {
+  border-radius: 10px;
+  position: relative;
+  height: fit-content;
+}
+.persona__area .active__orders .img__box:hover .product__info {
+  visibility: visible;
+  opacity: 1;
+  top: 100%;
+}
+.persona__area .active__orders .img__box img {
+  border-radius: inherit;
+}
+.persona__area .active__orders .img__box .product__info {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  padding: 8px 16px;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  border-radius: 10px;
+  background: #000;
+  border: 1px solid #ffffff;
+  min-width: 180px;
+}
+.persona__area .active__orders .img__box .product__info p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 19.2px;
+}
+.persona__area .active__orders .flex__box {
+  justify-content: start;
+  padding-bottom: 8px;
+}
+.persona__area .stages {
+  display: flex;
+  gap: 16px;
+}
+.persona__area .stage {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+.persona__area .stage.active {
+  background: #cfee13;
+}
+.persona__area .status__text {
+  font-size: 12px;
+  line-height: 19px;
+  font-family: "TT Autonomous", sans-serif;
+  cursor: pointer;
+}
+.persona__area .status__text:hover + .status__box {
+  visibility: visible;
+  opacity: 1;
+}
+.persona__area .status__box {
+  transition: all 0.4s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 53px;
+  left: 0;
+  width: 300px;
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  border: 1px solid #424242;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.persona__area .status__box .status__box-item {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  opacity: 0.5;
+}
+.persona__area .status__box .status__box-item.active {
+  opacity: 1;
+}
+.persona__area .status__box .status__box-item.active .info__title {
+  color: #cfee13;
+}
+.persona__area .status__box .status__box-item.active .info__title .circle,
+.persona__area .status__box .status__box-item.active .info__title .line {
+  background: #cfee13;
+}
+.persona__area .status__box .info__title {
+  font-family: "TT Autonomous", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22.4px;
+  color: #fff;
+}
+.persona__area .status__box .info__desc {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 19.2px;
+}
+.persona__area .status__box .progress {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+.persona__area .status__box .progress .circle {
+  width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+  border-radius: 50%;
+  background: #fff;
+}
+.persona__area .status__box .progress .line {
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  margin: 0 auto;
+}
+.persona__area .flex__box.column {
+  flex-direction: column;
+  align-items: start;
+}
+.persona__area .date__box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.persona__area .date__box .date {
+  font-family: "TT Autonomous", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.persona__area .date__box .date.active, .persona__area .date__box .date:hover {
+  color: #cfee13;
+}
+.persona__area .select__boxes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.persona__area .select__boxes .select__box {
+  position: relative;
+}
+.persona__area .select__boxes .select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.persona__area .select__boxes .selected__text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25.6px;
+}
+.persona__area .select__boxes .option__list {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  margin-top: 10px;
+  background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+.persona__area .select__boxes .option__list.show {
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.persona__area .select__boxes .option__item {
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25.6px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.persona__area .select__boxes .option__item:hover, .persona__area .select__boxes .option__item.active {
+  color: #cfee13;
+}
+.persona__area .img__boxes {
+  margin-bottom: 16px;
+}
+.persona__area .btns {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.persona__area .btns button {
+  white-space: nowrap;
+}
+.persona__area .orders__tab.hide,
+.persona__area .buyer__tab.hide {
+  display: none;
+}
+.persona__area .orders__tab .active__orders .img__box:hover .product__info,
+.persona__area .buyer__tab .active__orders .img__box:hover .product__info {
+  bottom: unset;
+  left: 100%;
+  top: 0;
+  margin-left: 10px;
+}
+.persona__area .orders__tab .active__orders .product__info,
+.persona__area .buyer__tab .active__orders .product__info {
+  top: 0;
+  bottom: unset;
+  left: 0;
+  z-index: 100;
+}
+.persona__area .buyer__tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.persona__area .buyer__tab .payment__method {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.persona__area .buyer__tab .img__boxes {
+  margin-bottom: 0;
+}
+.persona__area .buyer__tab .info__box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.persona__area .buyer__tab .info__boxes {
+  display: flex;
+  gap: 20px;
+}
+.persona__area .buyer__tab .info__boxes .info__box {
+  max-width: 400px;
+  width: 100%;
+}
+.persona__area .buyer__tab .btns {
+  flex-direction: row;
 }
 
 .swiper-pagination {

@@ -72,3 +72,19 @@ body {
     }
   }
 }
+
+.desc__sm {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  color: #fff;
+
+  &.green {
+    color: #cfee13;
+  }
+
+  &.tt__font {
+    font-family: "TT Autonomous", sans-serif;
+    font-weight: 700;
+  }
+}

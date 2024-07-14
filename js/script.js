@@ -810,3 +810,36 @@ try {
     enterDestinationInput.value = "";
   });
 } catch (error) {}
+
+try {
+  const selectBoxes = document.querySelectorAll(".select__box");
+
+  selectBoxes.forEach((item) => {
+    const select = item.querySelector(".select");
+    const optionList = item.querySelector(".option__list");
+    const optionListItems = item.querySelectorAll(".option__item");
+    const selectedTextElement =
+      item.querySelector(".selected__text") || select.querySelector("span");
+
+    optionListItems.forEach((el) => {
+      el.addEventListener("click", () => {
+        selectedTextElement.textContent = el.textContent;
+        optionList.classList.remove("show");
+        optionListItems.forEach((item) => item.classList.remove("active"));
+        el.classList.add("active");
+      });
+    });
+
+    select.addEventListener("click", () => {
+      optionList.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!item.contains(e.target)) {
+        optionList.classList.remove("show");
+      }
+    });
+  });
+} catch (error) {
+  console.log(error);
+}
