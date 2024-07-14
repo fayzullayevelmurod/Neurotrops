@@ -1,0 +1,49 @@
+.order__completed-page {
+  text-align: left;
+  .flex__box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  .order__completed-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .payment__type {
+    padding: 8px 16px;
+    border: 1px solid #cfee13;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    span {
+      font-family: "TT Autonomous", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 32px;
+      color: #cfee13;
+    }
+  }
+  .hint {
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    padding: 20px;
+  }
+  .payment__order {
+    .summary {
+      .price__box {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .price {
+        color: #cfee13;
+        font-family: "TT Autonomous", sans-serif;
+      }
+    }
+  }
+}

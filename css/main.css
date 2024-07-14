@@ -216,6 +216,14 @@ body.no-scroll {
   color: #fff;
 }
 
+.title__xs {
+  font-family: "TT Autonomous", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+  color: #fff;
+}
+
 .desc {
   font-size: 24px;
   line-height: 38.4px;
@@ -3290,6 +3298,9 @@ body.no-scroll {
 .order__page .nav {
   padding-bottom: 40px;
 }
+.order__page .company__logo {
+  top: -73px;
+}
 .order__page .product__price {
   font-family: "TT Autonomous", sans-serif;
   font-size: 10px;
@@ -3563,6 +3574,52 @@ body.no-scroll {
   font-size: 14px;
   font-weight: 700;
   line-height: 22.4px;
+}
+
+.order__completed-page {
+  text-align: left;
+}
+.order__completed-page .flex__box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.order__completed-page .order__completed-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.order__completed-page .payment__type {
+  padding: 8px 16px;
+  border: 1px solid #cfee13;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+}
+.order__completed-page .payment__type span {
+  font-family: "TT Autonomous", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #cfee13;
+}
+.order__completed-page .hint {
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  padding: 20px;
+}
+.order__completed-page .payment__order .summary .price__box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.order__completed-page .payment__order .summary .price {
+  color: #cfee13;
+  font-family: "TT Autonomous", sans-serif;
 }
 
 .swiper-pagination {
