@@ -87,6 +87,11 @@
     }
   }
 }
+.form__boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .form__box {
   .form__box-input {
     font-size: 24px;
@@ -138,6 +143,21 @@
       transform-origin: left;
       transform: scaleX(0);
       transition: all 0.3s linear;
+    }
+  }
+  .form__name {
+    font-family: "TT Autonomous", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 19.2px;
+    padding-bottom: 10px;
+    span {
+      &.purple {
+        color: #ea13ee;
+      }
+      &.green {
+        color: #cfee13;
+      }
     }
   }
 }

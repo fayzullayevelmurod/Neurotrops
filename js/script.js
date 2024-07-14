@@ -7,65 +7,9 @@ iMaskInput.forEach((maskedInput) => {
   const mask = IMask(maskedInput, maskOptions);
 });
 
-// live validator script
-// function validation() {
-//   let emails = document.querySelectorAll(".input-email");
-
-//   // `.email` klassiga ega bo'lgan elementlar mavjudmi?
-//   if (!emails || emails.length === 0) {
-//     console.error(
-//       "Xato: `.email` klassiga ega bo'lgan elementlar topilmadi yoki array bo'sh!"
-//     );
-//     return;
-//   }
-
-//   let forms = document.querySelectorAll(".feedback__form");
-//   let text = document.querySelectorAll(".check__status");
-//   let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-//   let validateLabel = document.querySelector(".validate__label");
-
-//   // Eslatma: To'g'ri manzil kiritilganini aniqlash uchun
-//   let isValid = true;
-
-//   // Har bir email inputini tekshirish
-//   emails.forEach((email) => {
-//     let emailValue = email.value.trim(); // Bo'shliqlarni olib tashlash
-//     if (!emailValue.match(pattern)) {
-//       isValid = false; // Tushunarsizlik bo'lgan variantni belgilash
-//     }
-//   });
-
-//   // Email inputlari to'g'ri bo'lsa
-//   if (isValid) {
-//     form.classList.add("valid");
-//     form.classList.remove("invalid");
-//     text.style.display = "none";
-//     validateLabel.classList.remove("invalid");
-//   } else {
-//     // Email inputlaridan kamida bitta noto'g'ri bo'lsa
-//     form.classList.remove("valid");
-//     form.classList.add("invalid");
-//     validateLabel.classList.add("invalid");
-//     text.innerHTML = "Введите корректные данные";
-//     text.style.display = "block";
-//     text.style.color = "#EA13EE";
-//   }
-
-//   // Barcha email inputlari bo'sh bo'lsa
-//   if (
-//     emails.length > 0 &&
-//     [...emails].every((email) => email.value.trim() === "")
-//   ) {
-//     form.classList.remove("valid");
-//     form.classList.remove("invalid");
-//     text.innerHTML = "";
-//     text.style.color = "#00ff00";
-//   }
-// }
 function validation() {
   let forms = document.querySelectorAll(".feedback__form");
 
-  // `.feedback__form` klassiga ega bo'lgan elementlar mavjudmi?
   if (!forms || forms.length === 0) {
     console.error(
       "Xato: `.feedback__form` klassiga ega bo'lgan elementlar topilmadi yoki array bo'sh!"
@@ -78,26 +22,21 @@ function validation() {
     let text = form.querySelector(".check__status");
     let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     let validateLabel = form.querySelector(".validate__label");
-    console.log(validateLabel);
-    // Eslatma: To'g'ri manzil kiritilganini aniqlash uchun
     let isValid = true;
 
-    // Har bir email inputini tekshirish
     emails.forEach((email) => {
-      let emailValue = email.value.trim(); // Bo'shliqlarni olib tashlash
+      let emailValue = email.value.trim();
       if (!emailValue.match(pattern)) {
-        isValid = false; // Tushunarsizlik bo'lgan variantni belgilash
+        isValid = false;
       }
     });
 
-    // Email inputlari to'g'ri bo'lsa
     if (isValid) {
       form.classList.add("valid");
       form.classList.remove("invalid");
       text.style.display = "none";
       validateLabel.classList.remove("invalid");
     } else {
-      // Email inputlaridan kamida bitta noto'g'ri bo'lsa
       form.classList.remove("valid");
       form.classList.add("invalid");
       validateLabel.classList.add("invalid");
@@ -106,7 +45,6 @@ function validation() {
       text.style.color = "#EA13EE";
     }
 
-    // Barcha email inputlari bo'sh bo'lsa
     if (
       emails.length > 0 &&
       [...emails].every((email) => email.value.trim() === "")
@@ -181,19 +119,15 @@ try {
   });
 } catch (error) {}
 try {
-  // product__img-swiper
   var swiper = new Swiper(".product__img-swiper", {
-    // slidesPerview: 1,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // effect: "fade",
     speed: 700,
   });
 } catch (error) {}
 try {
-  // about__swiper
   var swiper = new Swiper(".about__swiper", {
     slidesPerView: 2.8,
     spaceBetween: 20,
@@ -216,7 +150,6 @@ try {
 } catch (error) {}
 
 try {
-  // blog__swiper
   var swiper = new Swiper(".blog__swiper", {
     slidesPerView: 2,
     grid: {
@@ -249,7 +182,6 @@ try {
   });
 } catch (error) {}
 try {
-  // events__swiper
   var swiper = new Swiper(".events__swiper", {
     slidesPerview: 1,
     spaceBetween: 20,
@@ -357,15 +289,6 @@ try {
     reviewsTab.classList.remove("reviews__tab");
   }
 } catch (error) {}
-// products
-// const products = document.querySelectorAll(".product__img");
-
-// products.forEach((product) => {
-//   const productFavouriteBtn = product.querySelector(".product__favourite");
-//   productFavouriteBtn.addEventListener("click", function () {
-//     this.classList.toggle("active");
-//   });
-// });
 
 // fixed question btn
 const questionBtn = document.querySelector(".question__box-btn");
@@ -449,34 +372,6 @@ closeBtn.addEventListener("click", () => {
   mediaMenu.classList.remove("active");
 });
 
-// const showMoreBtn = document.querySelector(".show__more-btn");
-// if (showMoreBtn) {
-//   const products = document.querySelectorAll(
-//     ".products__page .product__tab-content"
-//   );
-
-//   const toggleProductsDisplay = () => {
-//     products.forEach((product) => {
-//       const productItems = product.querySelectorAll(".product__card");
-//       productItems.forEach((productItem, index) => {
-//         productItem.style.display =
-//           index < 4 || window.innerWidth < 1024 ? "block" : "none";
-//       });
-//     });
-//     showMoreBtn.style.display = "none";
-//   };
-
-//   const handleShowMoreClick = () => {
-//     toggleProductsDisplay();
-//   };
-
-//   if (window.innerWidth >= 1024) {
-//     showMoreBtn.style.display = "none";
-//     toggleProductsDisplay();
-//   } else {
-//     showMoreBtn.addEventListener("click", handleShowMoreClick);
-//   }
-// }
 const showMoreBtn = document.querySelector(".show__more-btn");
 if (showMoreBtn) {
   const products = document.querySelectorAll(
@@ -506,18 +401,6 @@ if (showMoreBtn) {
   showMoreBtn.addEventListener("click", showMore);
 }
 
-try {
-  // const productImg = document.querySelectorAll(".product__img");
-  // productImg.forEach((item) => {
-  //   const favouriteBtn = item.querySelector(".product__favourite");
-  //   if (favouriteBtn) {
-  //     favouriteBtn.addEventListener("click", () => {
-  //       favouriteBtn.classList.toggle("active");
-  //     });
-  //   }
-  // });
-} catch (error) {}
-
 // modal
 try {
   const cartModal = document.querySelector(".product__cart");
@@ -526,11 +409,9 @@ try {
 
   function hideCartModal() {
     cartModal.classList.remove("show");
-    // document.body.classList.remove("no-scroll");
   }
   function showCartModal() {
     cartModal.classList.add("show");
-    // document.body.classList.add("no-scroll");
   }
   const timeModal = document.querySelectorAll(".time__modal");
   openProductCartModal.forEach((btn) =>
@@ -562,11 +443,9 @@ try {
 
   function hideFavouriteModal() {
     favouriteModal.classList.remove("show");
-    // document.body.classList.remove("no-scroll");
   }
   function showFavouriteModal() {
     favouriteModal.classList.add("show");
-    // document.body.classList.add("no-scroll");
   }
   openFavouriteModal.forEach((btn) =>
     btn.addEventListener("click", () => {
@@ -660,89 +539,6 @@ try {
   });
 } catch (error) {}
 
-// // live validator script
-// // function validation() {
-// //   let form = document.getElementById('form')
-// //   let email = document.getElementById('email').value
-// //   let text = document.getElementById('check__status')
-// //   let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
-
-// //   if (email.match(pattern)) {
-// //     form.classList.add('valid')
-// //     form.classList.remove('invalid')
-// //     text.innerHTML = "Your Email Address in valid"
-// //     text.style.color = '#00ff00'
-// //   } else {
-// //     form.classList.remove('valid')
-// //     form.classList.add('invalid')
-// //     text.innerHTML = "Please Enter Valid Email Address"
-// //     text.style.color = '#ff0000'
-// //   }
-
-// //   if (email == '') {
-// //     form.classList.remove('valid')
-// //     form.classList.remove('invalid')
-// //     text.innerHTML = ""
-// //     text.style.color = '#00ff00'
-// //   }
-// // }
-// const liveEmailVal =  (form, email, checkStatus) => {
-//   let parent = document.getElementById(`${form}`)
-//   let input = document.getElementById(`${email}`).value
-//   let text = document.getElementById(`${checkStatus}`)
-//   let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
-
-//   if (input.match(pattern)) {
-//     parent.classList.add('valid')
-//     parent.classList.remove('invalid')
-//     text.innerHTML = "Your Email Address in valid"
-//     text.style.color = '#00ff00'
-//   } else {
-//     parent.classList.remove('valid')
-//     parent.classList.add('invalid')
-//     text.innerHTML = "Please Enter Valid Email Address"
-//     text.style.color = '#ff0000'
-//   }
-
-//   if (input == '') {
-//     parent.classList.remove('valid')
-//     parent.classList.remove('invalid')
-//     text.innerHTML = ""
-//     text.style.color = '#00ff00'
-//   }
-// }
-
-// const emailInput = document.querySelectorAll('input[tyoe="email"]');
-
-// freeze
-// try {
-//   const freeze = (status) => {
-//     status
-//       ? (document.body.style.overflowY = "hidden")
-//       : (document.body.style.overflowY = "auto");
-//   };
-
-//   // show modal
-//   const showModal = (openModal, modal, closeModal) => {
-//     const openM = document.querySelectorAll(`${openModal}`),
-//       closeM = document.querySelector(`${closeModal}`),
-//       m = document.querySelector(`${modal}`);
-//     openM.forEach(btn, () => {
-//       btn.addEventListener("click", (e) => {
-//         e.preventDefault();
-//         console.log(e);
-//         m.classList.add("show");
-//         freeze(true);
-//       });
-//     });
-//     // close
-//     closeM.addEventListener("click", () => {
-//       m.classList.remove("show");
-//       freeze(false);
-//     });
-//   };
-//   showModal(".sendDate", ".successfull__modal", ".close__success-modal");
-// } catch (error) {}
 try {
   const freeze = (status) => {
     status
@@ -756,9 +552,8 @@ try {
       closeM = document.querySelector(`${closeModal}`),
       m = document.querySelector(`${modal}`);
     openM.forEach((btn) => {
-      // forEach metodining qandaydir yolg'onlik qo'llab-quvvatlangan
       btn.addEventListener("click", (e) => {
-        e.preventDefault(); // sahifani refresh qilmaslik uchun
+        e.preventDefault();
         console.log(e);
         m.classList.add("show");
         freeze(true);
@@ -862,16 +657,6 @@ try {
   });
 } catch (error) {}
 
-// accordion
-// const accordion = document.querySelectorAll(".accordion");
-
-// accordion.forEach((item) => {
-//   const accordionBtn = item.querySelector(".accordion__arrow");
-//   accordionBtn.addEventListener("click", () => {
-//     item.classList.toggle("is__open");
-//   });
-// });
-
 try {
   const accordions = document.querySelectorAll(".accordion");
 
@@ -967,5 +752,61 @@ try {
   });
   closeDropdown.addEventListener("click", () => {
     mapDropdown.classList.remove("show");
+  });
+} catch (error) {}
+
+// delivery type
+try {
+  function activateElements(elementSelector, callback) {
+    const elements = document.querySelectorAll(elementSelector);
+    elements.forEach((item) => {
+      item.addEventListener("click", () => {
+        elements.forEach((el) => el.classList.remove("active"));
+        item.classList.add("active");
+        if (callback) {
+          callback(item);
+        }
+      });
+    });
+  }
+  const deliveryCost = document.querySelector(".delivery__cost");
+
+  activateElements(".delivery__type", (item) => {
+    const deliveryPrice = item.querySelector(".delivery__price").textContent;
+    deliveryCost.textContent = deliveryPrice;
+    if (deliveryPrice.textContent === "Бесплатно") {
+      deliveryCost.textContent = "0 руб.";
+    }
+  });
+
+  activateElements(".payment__method-type");
+} catch (error) {
+  console.log(error);
+}
+
+// enter__destination
+try {
+  const enterDestinationInput = document.querySelector(
+    ".enter__destination-input"
+  );
+  const destinationsList = document.querySelector(".destinations__list");
+  const destinationsItem = destinationsList.querySelectorAll(
+    ".destinations__item"
+  );
+  const resetSearch = document.querySelector(".reset__search");
+  enterDestinationInput.addEventListener("click", () => {
+    enterDestinationInput.value = "Населённый пункт";
+    destinationsList.classList.toggle("show");
+
+    destinationsItem.forEach((item) => {
+      item.addEventListener("click", () => {
+        enterDestinationInput.value = item.textContent;
+        destinationsList.classList.remove("show");
+      });
+    });
+  });
+  resetSearch.addEventListener("click", () => {
+    destinationsList.classList.remove("show");
+    enterDestinationInput.value = "";
   });
 } catch (error) {}
