@@ -338,64 +338,69 @@ try {
 
 try {
   // tabs
-  // const tabItems = document.querySelectorAll(".tab__item");
-  // const tabContent = document.querySelectorAll(".tab__content");
-  // function hideTabs() {
-  //   tabItems.forEach((item) => item.classList.remove("active"));
-  //   tabContent.forEach((content) => content.classList.remove("show"));
-  //   tabContent.forEach((content) => content.classList.add("hide"));
-  // }
-  // function showTabs(idx = 0) {
-  //   tabItems[idx].classList.add("active");
-  //   tabContent[idx].classList.remove("hide");
-  //   tabContent[idx].classList.add("show");
-  // }
-  // hideTabs();
-  // showTabs();
-  // tabItems.forEach((btn, idx) => {
-  //   btn.addEventListener("click", (e) => {
-  //     hideTabs();
-  //     showTabs(idx);
-  //   });
-  // });
-  document.querySelectorAll(".tab__container").forEach((container) => {
-    const tabItems = container.querySelectorAll(".tab__item");
-    const tabContent = container.querySelectorAll(".tab__content");
-
-    function hideTabs() {
-      tabItems.forEach((item) => item.classList.remove("active"));
-      tabContent.forEach((content) => content.classList.remove("show"));
-      tabContent.forEach((content) => content.classList.add("hide"));
-    }
-
-    function showTabs(idx = 0) {
-      tabItems[idx].classList.add("active");
-      tabContent[idx].classList.remove("hide");
-      tabContent[idx].classList.add("show");
-    }
-
-    hideTabs();
-    showTabs();
-
-    tabItems.forEach((btn, idx) => {
-      btn.addEventListener("click", () => {
-        hideTabs();
-        showTabs(idx);
-      });
+  const tabItems = document.querySelectorAll(".tab__item");
+  const tabContent = document.querySelectorAll(".tab__content");
+  function hideTabs() {
+    tabItems.forEach((item) => item.classList.remove("active"));
+    tabContent.forEach((content) => content.classList.remove("show"));
+    tabContent.forEach((content) => content.classList.add("hide"));
+  }
+  function showTabs(idx = 0) {
+    tabItems[idx].classList.add("active");
+    tabContent[idx].classList.remove("hide");
+    tabContent[idx].classList.add("show");
+  }
+  hideTabs();
+  showTabs();
+  tabItems.forEach((btn, idx) => {
+    btn.addEventListener("click", (e) => {
+      hideTabs();
+      showTabs(idx);
     });
   });
+  // document.querySelectorAll(".tab__container").forEach((container) => {
+  //   const tabItems = container.querySelectorAll(".tab__item");
+  //   const tabContent = container.querySelectorAll(".tab__content");
+
+  //   function hideTabs() {
+  //     tabItems.forEach((item) => item.classList.remove("active"));
+  //     tabContent.forEach((content) => content.classList.remove("show"));
+  //     tabContent.forEach((content) => content.classList.add("hide"));
+  //   }
+
+  //   function showTabs(idx = 0) {
+  //     tabItems[idx].classList.add("active");
+  //     tabContent[idx].classList.remove("hide");
+  //     tabContent[idx].classList.add("show");
+  //   }
+
+  //   hideTabs();
+  //   showTabs();
+
+  //   tabItems.forEach((btn, idx) => {
+  //     btn.addEventListener("click", () => {
+  //       hideTabs();
+  //       showTabs(idx);
+  //     });
+  //   });
+  // });
 } catch (error) {}
 
 // menu
 const mediaMenu = document.querySelector(".meida__menu");
 const closeBtn = document.querySelector(".close__btn");
 const openMenu = document.querySelector(".open__menu");
+const closeBtnTwo = document.querySelector(".close__media-tab-btn");
+const mediaTab = document.querySelector(".media__tab");
 
 openMenu.addEventListener("click", () => {
   mediaMenu.classList.add("active");
 });
 closeBtn.addEventListener("click", () => {
   mediaMenu.classList.remove("active");
+});
+closeBtnTwo.addEventListener("click", () => {
+  mediaTab.classList.remove("show");
 });
 
 const showMoreBtn = document.querySelector(".show__more-btn");
@@ -883,6 +888,24 @@ try {
     } else {
       moreDetailsText.textContent = "Подробнее";
     }
+  });
+} catch (error) {
+  console.log(error);
+}
+
+// filter modal
+try {
+  const filterModal = document.querySelector(".filter__modal");
+  const openFilterModal = document.querySelector(".open__filter-btn");
+  const closeFilterModal = document.querySelector(".close__modal-btn");
+
+  closeFilterModal.addEventListener("click", () => {
+    filterModal.classList.remove("show");
+    document.body.style.overflow = "";
+  });
+  openFilterModal.addEventListener("click", () => {
+    filterModal.classList.add("show");
+    document.body.style.overflow = "hidden";
   });
 } catch (error) {
   console.log(error);

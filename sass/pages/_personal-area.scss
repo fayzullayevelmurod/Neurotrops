@@ -3,8 +3,13 @@
     display: flex;
     gap: 20px;
   }
-  .tab__content {
+  .tab__content-box {
     width: 100%;
+    display: none;
+
+    &.show {
+      display: block;
+    }
   }
   .tab {
     flex-direction: column;
@@ -315,60 +320,6 @@
       }
     }
   }
-  .select__boxes {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    .select__box {
-      position: relative;
-    }
-    .select {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      user-select: none;
-    }
-    .selected__text {
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 25.6px;
-    }
-    .option__list {
-      position: absolute;
-      top: 80%;
-      left: 0;
-      margin-top: 10px;
-      background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
-      padding: 10px 20px;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      visibility: hidden;
-      opacity: 0;
-      z-index: 1;
-      transition: all 0.3s ease-out;
-      &.show {
-        top: 100%;
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-    .option__item {
-      white-space: nowrap;
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 25.6px;
-      transition: all 0.2s ease-out;
-      cursor: pointer;
-
-      &:hover,
-      &.active {
-        color: #cfee13;
-      }
-    }
-  }
   .img__boxes {
     margin-bottom: 16px;
   }
@@ -380,6 +331,12 @@
     button {
       white-space: nowrap;
       // font-size: 16px;
+    }
+  }
+
+  .orders__tab {
+    .flex__box {
+      gap: 20px;
     }
   }
   .orders__tab,
@@ -520,4 +477,65 @@
     rgba(66, 66, 66, 0.95) 31.25%,
     rgba(0, 0, 0, 0.95) 93.13%
   );
+}
+.select__boxes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .select__box {
+    position: relative;
+  }
+  .select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .selected__text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25.6px;
+  }
+  .option__list {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    margin-top: 10px;
+    background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+    &.show {
+      top: 100%;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .option__item {
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25.6px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      color: #cfee13;
+    }
+  }
+}
+
+.filter__box-media {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  display: none;
 }
