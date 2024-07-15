@@ -3160,7 +3160,16 @@ body.no-scroll {
   padding: 20px 0 40px 0;
 }
 .empty__basket-page .empty__basket-box .btns {
-  margin-bottom: 80px;
+  margin-top: 0;
+}
+.empty__basket-page .mushroom__img,
+.empty__basket-page .bottom__grass {
+  display: none;
+}
+.empty__basket-page .events {
+  background: none;
+  padding: 0 !important;
+  margin: 0;
 }
 
 .basket__page .basket {
@@ -4147,6 +4156,10 @@ body.no-scroll {
   top: unset;
   bottom: 50px;
   right: 250px;
+}
+.not__found .events .desc {
+  font-size: 32px;
+  line-height: 51.2px;
 }
 .not__found .events .title__xs {
   font-size: 40px;
@@ -5170,7 +5183,40 @@ body.no-scroll {
     width: 213px;
     height: 200px;
     left: 20px;
-    top: -60px;
+    top: -10px;
+  }
+  .basket__page .delivery .title::before {
+    width: 340px;
+  }
+  .empty__basket-page .empty__basket-box .desc {
+    padding: 20px 0;
+  }
+  .empty__basket-page .mushroom__img,
+  .empty__basket-page .bottom__grass {
+    display: block;
+  }
+  .empty__basket-page .events {
+    background: url(../images/img-slider-bg2.png) no-repeat;
+    margin-top: 0;
+    padding-top: 20px;
+    background-size: 100% 79%;
+    position: relative;
+    background-position: 0 137%;
+    padding-bottom: 186px !important;
+  }
+  .empty__basket-page .events::before {
+    top: 108px;
+  }
+  .empty__basket-page .events .bottom__grass {
+    bottom: -188px;
+    width: 100%;
+    height: 131px;
+  }
+  .empty__basket-page .events .mushroom__img {
+    top: 77%;
+  }
+  .empty__basket-page .empty__basket {
+    padding-bottom: 60px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -5414,6 +5460,15 @@ body.no-scroll {
   .not__found .events {
     margin-top: 0;
   }
+  .empty__basket-page .mushroom__img,
+  .empty__basket-page .bottom__grass {
+    display: none;
+  }
+  .empty__basket-page .events {
+    background: none;
+    padding: 0 !important;
+    margin: 0;
+  }
 }
 @media screen and (max-width: 480px) {
   .not__found .events {
@@ -5421,7 +5476,7 @@ body.no-scroll {
     margin-bottom: 10px;
   }
   .not__found .events::before {
-    top: 148px;
+    top: 132px;
   }
 }
 @media screen and (max-width: 365px) {

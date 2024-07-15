@@ -11,7 +11,16 @@
       padding: 20px 0 40px 0;
     }
     .btns {
-      margin-bottom: 80px;
+      margin-top: 0;
     }
+  }
+  .mushroom__img,
+  .bottom__grass {
+    display: none;
+  }
+  .events {
+    background: none;
+    padding: 0 !important;
+    margin: 0;
   }
 }
