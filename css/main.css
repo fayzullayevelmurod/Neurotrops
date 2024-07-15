@@ -5218,6 +5218,27 @@ body.no-scroll {
   .empty__basket-page .empty__basket {
     padding-bottom: 60px;
   }
+  .basket__page .products .product__card {
+    flex-direction: column;
+  }
+  .basket__page .products .counter {
+    padding-top: 10px;
+  }
+  .basket__page .price__list .price__list-box {
+    min-width: 320px;
+  }
+  .basket__page .flex__box {
+    flex-wrap: wrap;
+  }
+  .basket__page .products .product__price {
+    flex-wrap: wrap;
+  }
+  .basket__page .basket__boxes {
+    gap: 20px;
+  }
+  .basket__page .product__img .product__discount {
+    top: 20px;
+  }
 }
 @media screen and (max-width: 800px) {
   .products .media__bg {
@@ -5266,9 +5287,30 @@ body.no-scroll {
     line-height: 25.6px;
   }
 }
+@media screen and (max-width: 768px) {
+  .basket__page .basket__boxes {
+    flex-direction: column;
+  }
+  .basket__page .basket__boxes .title__sm {
+    margin-bottom: 20px;
+  }
+  .basket__page .price__list .price__list-box {
+    background: none;
+    padding: 0;
+  }
+  .basket__page .price__list {
+    flex: none;
+  }
+}
 @media screen and (max-width: 700px) {
   .meida__menu .menu__bottom {
     padding-top: 40px;
+  }
+  .title sub {
+    font-size: 16px;
+  }
+  .basket__page .basket__boxes {
+    margin-top: 20px;
   }
   .home__page .intro {
     padding-top: 124px;
@@ -5468,6 +5510,35 @@ body.no-scroll {
     background: none;
     padding: 0 !important;
     margin: 0;
+  }
+  .basket__page .top__box .btns {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .basket__page .products .product__price {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+  .basket__page .products .product__price .price.old__price {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .basket__page .products .product__price .price {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+  .basket__page .price__list .price__list-box .price,
+  .basket__page .price__list .price__list-box .total {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+  .basket__page .price__list .price__list-box {
+    row-gap: 20px;
+  }
+  .basket__page .basket {
+    padding-bottom: 40px;
   }
 }
 @media screen and (max-width: 480px) {
