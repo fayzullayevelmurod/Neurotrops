@@ -3728,9 +3728,15 @@ body.no-scroll {
   width: fit-content;
 }
 .persona__area .stock__box {
+  position: relative;
   background: url(../../images/stock-bg.png) no-repeat;
   background-size: cover;
   border: none;
+}
+.persona__area .stock__box .close__btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 .persona__area .private__cards {
   display: grid;
@@ -4138,6 +4144,9 @@ body.no-scroll {
 }
 .persona__area .check__box-list input:checked + label::after {
   opacity: 1;
+}
+.persona__area .media__block-img-box {
+  display: none !important;
 }
 
 .modal.product__cart .modal__content.remove__bg-img {
@@ -5244,6 +5253,91 @@ body.no-scroll {
     line-height: 32px;
     margin-bottom: 0 !important;
   }
+  .persona__area .active__orders .flex__box {
+    flex-wrap: nowrap;
+    align-items: start;
+    flex-direction: row;
+  }
+  .persona__area .active__orders .card {
+    border: none;
+    padding: 0;
+  }
+  .persona__area .active__orders .card {
+    flex-direction: column;
+  }
+  .persona__area .active__orders .card .flex__box {
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%) 1;
+    margin-bottom: 8px;
+  }
+  .persona__area .active__orders .card .flex__box .desc__sm:last-child {
+    font-size: 12px;
+    line-height: 19.2px;
+  }
+  .persona__area .active__orders .card .flex__box .desc__sm:first-child {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+  .persona__area .stock__box {
+    background-position: center;
+  }
+  .persona__area .active__orders .img__box:hover .product__info {
+    top: -100%;
+    left: 0;
+    right: unset;
+  }
+  .persona__area .active__orders .img__box .product__info {
+    right: unset;
+  }
+  .persona__area .status__box {
+    z-index: 1;
+    bottom: 100px;
+  }
+  .persona__area .private__cards {
+    display: none;
+  }
+  .title__xs.media__hide {
+    display: none;
+  }
+  .title__xs {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .orders__tab .btns {
+    flex-direction: row;
+  }
+  .orders__tab .img__boxes {
+    display: none !important;
+  }
+  .orders__tab .media__block-img-box {
+    display: flex !important;
+  }
+  .persona__area .tab {
+    display: none;
+  }
+  .media__tab {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(149.04deg, #424242 93.13%, #000000 31.25%);
+    padding: 20px;
+  }
+  .media__tab .close__media-tab-btn {
+    font-family: "TT Autonomous", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25.6px;
+  }
+  .media__tab .tab {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 @media screen and (max-width: 992px) {
   .basket__page .basket__boxes {
@@ -5276,6 +5370,28 @@ body.no-scroll {
   }
   .order__page .form__boxes {
     margin-top: 10px;
+  }
+  .order__completed-page .title__xs {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .order__completed-page .desc {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .order__completed-page .payment__order .summary .price__box .desc:not(.price) {
+    font-size: 18px;
+  }
+  .order__completed-page .info .payment__type.hint {
+    border: none;
+    background: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%);
+  }
+  .order__completed-page .payment__type span {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+  .persona__area .tabs {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 800px) {
@@ -5585,6 +5701,38 @@ body.no-scroll {
     flex-direction: column;
     align-items: start;
     margin-top: 20px;
+  }
+  .orders__tab .btns {
+    flex-direction: column;
+    align-items: start;
+  }
+  .orders__tab .btns button {
+    width: 100% !important;
+  }
+  .persona__area .date__box .date {
+    font-size: 18px;
+    line-height: 28.8px;
+  }
+  .yellow__btn {
+    box-shadow: 0px 0px 16px 0px rgba(207, 238, 19, 0.7490196078);
+  }
+  .persona__area .select__boxes {
+    display: none;
+  }
+  .danger {
+    color: #ea13ee;
+  }
+  .info__tex {
+    color: #cee73c;
+  }
+  .persona__area .buyer__tab .info__boxes {
+    flex-direction: column;
+  }
+  .persona__area .buyer__tab .payment__method .btns {
+    flex-direction: column;
+  }
+  .persona__area .buyer__tab .payment__method .btns button {
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 480px) {

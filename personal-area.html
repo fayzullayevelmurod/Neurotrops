@@ -257,7 +257,7 @@
               <li class="tab__item">Персональные данные</li>
               <li class="tab__item">Заказы(4)</li>
               <li class="tab__item">Избранное(12)</li>
-              <li class="tab__item">Сравнение(4)</li>
+              <li class="tab__itemm">Сравнение(4)</li>
               <li class="tab__itemm">Адресная книга</li>
               <li class="tab__itemm">Подписки</li>
               <li class="tab__itemm">Формы оплаты</li>
@@ -285,6 +285,11 @@
                     <h3 class="desc__sm tt__font green">Распродажа сбора Ежовика гребенчатого!</h3>
                   </div>
                   <a class="outline__btn" href="order-completed.html">Сменить пароль</a>
+                  <button class="close__btn">
+                    <svg width="16" height="16" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 21L1 1M1 21L21 1" stroke="white" stroke-width="2" />
+                    </svg>
+                  </button>
                 </div>
                 <div class="private__cards">
                   <div class="private__card">
@@ -530,7 +535,7 @@
                   </div>
                   <button class="outline__btn" disabled>Сохранить изменения</button>
                 </form>
-                <h2 class="title__xs">Связать профиль с соцсетью или сервисом</h2>
+                <h2 class="title__xs media__hide">Связать профиль с соцсетью или сервисом</h2>
                 <div class="private__cards">
                   <div class="private__card">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -677,80 +682,23 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="btns">
-                        <button class="yellow__btn">Повторить заказ</button>
-                        <button class="outline__btn">Отменить заказ</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="active__orders">
-                    <div class="card">
-                      <div class="left__box">
-                        <div>
-                          <div class="img__boxes">
-                            <div class="img__box">
-                              <img src="images/img-item-test.png" alt="" width="60" height="60">
-                              <div class="product__info">
-                                <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                              </div>
-                            </div>
-                            <div class="img__box">
-                              <img src="images/img-item-test.png" alt="" width="60" height="60">
-                              <div class="product__info">
-                                <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                              </div>
-                            </div>
-                            <div class="img__box">
-                              <img src="images/img-item-test.png" alt="" width="60" height="60">
-                              <div class="product__info">
-                                <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                              </div>
+                        <div class="img__boxes media__block-img-box">
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
                             </div>
                           </div>
-                          <div class="flex__box">
-                            <p class="desc__sm">№44</p>
-                            <p class="desc__sm">Ожидает оплаты</p>
-                          </div>
-                          <h3 class="desc__sm">Заказ от 16 мая 2024 года</h3>
-                        </div>
-                        <div class="stages">
-                          <div class="stage active"></div>
-                          <div class="stage"></div>
-                          <div class="stage"></div>
-                        </div>
-                        <p class="status__text">Принят, ожидается оплата</p>
-                        <div class="status__box">
-                          <div class="status__box-item active">
-                            <div class="progress">
-                              <div class="circle"></div>
-                              <div class="line"></div>
-                            </div>
-                            <div class="info">
-                              <div class="info__title">Принят, ожидается оплата</div>
-                              <p class="info__desc">Заказ принят, но пока не обрабатывается (например, заказ только что
-                                создан или ожидается
-                                оплата заказа)</p>
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
                             </div>
                           </div>
-                          <div class="status__box-item">
-                            <div class="progress">
-                              <div class="circle"></div>
-                              <div class="line"></div>
-                            </div>
-                            <div class="info">
-                              <div class="info__title">Оплачен, формируется к отправке</div>
-                              <p class="info__desc">Заказ оплачен, формируется к отправке клиенту.</p>
-                            </div>
-                          </div>
-                          <div class="status__box-item">
-                            <div class="progress">
-                              <div class="circle"></div>
-                              <div class="line"></div>
-                            </div>
-                            <div class="info">
-                              <div class="info__title">Выполнено</div>
-                              <p class="info__desc">Заказ доставлен и оплачен.</p>
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
                             </div>
                           </div>
                         </div>
@@ -831,6 +779,26 @@
                             </div>
                           </div>
                         </div>
+                        <div class="img__boxes media__block-img-box">
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                            </div>
+                          </div>
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                            </div>
+                          </div>
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div class="btns">
                         <button class="yellow__btn">Повторить заказ</button>
@@ -903,8 +871,28 @@
                               <div class="line"></div>
                             </div>
                             <div class="info">
-                              <div class="info__title">Выполнено</div>
+                              <div class="info__title info__text">Выполнено</div>
                               <p class="info__desc">Заказ доставлен и оплачен.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="img__boxes media__block-img-box">
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                            </div>
+                          </div>
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                            </div>
+                          </div>
+                          <div class="img__box">
+                            <img src="images/img-item-test.png" alt="" width="60" height="60">
+                            <div class="product__info">
+                              <p>Ежовик гребенчатый, молотый, 100 гр.</p>
                             </div>
                           </div>
                         </div>
@@ -1344,6 +1332,25 @@
     </div>
   </div>
 
+  <!-- media tab -->
+  <div class="media__tab">
+    <button class="close__media-tab-btn">Назад</button>
+    <h2 class="title__sm">Местоположение</h2>
+    <div class="tab__container">
+      <ul class="tab">
+        <li class="tab__item">Мой кабинет</li>
+        <li class="tab__item">Персональные данные</li>
+        <li class="tab__item">Заказы(4)</li>
+        <li class="tab__item">Избранное(12)</li>
+        <li class="tab__itemm">Сравнение(4)</li>
+        <li class="tab__itemm">Адресная книга</li>
+        <li class="tab__itemm">Подписки</li>
+        <li class="tab__itemm">Формы оплаты</li>
+        <li class="tab__itemm">Помощь</li>
+        <li class="tab__itemm">Выйти</li>
+      </ul>
+    </div>
+  </div>
   <!-- swiper js -->
   <script src="libs/swiper/swiper.min.js"></script>
   <script src="https://unpkg.com/imask"></script>

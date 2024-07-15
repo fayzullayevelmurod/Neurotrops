@@ -67,9 +67,16 @@
     }
   }
   .stock__box {
+    position: relative;
     background: url(../../images/stock-bg.png) no-repeat;
     background-size: cover;
     border: none;
+
+    .close__btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
   }
   .private__cards {
     display: grid;
@@ -502,6 +509,9 @@
         }
       }
     }
+  }
+  .media__block-img-box {
+    display: none !important;
   }
 }
 .modal.product__cart .modal__content.remove__bg-img {
