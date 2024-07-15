@@ -921,6 +921,56 @@
   .modal.favourite__modal h5 {
     font-size: 18px;
   }
+  .not__found {
+    .events {
+      padding-bottom: 89px !important;
+      margin-top: 0;
+      padding-top: 20px;
+      background-size: 100% 79%;
+      position: relative;
+      background-position: 0 137%;
+
+      &::before {
+        top: 135px;
+      }
+      .bottom__grass {
+        width: 1189px;
+      }
+      .mushroom__img {
+        right: 0;
+      }
+      .title {
+        font-size: 24px;
+        line-height: 38.4px;
+      }
+      .title__xs {
+        font-size: 20px;
+        line-height: 32px;
+      }
+      .big__title {
+        font-size: 64px;
+        line-height: 89px;
+        padding: 10px 0;
+      }
+      .desc {
+        font-size: 20px;
+        line-height: 32px;
+        // max-width: 100%;
+      }
+    }
+    .btns {
+      margin-top: 20px;
+    }
+    .company__logo {
+      top: -10px !important;
+    }
+  }
+  .basket__page .company__logo {
+    width: 213px;
+    height: 200px;
+    left: 20px;
+    top: -60px;
+  }
 }
 @media screen and (max-width: 800px) {
   .products .media__bg {
@@ -1173,7 +1223,24 @@
     bottom: 50%;
     left: 29%;
   }
+  .not__found .events .desc {
+    max-width: 100%;
+  }
+  .not__found .events {
+    margin-top: 0;
+  }
 }
+
+@media screen and (max-width: 480px) {
+  .not__found .events {
+    padding-bottom: 41px !important;
+    margin-bottom: 10px;
+    &::before {
+      top: 148px;
+    }
+  }
+}
+
 @media screen and (max-width: 365px) {
   .intro__bg .right__photo.media__block {
     display: block;

@@ -4139,7 +4139,7 @@ body.no-scroll {
   background: #000;
 }
 .not__found .events {
-  padding-top: 0;
+  padding: 0 0 92px 0;
 }
 .not__found .events .mushroom__img {
   max-width: 716px;
@@ -4148,7 +4148,7 @@ body.no-scroll {
   bottom: 50px;
   right: 250px;
 }
-.not__found .events .title {
+.not__found .events .title__xs {
   font-size: 40px;
   line-height: 56px;
 }
@@ -4159,6 +4159,9 @@ body.no-scroll {
   font-weight: 700;
   line-height: 179.2px;
   color: #cfee13;
+}
+.not__found .events .bottom__grass {
+  bottom: -5px;
 }
 
 .swiper-pagination {
@@ -5123,6 +5126,52 @@ body.no-scroll {
   .modal.favourite__modal h5 {
     font-size: 18px;
   }
+  .not__found .events {
+    padding-bottom: 89px !important;
+    margin-top: 0;
+    padding-top: 20px;
+    background-size: 100% 79%;
+    position: relative;
+    background-position: 0 137%;
+  }
+  .not__found .events::before {
+    top: 135px;
+  }
+  .not__found .events .bottom__grass {
+    width: 1189px;
+  }
+  .not__found .events .mushroom__img {
+    right: 0;
+  }
+  .not__found .events .title {
+    font-size: 24px;
+    line-height: 38.4px;
+  }
+  .not__found .events .title__xs {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .not__found .events .big__title {
+    font-size: 64px;
+    line-height: 89px;
+    padding: 10px 0;
+  }
+  .not__found .events .desc {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .not__found .btns {
+    margin-top: 20px;
+  }
+  .not__found .company__logo {
+    top: -10px !important;
+  }
+  .basket__page .company__logo {
+    width: 213px;
+    height: 200px;
+    left: 20px;
+    top: -60px;
+  }
 }
 @media screen and (max-width: 800px) {
   .products .media__bg {
@@ -5358,6 +5407,21 @@ body.no-scroll {
     font-size: 60px;
     bottom: 50%;
     left: 29%;
+  }
+  .not__found .events .desc {
+    max-width: 100%;
+  }
+  .not__found .events {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .not__found .events {
+    padding-bottom: 41px !important;
+    margin-bottom: 10px;
+  }
+  .not__found .events::before {
+    top: 148px;
   }
 }
 @media screen and (max-width: 365px) {

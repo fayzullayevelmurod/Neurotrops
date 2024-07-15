@@ -1,7 +1,7 @@
 .not__found {
   background: #000;
   .events {
-    padding-top: 0;
+    padding: 0 0 92px 0;
 
     .mushroom__img {
       max-width: 716px;
@@ -10,7 +10,7 @@
       bottom: 50px;
       right: 250px;
     }
-    .title {
+    .title__xs {
       font-size: 40px;
       line-height: 56px;
     }
@@ -21,6 +21,9 @@
       font-weight: 700;
       line-height: 179.2px;
       color: #cfee13;
+    }
+    .bottom__grass {
+      bottom: -5px;
     }
   }
 }
