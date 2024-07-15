@@ -370,7 +370,7 @@
     -webkit-text-fill-color: #cfee13;
   }
   .tab__item,
-  .tab__link {
+  .tab__itemm .tab__link {
     font-size: 18px;
     line-height: 28.8px;
     white-space: nowrap;
@@ -1153,6 +1153,7 @@
     align-items: start;
   }
   .tab__item,
+  tab__itemm,
   .tab__link,
   .tab__item-three {
     font-size: 18px;

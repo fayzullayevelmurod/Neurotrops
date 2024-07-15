@@ -11,11 +11,17 @@
     max-width: 400px;
     width: 100%;
 
-    &__item {
+    &__item,
+    &__itemm {
       font-family: "TT Autonomous", sans-serif;
       font-size: 24px;
       font-weight: 700;
       line-height: 38.4px;
+      cursor: pointer;
+
+      &:hover {
+        color: #cfee13;
+      }
     }
   }
   .cards {
@@ -32,7 +38,6 @@
     border-radius: 10px;
     position: relative;
     border: 1px solid transparent;
-    background: #f2f2f2;
     background-clip: padding-box;
     border: 1px solid #424242;
     // &::before {
@@ -424,5 +429,85 @@
     .btns {
       flex-direction: row;
     }
+    .more__details {
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        color: #cfee13;
+      }
+    }
+    .more__details-box {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+
+      &.show {
+        display: flex;
+      }
+    }
   }
+  .check__box-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .check__box {
+      display: flex;
+      align-items: center;
+    }
+    label {
+      position: relative;
+      padding-left: 40px;
+      user-select: none;
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #dee2e7;
+        border-radius: 2px;
+        background: transparent;
+        transition: all 0.2s ease-out;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 51%;
+        transform: translateY(-50%);
+        left: 6px;
+        width: 9px;
+        height: 6px;
+        background: url(../../images/icons/check.svg) no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: all 0.2s ease-out;
+      }
+    }
+    input {
+      display: none;
+
+      &:checked + label {
+        color: #cfee13;
+        &::before {
+          border-color: #cfee13;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.modal.product__cart .modal__content.remove__bg-img {
+  background: linear-gradient(
+    149.04deg,
+    rgba(66, 66, 66, 0.95) 31.25%,
+    rgba(0, 0, 0, 0.95) 93.13%
+  );
 }

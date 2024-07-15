@@ -1,0 +1,26 @@
+.not__found {
+  background: #000;
+  .events {
+    padding-top: 0;
+
+    .mushroom__img {
+      max-width: 716px;
+      max-height: 429px;
+      top: unset;
+      bottom: 50px;
+      right: 250px;
+    }
+    .title {
+      font-size: 40px;
+      line-height: 56px;
+    }
+    .big__title {
+      padding-bottom: 20px;
+      font-family: "TT Autonomous", sans-serif;
+      font-size: 128px;
+      font-weight: 700;
+      line-height: 179.2px;
+      color: #cfee13;
+    }
+  }
+}

@@ -161,3 +161,20 @@
     }
   }
 }
+
+.comments__textarea {
+  border: 1px solid #424242;
+  // border-image: linear-gradient(149.04deg, #424242 31.25%, #000000 93.13%) 1;
+  border-radius: 10px;
+  background: transparent;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25.6px;
+  color: #fff;
+  resize: none;
+  height: 116px;
+  &::placeholder {
+    color: #fff;
+  }
+}

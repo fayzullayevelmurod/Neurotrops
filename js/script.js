@@ -338,24 +338,50 @@ try {
 
 try {
   // tabs
-  const tabItems = document.querySelectorAll(".tab__item");
-  const tabContent = document.querySelectorAll(".tab__content");
-  function hideTabs() {
-    tabItems.forEach((item) => item.classList.remove("active"));
-    tabContent.forEach((content) => content.classList.remove("show"));
-    tabContent.forEach((content) => content.classList.add("hide"));
-  }
-  function showTabs(idx = 0) {
-    tabItems[idx].classList.add("active");
-    tabContent[idx].classList.remove("hide");
-    tabContent[idx].classList.add("show");
-  }
-  hideTabs();
-  showTabs();
-  tabItems.forEach((btn, idx) => {
-    btn.addEventListener("click", (e) => {
-      hideTabs();
-      showTabs(idx);
+  // const tabItems = document.querySelectorAll(".tab__item");
+  // const tabContent = document.querySelectorAll(".tab__content");
+  // function hideTabs() {
+  //   tabItems.forEach((item) => item.classList.remove("active"));
+  //   tabContent.forEach((content) => content.classList.remove("show"));
+  //   tabContent.forEach((content) => content.classList.add("hide"));
+  // }
+  // function showTabs(idx = 0) {
+  //   tabItems[idx].classList.add("active");
+  //   tabContent[idx].classList.remove("hide");
+  //   tabContent[idx].classList.add("show");
+  // }
+  // hideTabs();
+  // showTabs();
+  // tabItems.forEach((btn, idx) => {
+  //   btn.addEventListener("click", (e) => {
+  //     hideTabs();
+  //     showTabs(idx);
+  //   });
+  // });
+  document.querySelectorAll(".tab__container").forEach((container) => {
+    const tabItems = container.querySelectorAll(".tab__item");
+    const tabContent = container.querySelectorAll(".tab__content");
+
+    function hideTabs() {
+      tabItems.forEach((item) => item.classList.remove("active"));
+      tabContent.forEach((content) => content.classList.remove("show"));
+      tabContent.forEach((content) => content.classList.add("hide"));
+    }
+
+    function showTabs(idx = 0) {
+      tabItems[idx].classList.add("active");
+      tabContent[idx].classList.remove("hide");
+      tabContent[idx].classList.add("show");
+    }
+
+    hideTabs();
+    showTabs();
+
+    tabItems.forEach((btn, idx) => {
+      btn.addEventListener("click", () => {
+        hideTabs();
+        showTabs(idx);
+      });
     });
   });
 } catch (error) {}
@@ -839,6 +865,24 @@ try {
         optionList.classList.remove("show");
       }
     });
+  });
+} catch (error) {
+  console.log(error);
+}
+
+// more__details
+try {
+  const moreDetailsText = document.querySelector(".more__details");
+  const moreDetails = document.querySelector(".more__details-box");
+
+  moreDetailsText.addEventListener("click", () => {
+    moreDetails.classList.toggle("show");
+
+    if (moreDetailsText.textContent === "Подробнее") {
+      moreDetailsText.textContent = "Скрыть";
+    } else {
+      moreDetailsText.textContent = "Подробнее";
+    }
   });
 } catch (error) {
   console.log(error);

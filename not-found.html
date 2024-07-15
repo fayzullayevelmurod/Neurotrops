@@ -26,7 +26,7 @@
 
 <body>
 
-  <div class="wrapper basket__page bg-black order__page">
+  <div class="wrapper about__page not__found">
 
     <!-- header -->
     <header class="header">
@@ -224,316 +224,41 @@
 
     <!-- main -->
     <main class="main">
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+            <li class="nav__item"><a class="nav__link active" href="about.html">О нас</a></li>
+            <li class="nav__item"><a class="nav__link" href="products.html">Продукция</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Микродозинг</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Покупка</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Доставка</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Партнёрам</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Блог</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">F.A.Q.</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
 
-      <!-- basket -->
-      <section class="basket">
-        <div class="container">
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="#!">Главная</a></li>
-              <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
-              <li class="nav__item"><a class="nav__link" href="products.html">Продукция</a></li>
-              <li class="nav__item"><a class="nav__link" href="#!">Микродозинг</a></li>
-              <li class="nav__item"><a class="nav__link" href="#!">Покупка</a></li>
-              <li class="nav__item"><a class="nav__link" href="#!">Доставка</a></li>
-              <li class="nav__item"><a class="nav__link" href="#!">Партнёрам</a></li>
-              <li class="nav__item"><a class="nav__link" href="#!">Блог</a></li>
-              <li class="nav__item"><a class="nav__link" href="#!">F.A.Q.</a></li>
-              <li class="nav__item"><a class="nav__link" href="#!">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="container">
-          <img class="company__logo" src="images/company-logo.png" alt="company-logo">
+      <section class="events">
+        <div class="container basket__page">
           <div class="delivery">
-            <h1 class="title">Корзина <sub>4 товара</sub></h1>
+            <h1 class="title">Страница не найдена</h1>
           </div>
-          <div class="basket__boxes">
-            <div class="product__list-box">
-              <h2 class="title__sm white__text">Покупатель</h2>
-              <form class="form__boxes">
-                <div class="form__box">
-                  <div class="form__name">Контактное лицо <span class="purple">*</span></div>
-                  <input class="form__box-input" type="text" name="name" placeholder="Подсказка" id="one" required="">
-                  <label for="one" class="input__box">
-                  </label>
-                </div>
-                <div class="form__box">
-                  <div class="form__name">Телефон <span>*</span></div>
-                  <input class="form__box-input" type="tel" name="phone" id="ImaskInput"
-                    placeholder="+7 (800) 000 00 00" required="">
-                  <label for="two" class="input__box">
-                  </label>
-                </div>
-                <div class="form__box">
-                  <div class="form__name">Почтовый ящик <span class="purple">*</span></div>
-                  <input class="form__box-input" type="text" name="name" placeholder="Подсказка" id="two" required="">
-                  <label for="two" class="input__box">
-                  </label>
-                </div>
-                <div class="delivery__method">
-                  <h2 class="title__sm white__text">Способ доставки</h2>
-                  <div class="list">
-                    <div class="delivery__type">
-                      <div class="delivery__companies">пек <span>:</span></div>
-                      <div class="text__box">
-                        <div>СДЭК</div>
-                        <div class="delivery__price">1.200 руб.</div>
-                      </div>
-                    </div>
-                    <div class="delivery__type">
-                      <div class="delivery__companies">пек <span>:</span></div>
-                      <div class="text__box">
-                        <div>ПЭК</div>
-                        <div class="delivery__price">500 руб.</div>
-                      </div>
-                    </div>
-                    <div class="delivery__type">
-                      <div class="delivery__companies">пек <span>:</span></div>
-                      <div class="text__box">
-                        <div>Самовывоз</div>
-                        <div class="delivery__price">Бесплатно</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cost__of-delivery">
-                  <span>Стоимость доставки:</span>
-                  <span class="delivery__cost">0 руб.</span>
-                </div>
-                <div class="delivery__address">
-                  <h2 class="title__sm white__text">Адрес доставки</h2>
-
-                  <div class="destination__box">
-                    <h3 class="destination">Место назначения:</h3>
-                    <div class="geo__box">
-                      <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M15.7396 1.54038C15.8408 1.49479 15.9024 1.49816 15.9269 1.5022C15.9535 1.50659 15.9676 1.51651 15.9755 1.52448C15.9835 1.53244 15.9934 1.54651 15.9978 1.57314C16.0018 1.59763 16.0052 1.65918 15.9596 1.76037L9.47665 16.1514C9.38678 16.3509 9.16593 16.4949 8.8879 16.4999C8.60076 16.505 8.54051 16.3783 8.52974 16.3427C8.02469 14.6724 7.23408 12.724 6.00505 11.4949C4.77602 10.2659 2.82762 9.47531 1.15731 8.97027C1.12166 8.95949 0.994979 8.89924 1.00012 8.6121C1.00509 8.33407 1.14909 8.11322 1.3486 8.02334L15.7396 1.54038Z"
-                          stroke="#fff" stroke-width="2" stroke-linejoin="round" />
-                      </svg>
-                      <h3 class="geo">Москва</h3>
-                    </div>
-                  </div>
-                  <div class="enter__destination">
-                    <div class="search__box">
-                      <img class="search__img" src="images/icons/search-rotate.svg" alt="">
-                      <input class="enter__destination-input" type="text" placeholder="Введите пункт назначения"
-                        readonly>
-                      <svg class="clear__img reset__search" width="22" height="22" viewBox="0 0 22 22" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 21L1 1M1 21L21 1" stroke="white" stroke-width="2" />
-                      </svg>
-
-                    </div>
-                    <div class="destinations__list">
-                      <div class="scroll__box">
-                        <div class="destinations__item">
-                          <span><b>Населённый пункт, </b> наименование области, наименование района</span>
-                        </div>
-                        <div class="destinations__item">
-                          <span><b>Населённый пункт,</b> наименование области, наименование района</span>
-                        </div>
-                        <div class="destinations__item">
-                          <span><b>Населённый пункт, </b> наименование области, наименование района</span>
-                        </div>
-                        <div class="destinations__item">
-                          <span><b>Населённый пункт,</b> наименование области, наименование района</span>
-                        </div>
-                        <div class="destinations__item">
-                          <span><b>Населённый пункт, </b> наименование области, наименование района</span>
-                        </div>
-                        <div class="destinations__item">
-                          <span><b>Населённый пункт,</b> наименование области, наименование района</span>
-                        </div>
-                        <div class="destinations__item">
-                          <span><b>Населённый пункт,</b> наименование области, наименование района</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__box">
-                  <div class="form__name">Улица <span class="purple">*</span></div>
-                  <input class="form__box-input" type="text" name="name" placeholder="Подсказка" required="">
-                  <label class="input__box">
-                  </label>
-                </div>
-                <div class="form__box">
-                  <div class="form__name">Дом <span class="purple">*</span></div>
-                  <input class="form__box-input" type="text" name="name" placeholder="Подсказка" required="">
-                  <label class="input__box">
-                  </label>
-                </div>
-                <div class="form__box">
-                  <div class="form__name">Квартира/Офис <span class="purple">*</span></div>
-                  <input class="form__box-input" type="text" name="name" placeholder="Подсказка" required="">
-                  <label class="input__box">
-                  </label>
-                </div>
-                <div class="form__box">
-                  <div class="form__name">Индекс <span class="purple">*</span></div>
-                  <input class="form__box-input" type="number" name="name" placeholder="Подсказка" required="">
-                  <label class="input__box">
-                  </label>
-                </div>
-                <div class="form__box">
-                  <div class="form__name">Регион <span class="purple">*</span></div>
-                  <input class="form__box-input" type="text" name="name" placeholder="Подсказка" required="">
-                  <label class="input__box">
-                  </label>
-                </div>
-                <div class="form__box">
-                  <div class="form__name">Город <span class="purple">*</span></div>
-                  <input class="form__box-input" type="text" name="name" placeholder="Подсказка" required="">
-                  <label class="input__box">
-                  </label>
-                </div>
-                <div class="payment__method">
-                  <h2 class="title__sm white__text">Способ оплаты</h2>
-                  <div class="payment__method-box">
-                    <div class="payment__method-type active">
-                      <span>Предоплата картой</span>
-                      <img src="images/icons/icon-check.svg" alt="check__icon">
-                    </div>
-                    <div class="payment__method-type">
-                      <span>При получении картой</span>
-                      <img src="images/icons/icon-check.svg" alt="check__icon">
-                    </div>
-                    <div class="payment__method-type">
-                      <span>При получении наличными</span>
-                      <img src="images/icons/icon-check.svg" alt="check__icon">
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="price__list">
-              <h2 class="title__sm white__text">Стоимость</h2>
-              <div class="price__list-box">
-                <div class="box">
-                  <div class="total">Детали заказа</div>
-                </div>
-                <div class="box">
-                  <div class="order__box">
-                    <img class="order__img" src="images/img-item-test.png" alt="">
-                    <div class="order__content">
-                      <div class="product__price">3,250 руб./шт.</div>
-                      <div class="product__name">Ежовик + Мухомор красный</div>
-                      <div class="weight__box">
-                        <span>Молотый</span>
-                        <span>/</span>
-                        <span>30 грамм</span>
-                      </div>
-                      <div class="product__count-box">
-                        <span class="x__icon">x</span>
-                        <span class="product__count">1</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="order__box">
-                    <img class="order__img" src="images/img-item-test.png" alt="">
-                    <div class="order__content">
-                      <div class="product__price">3,250 руб./шт.</div>
-                      <div class="product__name">Ежовик + Мухомор красный</div>
-                      <div class="weight__box">
-                        <span>Молотый</span>
-                        <span>/</span>
-                        <span>30 грамм</span>
-                      </div>
-                      <div class="product__count-box">
-                        <span class="x__icon">x</span>
-                        <span class="product__count">1</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="order__box">
-                    <img class="order__img" src="images/img-item-test.png" alt="">
-                    <div class="order__content">
-                      <div class="product__price">3,250 руб./шт.</div>
-                      <div class="product__name">Ежовик + Мухомор красный</div>
-                      <div class="weight__box">
-                        <span>Молотый</span>
-                        <span>/</span>
-                        <span>30 грамм</span>
-                      </div>
-                      <div class="product__count-box">
-                        <span class="x__icon">x</span>
-                        <span class="product__count">1</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="order__box">
-                    <img class="order__img" src="images/img-item-test.png" alt="">
-                    <div class="order__content">
-                      <div class="product__price">3,250 руб./шт.</div>
-                      <div class="product__name">Ежовик + Мухомор красный</div>
-                      <div class="weight__box">
-                        <span>Молотый</span>
-                        <span>/</span>
-                        <span>30 грамм</span>
-                      </div>
-                      <div class="product__count-box">
-                        <span class="x__icon">x</span>
-                        <span class="product__count">1</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order__info">
-                  <div class="order__info-box">
-                    <div>Способ доставки:</div>
-                    <a href="#!">Деловые линии</a>
-                  </div>
-                  <div class="order__info-box">
-                    <div>Адрес доставки:</div>
-                    <a href="#!">г. Москва</a>
-                  </div>
-                  <div class="order__info-box">
-                    <div>Способ оплаты:</div>
-                    <a href="#!">предоплата картой</a>
-                  </div>
-                </div>
-                <div class="order__info">
-                  <div class="order__info-box">
-                    <div class="desc">Подитог:</div>
-                    <div class="desc">17 .000 руб.</div>
-                  </div>
-                  <div class="order__info-box">
-                    <div class="desc">Доставка:</div>
-                    <div class="desc">+ 1.500 руб.</div>
-                  </div>
-                  <div class="order__info-box">
-                    <div class="desc">Скидка:</div>
-                    <div class="desc green__text">- 4.000 руб.</div>
-                  </div>
-                </div>
-                <div class="price__list-box-header">
-                  <div class="total">Итого:</div>
-                  <div class="price">13.000 руб.</div>
-                </div>
-                <div class="box">
-                  <button class="yellow__btn">Оформить заказ</button>
-                </div>
-                <div class="payment__systems">
-                  <a href="#!">
-                    <img src="images/master-card.svg" alt="">
-                  </a>
-                  <a href="#!">
-                    <img src="images/mir.svg" alt="">
-                  </a>
-                  <a href="#!">
-                    <img src="images/visa.svg" alt="">
-                  </a>
-                </div>
-                <div>
-                  <p>Продолжая, вы соглашаетесь с <a class="green__text" href="#!">Политикой конфиденциальности</a> и с
-                    <a class="green__text" href="#!">Публичной офертой</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <img class="company__logo" src="images/company-logo.png" alt="company-logo">
+        </div>
+        <img class="bottom__grass" src="images/img-grass-dark.png" alt="">
+        <img class="mushroom__img" src="images/mushroom.png" alt="">
+        <div class="container">
+          <h1 class="title">код</h1>
+          <p class="big__title">404</p>
+          <p class="desc">
+            Страницы, которую вы пытались открыть, не существует. Возможно, она была удалена администратором сайта.
+          </p>
+          <div class="btns">
+            <a class="yellow__btn" href="products.html">Продукция</a>
+            <a class="outline__btn" href="index.html">Главная</a>
           </div>
         </div>
       </section>

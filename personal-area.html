@@ -251,22 +251,329 @@
           </div>
 
           <!-- tab -->
-          <div class="tabs">
+          <div class="tabs tab__container">
             <ul class="tab">
               <li class="tab__item">Мой кабинет</li>
               <li class="tab__item">Персональные данные</li>
               <li class="tab__item">Заказы(4)</li>
               <li class="tab__item">Избранное(12)</li>
               <li class="tab__item">Сравнение(4)</li>
-              <li class="tab__item">Адресная книга</li>
-              <li class="tab__item">Подписки</li>
-              <li class="tab__item">Формы оплаты</li>
-              <li class="tab__item">Помощь</li>
-              <li class="tab__item">Выйти</li>
+              <li class="tab__itemm">Адресная книга</li>
+              <li class="tab__itemm">Подписки</li>
+              <li class="tab__itemm">Формы оплаты</li>
+              <li class="tab__itemm">Помощь</li>
+              <li class="tab__itemm">Выйти</li>
             </ul>
 
             <div class="tab__content">
-              <div class="orders__tab hide">
+              <div class="cards">
+                <h2 class="title__xs">Общие данные</h2>
+                <div class="card personal__data">
+                  <div>
+                    <p class="desc__sm">Личные данные</p>
+                    <h3 class="desc__sm tt__font green">Сергей Константинович</h3>
+                  </div>
+                  <div class="links">
+                    <a href="#!">clientname@mail.ru</a>
+                    <a href="te:+78000000000">+7 (800) 000 00 00</a>
+                  </div>
+                  <a class="outline__btn" href="order-completed.html">Сменить пароль</a>
+                </div>
+                <div class="card stock__box">
+                  <div>
+                    <p class="desc__sm">Акция</p>
+                    <h3 class="desc__sm tt__font green">Распродажа сбора Ежовика гребенчатого!</h3>
+                  </div>
+                  <a class="outline__btn" href="order-completed.html">Сменить пароль</a>
+                </div>
+                <div class="private__cards">
+                  <div class="private__card">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
+                        stroke="white" stroke-width="2" />
+                      <path class="green__path"
+                        d="M28.5 14.8252C26.76 14.8252 25.09 15.6352 24 16.9152C22.91 15.6352 21.24 14.8252 19.5 14.8252C16.42 14.8252 14 17.2452 14 20.3252C14 24.1052 17.4 27.1852 22.55 31.8652L24 33.1752L25.45 31.8552C30.6 27.1852 34 24.1052 34 20.3252C34 17.2452 31.58 14.8252 28.5 14.8252ZM24.1 30.3752L24 30.4752L23.9 30.3752C19.14 26.0652 16 23.2152 16 20.3252C16 18.3252 17.5 16.8252 19.5 16.8252C21.04 16.8252 22.54 17.8152 23.07 19.1852H24.94C25.46 17.8152 26.96 16.8252 28.5 16.8252C30.5 16.8252 32 18.3252 32 20.3252C32 23.2152 28.86 26.0652 24.1 30.3752Z"
+                        fill="white" />
+                    </svg>
+                    <h3 class="desc__sm tt__font">Избранное</h3>
+                    <p class="product__status-text">Нет товаров</p>
+                  </div>
+                  <div class="private__card">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
+                        stroke="white" stroke-width="2" />
+                      <path class="green__path" d="M14 14.8252H28.7368V17.1189H14V14.8252Z" fill="white" />
+                      <path class="green__path" d="M14 25.1471H23.4737V22.8533H14V25.1471Z" fill="white" />
+                      <path class="green__path" d="M25.5789 25.1471H34V22.8533H25.5789V25.1471Z" fill="white" />
+                      <path class="green__path" d="M28.7368 19.4127V28.5877H30.8421V19.4127H28.7368Z" fill="white" />
+                      <path class="green__path" d="M14 30.8814H28.7368V33.1752H14V30.8814Z" fill="white" />
+                    </svg>
+
+                    <h3 class="desc__sm tt__font">Избранное</h3>
+                    <p class="product__status-text">Нет товаров</p>
+                  </div>
+                  <div class="private__card">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
+                        stroke="white" stroke-width="2" />
+                      <path class="green__path"
+                        d="M33.99 16.6602C33.99 15.6509 33.1 14.8252 32 14.8252H16C14.9 14.8252 14 15.6509 14 16.6602V27.6702C14 28.6794 14.9 29.5052 16 29.5052H30L34 33.1752L33.99 16.6602ZM32 16.6602V28.7437L30.83 27.6702H16V16.6602H32ZM18 23.0827H24V24.9177H18V23.0827ZM18 19.4127H30V21.2477H18V19.4127Z"
+                        fill="white" />
+                    </svg>
+                    <h3 class="desc__sm tt__font">Избранное</h3>
+                    <p class="product__status-text">Нет товаров</p>
+                  </div>
+                </div>
+                <h3 class="title__xs">Активные заказы(2)</h3>
+                <div class="active__orders">
+                  <div class="card">
+                    <div class="left__box">
+                      <div>
+                        <div class="flex__box">
+                          <p class="desc__sm">№44</p>
+                          <p class="desc__sm">Ожидает оплаты</p>
+                        </div>
+                        <h3 class="desc__sm">Заказ от 16 мая 2024 года</h3>
+                      </div>
+                      <div class="stages">
+                        <div class="stage active"></div>
+                        <div class="stage"></div>
+                        <div class="stage"></div>
+                      </div>
+                      <p class="status__text">Принят, ожидается оплата</p>
+                      <div class="status__box">
+                        <div class="status__box-item active">
+                          <div class="progress">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                          </div>
+                          <div class="info">
+                            <div class="info__title">Принят, ожидается оплата</div>
+                            <p class="info__desc">Заказ принят, но пока не обрабатывается (например, заказ только что
+                              создан или ожидается
+                              оплата заказа)</p>
+                          </div>
+                        </div>
+                        <div class="status__box-item">
+                          <div class="progress">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                          </div>
+                          <div class="info">
+                            <div class="info__title">Оплачен, формируется к отправке</div>
+                            <p class="info__desc">Заказ оплачен, формируется к отправке клиенту.</p>
+                          </div>
+                        </div>
+                        <div class="status__box-item">
+                          <div class="progress">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                          </div>
+                          <div class="info">
+                            <div class="info__title">Выполнено</div>
+                            <p class="info__desc">Заказ доставлен и оплачен.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right__box">
+                      <div class="img__box">
+                        <img src="images/img-item-test.png" alt="" width="60" height="60">
+                        <div class="product__info">
+                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                        </div>
+                      </div>
+                      <div class="img__box">
+                        <img src="images/img-item-test.png" alt="" width="60" height="60">
+                        <div class="product__info">
+                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                        </div>
+                      </div>
+                      <div class="img__box">
+                        <img src="images/img-item-test.png" alt="" width="60" height="60">
+                        <div class="product__info">
+                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="active__orders">
+                  <div class="card">
+                    <div class="left__box">
+                      <div>
+                        <div class="flex__box">
+                          <p class="desc__sm">№44</p>
+                          <p class="desc__sm">Ожидает оплаты</p>
+                        </div>
+                        <h3 class="desc__sm">Заказ от 16 мая 2024 года</h3>
+                      </div>
+                      <div class="stages">
+                        <div class="stage active"></div>
+                        <div class="stage"></div>
+                        <div class="stage"></div>
+                      </div>
+                      <p class="status__text">Принят, ожидается оплата</p>
+                      <div class="status__box">
+                        <div class="status__box-item active">
+                          <div class="progress">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                          </div>
+                          <div class="info">
+                            <div class="info__title">Принят, ожидается оплата</div>
+                            <p class="info__desc">Заказ принят, но пока не обрабатывается (например, заказ только что
+                              создан или ожидается
+                              оплата заказа)</p>
+                          </div>
+                        </div>
+                        <div class="status__box-item">
+                          <div class="progress">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                          </div>
+                          <div class="info">
+                            <div class="info__title">Оплачен, формируется к отправке</div>
+                            <p class="info__desc">Заказ оплачен, формируется к отправке клиенту.</p>
+                          </div>
+                        </div>
+                        <div class="status__box-item">
+                          <div class="progress">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                          </div>
+                          <div class="info">
+                            <div class="info__title">Выполнено</div>
+                            <p class="info__desc">Заказ доставлен и оплачен.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right__box">
+                      <div class="img__box">
+                        <img src="images/img-item-test.png" alt="" width="60" height="60">
+                        <div class="product__info">
+                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                        </div>
+                      </div>
+                      <div class="img__box">
+                        <img src="images/img-item-test.png" alt="" width="60" height="60">
+                        <div class="product__info">
+                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                        </div>
+                      </div>
+                      <div class="img__box">
+                        <img src="images/img-item-test.png" alt="" width="60" height="60">
+                        <div class="product__info">
+                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab__content">
+              <div class="row__box">
+                <form class="form__boxes">
+                  <h2 class="title__xs">Общие данные</h2>
+                  <div class="form__box">
+                    <div class="form__name">Контактное лицо <span class="green">*</span></div>
+                    <input class="form__box-input" value="Фамилия Имя Отчество" type="text" name="name"
+                      placeholder="Подсказка" required="">
+                    <label class="input__box">
+                    </label>
+                  </div>
+                  <div class="form__box">
+                    <div class="form__name">Почтовый ящик <span class="green">*</span></div>
+                    <input class="form__box-input" value="clientmail@mail.ru" type="email" name="name"
+                      placeholder="clientmail@mail.ru" required="">
+                    <label class="input__box">
+                    </label>
+                    <span class="clue">Подсказка</span>
+                  </div>
+                  <div class="form__box">
+                    <div class="form__name">Телефон <span>*</span></div>
+                    <input class="form__box-input" type="tel" name="phone" id="ImaskInput"
+                      placeholder="+7 (800) 000 00 00" value="+7 (800) 000 00 00" required="">
+                    <label for="two" class="input__box">
+                    </label>
+                    <span class="clue">Подсказка</span>
+                  </div>
+                  <button class="outline__btn" disabled>Сохранить изменения</button>
+                </form>
+                <form class="form__boxes">
+                  <h2 class="title__xs">Изменить пароль</h2>
+                  <div class="form__box">
+                    <div class="form__name">Текущий пароль <span class="green">*</span></div>
+                    <input class="form__box-input" type="password" name="name" placeholder="********" required="">
+                    <label class="input__box">
+                    </label>
+                    <span class="clue">Для смены пароля Вам необходимо ввести текущий пароль, а затем придумать новый
+                      пароль.</span>
+                  </div>
+                  <div class="form__box">
+                    <div class="form__name">Пароль <span class="green">*</span></div>
+                    <input class="form__box-input" type="password" name="name" placeholder="Пароль" required="">
+                    <label class="input__box">
+                    </label>
+                  </div>
+                  <div class="form__box">
+                    <div class="form__name">Подтвердите пароль <span class="green">*</span></div>
+                    <input class="form__box-input" type="password" name="name" placeholder="Пароль" required="">
+                    <label class="input__box">
+                    </label>
+                  </div>
+                  <button class="outline__btn" disabled>Сохранить изменения</button>
+                </form>
+                <h2 class="title__xs">Связать профиль с соцсетью или сервисом</h2>
+                <div class="private__cards">
+                  <div class="private__card">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
+                        stroke="white" stroke-width="2" />
+                      <path class="green__path"
+                        d="M25.0014 31C17.3357 31 12.9634 25.7447 12.7812 17H16.6211C16.7472 23.4184 19.578 26.1371 21.8202 26.6977V17H25.436V22.5355C27.6502 22.2973 29.9762 19.7748 30.761 17H34.3767C33.7741 20.4194 31.2516 22.9419 29.4578 23.979C31.2516 24.8198 34.1246 27.02 35.2177 31H31.2376C30.3827 28.3373 28.2528 26.2773 25.436 25.997V31H25.0014Z"
+                        fill="white" />
+                    </svg>
+                    <h3 class="desc__sm tt__font">Социальная сеть</h3>
+                    <p class="product__status-text">Подключить</p>
+                  </div>
+                  <div class="private__card">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
+                        stroke="white" stroke-width="2" />
+                      <path class="green__path"
+                        d="M25.0014 31C17.3357 31 12.9634 25.7447 12.7812 17H16.6211C16.7472 23.4184 19.578 26.1371 21.8202 26.6977V17H25.436V22.5355C27.6502 22.2973 29.9762 19.7748 30.761 17H34.3767C33.7741 20.4194 31.2516 22.9419 29.4578 23.979C31.2516 24.8198 34.1246 27.02 35.2177 31H31.2376C30.3827 28.3373 28.2528 26.2773 25.436 25.997V31H25.0014Z"
+                        fill="white" />
+                    </svg>
+                    <h3 class="desc__sm tt__font">Социальная сеть</h3>
+                    <p class="product__status-text">Подключить</p>
+                  </div>
+                  <div class="private__card">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
+                        stroke="white" stroke-width="2" />
+                      <path class="green__path"
+                        d="M25.0014 31C17.3357 31 12.9634 25.7447 12.7812 17H16.6211C16.7472 23.4184 19.578 26.1371 21.8202 26.6977V17H25.436V22.5355C27.6502 22.2973 29.9762 19.7748 30.761 17H34.3767C33.7741 20.4194 31.2516 22.9419 29.4578 23.979C31.2516 24.8198 34.1246 27.02 35.2177 31H31.2376C30.3827 28.3373 28.2528 26.2773 25.436 25.997V31H25.0014Z"
+                        fill="white" />
+                    </svg>
+                    <h3 class="desc__sm tt__font">Социальная сеть</h3>
+                    <p class="product__status-text">Подключить</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab__content">
+              <div class="orders__tab">
                 <div class="flex__box column">
                   <div class="date__box">
                     <div class="date active">Все</div>
@@ -610,7 +917,9 @@
                   </div>
                 </div>
               </div>
+            </div>
 
+            <div class="tab__content">
               <div class="buyer__tab">
                 <h2 class="title__xs">Покупатель</h2>
                 <div class="info__box">
@@ -625,7 +934,26 @@
                   <span class="green__text">Телефон</span>
                   <span class="desc__sm">+7 (800) 000 00 00</span>
                 </div>
+                <div class="more__details-box">
+                  <div class="info__box">
+                    <span class="green__text">Индекс</span>
+                    <span class="desc__sm">440044</span>
+                  </div>
+                  <div class="info__box">
+                    <span class="green__text">Местоположение</span>
+                    <span class="desc__sm">Россия, Урал, Челябинская область, г. Челябинск</span>
+                  </div>
+                  <div class="info__box">
+                    <span class="green__text">Город</span>
+                    <span class="desc__sm">Челябинск</span>
+                  </div>
+                  <div class="info__box">
+                    <span class="green__text">Адрес доставки</span>
+                    <span class="desc__sm">г. Челябинск, ул. Советская, дом №44</span>
+                  </div>
+                </div>
                 <span class="more__details">Подробнее</span>
+
                 <div class="list__of-products active__orders">
                   <div class="img__boxes">
                     <div class="img__box">
@@ -674,312 +1002,50 @@
             </div>
 
             <div class="tab__content">
-              <div class="cards">
-                <h2 class="title__xs">Общие данные</h2>
-                <div class="card personal__data">
-                  <div>
-                    <p class="desc__sm">Личные данные</p>
-                    <h3 class="desc__sm tt__font green">Сергей Константинович</h3>
-                  </div>
-                  <div class="links">
-                    <a href="#!">clientname@mail.ru</a>
-                    <a href="te:+78000000000">+7 (800) 000 00 00</a>
-                  </div>
-                  <a class="outline__btn" href="#!">Сменить пароль</a>
-                </div>
-                <div class="card stock__box">
-                  <div>
-                    <p class="desc__sm">Акция</p>
-                    <h3 class="desc__sm tt__font green">Распродажа сбора Ежовика гребенчатого!</h3>
-                  </div>
-                  <a class="outline__btn" href="#!">Сменить пароль</a>
-                </div>
-                <div class="private__cards">
-                  <div class="private__card">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
-                        stroke="white" stroke-width="2" />
-                      <path class="green__path"
-                        d="M28.5 14.8252C26.76 14.8252 25.09 15.6352 24 16.9152C22.91 15.6352 21.24 14.8252 19.5 14.8252C16.42 14.8252 14 17.2452 14 20.3252C14 24.1052 17.4 27.1852 22.55 31.8652L24 33.1752L25.45 31.8552C30.6 27.1852 34 24.1052 34 20.3252C34 17.2452 31.58 14.8252 28.5 14.8252ZM24.1 30.3752L24 30.4752L23.9 30.3752C19.14 26.0652 16 23.2152 16 20.3252C16 18.3252 17.5 16.8252 19.5 16.8252C21.04 16.8252 22.54 17.8152 23.07 19.1852H24.94C25.46 17.8152 26.96 16.8252 28.5 16.8252C30.5 16.8252 32 18.3252 32 20.3252C32 23.2152 28.86 26.0652 24.1 30.3752Z"
-                        fill="white" />
-                    </svg>
-                    <h3 class="desc__sm tt__font">Избранное</h3>
-                    <p class="product__status-text">Нет товаров</p>
-                  </div>
-                  <div class="private__card">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
-                        stroke="white" stroke-width="2" />
-                      <path class="green__path" d="M14 14.8252H28.7368V17.1189H14V14.8252Z" fill="white" />
-                      <path class="green__path" d="M14 25.1471H23.4737V22.8533H14V25.1471Z" fill="white" />
-                      <path class="green__path" d="M25.5789 25.1471H34V22.8533H25.5789V25.1471Z" fill="white" />
-                      <path class="green__path" d="M28.7368 19.4127V28.5877H30.8421V19.4127H28.7368Z" fill="white" />
-                      <path class="green__path" d="M14 30.8814H28.7368V33.1752H14V30.8814Z" fill="white" />
-                    </svg>
-
-                    <h3 class="desc__sm tt__font">Избранное</h3>
-                    <p class="product__status-text">Нет товаров</p>
-                  </div>
-                  <div class="private__card">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
-                        stroke="white" stroke-width="2" />
-                      <path class="green__path"
-                        d="M33.99 16.6602C33.99 15.6509 33.1 14.8252 32 14.8252H16C14.9 14.8252 14 15.6509 14 16.6602V27.6702C14 28.6794 14.9 29.5052 16 29.5052H30L34 33.1752L33.99 16.6602ZM32 16.6602V28.7437L30.83 27.6702H16V16.6602H32ZM18 23.0827H24V24.9177H18V23.0827ZM18 19.4127H30V21.2477H18V19.4127Z"
-                        fill="white" />
-                    </svg>
-                    <h3 class="desc__sm tt__font">Избранное</h3>
-                    <p class="product__status-text">Нет товаров</p>
-                  </div>
-                </div>
-                <h3 class="title__xs">Активные заказы(2)</h3>
-                <div class="active__orders">
-                  <div class="card">
-                    <div class="border__overlay"></div>
-                    <div class="left__box">
-                      <div>
-                        <div class="flex__box">
-                          <p class="desc__sm">№44</p>
-                          <p class="desc__sm">Ожидает оплаты</p>
-                        </div>
-                        <h3 class="desc__sm">Заказ от 16 мая 2024 года</h3>
-                      </div>
-                      <div class="stages">
-                        <div class="stage active"></div>
-                        <div class="stage"></div>
-                        <div class="stage"></div>
-                      </div>
-                      <p class="status__text">Принят, ожидается оплата</p>
-                      <div class="status__box">
-                        <div class="status__box-item active">
-                          <div class="progress">
-                            <div class="circle"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div class="info">
-                            <div class="info__title">Принят, ожидается оплата</div>
-                            <p class="info__desc">Заказ принят, но пока не обрабатывается (например, заказ только что
-                              создан или ожидается
-                              оплата заказа)</p>
-                          </div>
-                        </div>
-                        <div class="status__box-item">
-                          <div class="progress">
-                            <div class="circle"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div class="info">
-                            <div class="info__title">Оплачен, формируется к отправке</div>
-                            <p class="info__desc">Заказ оплачен, формируется к отправке клиенту.</p>
-                          </div>
-                        </div>
-                        <div class="status__box-item">
-                          <div class="progress">
-                            <div class="circle"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div class="info">
-                            <div class="info__title">Выполнено</div>
-                            <p class="info__desc">Заказ доставлен и оплачен.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="right__box">
-                      <div class="img__box">
-                        <img src="images/img-item-test.png" alt="" width="60" height="60">
-                        <div class="product__info">
-                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                        </div>
-                      </div>
-                      <div class="img__box">
-                        <img src="images/img-item-test.png" alt="" width="60" height="60">
-                        <div class="product__info">
-                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                        </div>
-                      </div>
-                      <div class="img__box">
-                        <img src="images/img-item-test.png" alt="" width="60" height="60">
-                        <div class="product__info">
-                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="active__orders">
-                  <div class="card">
-                    <div class="left__box">
-                      <div>
-                        <div class="flex__box">
-                          <p class="desc__sm">№44</p>
-                          <p class="desc__sm">Ожидает оплаты</p>
-                        </div>
-                        <h3 class="desc__sm">Заказ от 16 мая 2024 года</h3>
-                      </div>
-                      <div class="stages">
-                        <div class="stage active"></div>
-                        <div class="stage"></div>
-                        <div class="stage"></div>
-                      </div>
-                      <p class="status__text">Принят, ожидается оплата</p>
-                      <div class="status__box">
-                        <div class="status__box-item active">
-                          <div class="progress">
-                            <div class="circle"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div class="info">
-                            <div class="info__title">Принят, ожидается оплата</div>
-                            <p class="info__desc">Заказ принят, но пока не обрабатывается (например, заказ только что
-                              создан или ожидается
-                              оплата заказа)</p>
-                          </div>
-                        </div>
-                        <div class="status__box-item">
-                          <div class="progress">
-                            <div class="circle"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div class="info">
-                            <div class="info__title">Оплачен, формируется к отправке</div>
-                            <p class="info__desc">Заказ оплачен, формируется к отправке клиенту.</p>
-                          </div>
-                        </div>
-                        <div class="status__box-item">
-                          <div class="progress">
-                            <div class="circle"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div class="info">
-                            <div class="info__title">Выполнено</div>
-                            <p class="info__desc">Заказ доставлен и оплачен.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="right__box">
-                      <div class="img__box">
-                        <img src="images/img-item-test.png" alt="" width="60" height="60">
-                        <div class="product__info">
-                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                        </div>
-                      </div>
-                      <div class="img__box">
-                        <img src="images/img-item-test.png" alt="" width="60" height="60">
-                        <div class="product__info">
-                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                        </div>
-                      </div>
-                      <div class="img__box">
-                        <img src="images/img-item-test.png" alt="" width="60" height="60">
-                        <div class="product__info">
-                          <p>Ежовик гребенчатый, молотый, 100 гр.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab__content">
               <div class="row__box">
-                <form class="form__boxes">
-                  <h2 class="title__xs">Общие данные</h2>
-                  <div class="form__box">
-                    <div class="form__name">Контактное лицо <span class="green">*</span></div>
-                    <input class="form__box-input" value="Фамилия Имя Отчество" type="text" name="name"
-                      placeholder="Подсказка" required="">
-                    <label class="input__box">
-                    </label>
+                <h2 class="title__xs">Покупатель</h2>
+                <p class="desc">Вы уверены, что хотите отменить заказ № 44 от 16 мая 2024 года?</p>
+
+                <div class="order__completed-page">
+                  <div class="payment__type hint">
+                    <span>Обратите внимание!</span>
+                    <p>Если вы откажетесь от покупки, для возврата денег вам придется обратиться в магазин.</p>
                   </div>
-                  <div class="form__box">
-                    <div class="form__name">Почтовый ящик <span class="green">*</span></div>
-                    <input class="form__box-input" value="clientmail@mail.ru" type="email" name="name"
-                      placeholder="clientmail@mail.ru" required="">
-                    <label class="input__box">
-                    </label>
-                    <span class="clue">Подсказка</span>
+                </div>
+                <div class="check__box-list">
+                  <div class="check__box">
+                    <input type="checkbox" id="one">
+                    <label for="one">Слишком долго ждать</label>
                   </div>
-                  <div class="form__box">
-                    <div class="form__name">Телефон <span>*</span></div>
-                    <input class="form__box-input" type="tel" name="phone" id="ImaskInput"
-                      placeholder="+7 (800) 000 00 00" value="+7 (800) 000 00 00" required="">
-                    <label for="two" class="input__box">
-                    </label>
-                    <span class="clue">Подсказка</span>
+                  <div class="check__box">
+                    <input type="checkbox" id="two">
+                    <label for="two">Заказал по ошибке</label>
                   </div>
-                  <button class="outline__btn" disabled>Сохранить изменения</button>
-                </form>
-                <form class="form__boxes">
-                  <h2 class="title__xs">Изменить пароль</h2>
-                  <div class="form__box">
-                    <div class="form__name">Текущий пароль <span class="green">*</span></div>
-                    <input class="form__box-input" type="password" name="name" placeholder="********" required="">
-                    <label class="input__box">
-                    </label>
-                    <span class="clue">Для смены пароля Вам необходимо ввести текущий пароль, а затем придумать новый
-                      пароль.</span>
+                  <div class="check__box">
+                    <input type="checkbox" id="three">
+                    <label for="three">Заказал по ошибке</label>
                   </div>
-                  <div class="form__box">
-                    <div class="form__name">Пароль <span class="green">*</span></div>
-                    <input class="form__box-input" type="password" name="name" placeholder="Пароль" required="">
-                    <label class="input__box">
-                    </label>
+                  <div class="check__box">
+                    <input type="checkbox" id="five">
+                    <label for="five">Нет в наличии</label>
                   </div>
-                  <div class="form__box">
-                    <div class="form__name">Подтвердите пароль <span class="green">*</span></div>
-                    <input class="form__box-input" type="password" name="name" placeholder="Пароль" required="">
-                    <label class="input__box">
-                    </label>
+
+                  <div class="check__box">
+                    <input type="checkbox" id="six">
+                    <label for="six">Заказал в другом магазине</label>
                   </div>
-                  <button class="outline__btn" disabled>Сохранить изменения</button>
-                </form>
-                <h2 class="title__xs">Связать профиль с соцсетью или сервисом</h2>
-                <div class="private__cards">
-                  <div class="private__card">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
-                        stroke="white" stroke-width="2" />
-                      <path class="green__path"
-                        d="M25.0014 31C17.3357 31 12.9634 25.7447 12.7812 17H16.6211C16.7472 23.4184 19.578 26.1371 21.8202 26.6977V17H25.436V22.5355C27.6502 22.2973 29.9762 19.7748 30.761 17H34.3767C33.7741 20.4194 31.2516 22.9419 29.4578 23.979C31.2516 24.8198 34.1246 27.02 35.2177 31H31.2376C30.3827 28.3373 28.2528 26.2773 25.436 25.997V31H25.0014Z"
-                        fill="white" />
-                    </svg>
-                    <h3 class="desc__sm tt__font">Социальная сеть</h3>
-                    <p class="product__status-text">Подключить</p>
+                  <div class="check__box">
+                    <input type="checkbox" id="seven">
+                    <label for="seven">Заказ-дубликат</label>
                   </div>
-                  <div class="private__card">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
-                        stroke="white" stroke-width="2" />
-                      <path class="green__path"
-                        d="M25.0014 31C17.3357 31 12.9634 25.7447 12.7812 17H16.6211C16.7472 23.4184 19.578 26.1371 21.8202 26.6977V17H25.436V22.5355C27.6502 22.2973 29.9762 19.7748 30.761 17H34.3767C33.7741 20.4194 31.2516 22.9419 29.4578 23.979C31.2516 24.8198 34.1246 27.02 35.2177 31H31.2376C30.3827 28.3373 28.2528 26.2773 25.436 25.997V31H25.0014Z"
-                        fill="white" />
-                    </svg>
-                    <h3 class="desc__sm tt__font">Социальная сеть</h3>
-                    <p class="product__status-text">Подключить</p>
-                  </div>
-                  <div class="private__card">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M1 24C1 11.2975 11.2975 1 24 1C36.7025 1 47 11.2975 47 24C47 36.7025 36.7025 47 24 47C11.2975 47 1 36.7025 1 24Z"
-                        stroke="white" stroke-width="2" />
-                      <path class="green__path"
-                        d="M25.0014 31C17.3357 31 12.9634 25.7447 12.7812 17H16.6211C16.7472 23.4184 19.578 26.1371 21.8202 26.6977V17H25.436V22.5355C27.6502 22.2973 29.9762 19.7748 30.761 17H34.3767C33.7741 20.4194 31.2516 22.9419 29.4578 23.979C31.2516 24.8198 34.1246 27.02 35.2177 31H31.2376C30.3827 28.3373 28.2528 26.2773 25.436 25.997V31H25.0014Z"
-                        fill="white" />
-                    </svg>
-                    <h3 class="desc__sm tt__font">Социальная сеть</h3>
-                    <p class="product__status-text">Подключить</p>
-                  </div>
+                </div>
+                <span>Другое</span>
+                <textarea class="comments__textarea" placeholder="Комментарий"></textarea>
+                <div>
+                  <button class="yellow__btn product__cart-open">Отменить заказ</button>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -1174,6 +1240,19 @@
     </button>
   </div>
 
+  <!--  -->
+  <div class="modal product__cart time__modal">
+    <div class="modal__content remove__bg-img">
+      <div class="modal__header">
+        <h4>Готово!</h4>
+        <button class="close__modal product__cart-close">
+          <img src="images/icons/close.svg" alt="close" width="20" height="20">
+        </button>
+      </div>
+      <p>Заказ № 44 от 16 мая 2024 года был отменён. Вы будете перенаправлены в раздел “Заказы”.</p>
+    </div>
+  </div>
+
   <!-- successfull send modal -->
   <div class="successfull__modal">
     <div class="successfull__content">
@@ -1199,10 +1278,10 @@
         </button>
       </div>
       <div class="line"></div>
-      <div class="tab__box">
+      <div class="tab__box tab__container">
         <div class="tab__header">
-          <h4 class="tab__el">Звонок</h4>
-          <h4 class="tab__el">Сообщение</h4>
+          <h4 class="tab__el tab__item">Звонок</h4>
+          <h4 class="tab__el tab__item">Сообщение</h4>
         </div>
         <div class="tab__content">
           <form class="form feedback__form">

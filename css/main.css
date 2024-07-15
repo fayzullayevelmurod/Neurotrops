@@ -515,6 +515,22 @@ body.no-scroll {
   color: #cfee13;
 }
 
+.comments__textarea {
+  border: 1px solid #424242;
+  border-radius: 10px;
+  background: transparent;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25.6px;
+  color: #fff;
+  resize: none;
+  height: 116px;
+}
+.comments__textarea::placeholder {
+  color: #fff;
+}
+
 .card__page .product__card {
   padding: 0 !important;
   border-radius: 0 !important;
@@ -818,14 +834,17 @@ body.no-scroll {
   background: linear-gradient(144.7deg, #f7f7f7 10.78%, #bcbcbc 93.37%);
   opacity: 0.1;
 }
+.tab__items .tab__item,
 .tab__items .tab__item {
   cursor: pointer;
   text-transform: uppercase;
 }
+.tab__items .tab__item.active h4,
 .tab__items .tab__item.active h4 {
   text-shadow: 0px 0 32px rgba(207, 238, 19, 0.7490196078);
   color: #cfee13;
 }
+.tab__items .tab__item h4,
 .tab__items .tab__item h4 {
   font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
@@ -2750,7 +2769,7 @@ body.no-scroll {
 }
 .about__page .container {
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 .about__page .about {
   padding-bottom: 0;
@@ -2958,6 +2977,7 @@ body.no-scroll {
 .points__tab::-webkit-scrollbar {
   display: none;
 }
+.points__tab .tab__item a,
 .points__tab .tab__item a {
   font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
@@ -2970,7 +2990,9 @@ body.no-scroll {
   text-transform: uppercase;
   cursor: pointer;
 }
-.points__tab .tab__item a:hover, .points__tab .tab__item a.active {
+.points__tab .tab__item a:hover, .points__tab .tab__item a.active,
+.points__tab .tab__item a:hover,
+.points__tab .tab__item a.active {
   opacity: 1;
   text-shadow: 0px 0 11px rgba(207, 238, 19, 0.7490196078);
   color: #cfee13;
@@ -3144,11 +3166,11 @@ body.no-scroll {
 .basket__page .basket {
   padding-bottom: 80px;
 }
-.basket__page .basket .nav {
+.basket__page .basket .nav.pb {
   padding-bottom: 149px;
 }
 .basket__page .company__logo {
-  top: -180px;
+  top: -73px;
 }
 .basket__page .container {
   position: relative;
@@ -3463,13 +3485,23 @@ body.no-scroll {
   display: flex;
   align-items: center;
   gap: 12px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.order__page .delivery__address .geo__box path {
+  transition: all 0.2s linear;
+}
+.order__page .delivery__address .geo__box:hover {
+  color: #cfee13;
+}
+.order__page .delivery__address .geo__box:hover path {
+  stroke: #cfee13;
 }
 .order__page .delivery__address .geo {
   font-family: "TT Autonomous", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
-  color: #cfee13;
 }
 .order__page .delivery__address .search__box {
   position: relative;
@@ -3648,11 +3680,15 @@ body.no-scroll {
   max-width: 400px;
   width: 100%;
 }
-.persona__area .tab__item {
+.persona__area .tab__item, .persona__area .tab__itemm {
   font-family: "TT Autonomous", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 38.4px;
+  cursor: pointer;
+}
+.persona__area .tab__item:hover, .persona__area .tab__itemm:hover {
+  color: #cfee13;
 }
 .persona__area .cards {
   display: flex;
@@ -3668,7 +3704,6 @@ body.no-scroll {
   border-radius: 10px;
   position: relative;
   border: 1px solid transparent;
-  background: #f2f2f2;
   background-clip: padding-box;
   border: 1px solid #424242;
 }
@@ -4026,6 +4061,104 @@ body.no-scroll {
 }
 .persona__area .buyer__tab .btns {
   flex-direction: row;
+}
+.persona__area .buyer__tab .more__details {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-out;
+}
+.persona__area .buyer__tab .more__details:hover {
+  color: #cfee13;
+}
+.persona__area .buyer__tab .more__details-box {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+.persona__area .buyer__tab .more__details-box.show {
+  display: flex;
+}
+.persona__area .check__box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.persona__area .check__box-list .check__box {
+  display: flex;
+  align-items: center;
+}
+.persona__area .check__box-list label {
+  position: relative;
+  padding-left: 40px;
+  user-select: none;
+  cursor: pointer;
+}
+.persona__area .check__box-list label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dee2e7;
+  border-radius: 2px;
+  background: transparent;
+  transition: all 0.2s ease-out;
+}
+.persona__area .check__box-list label::after {
+  content: "";
+  position: absolute;
+  top: 51%;
+  transform: translateY(-50%);
+  left: 6px;
+  width: 9px;
+  height: 6px;
+  background: url(../../images/icons/check.svg) no-repeat;
+  background-size: contain;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.persona__area .check__box-list input {
+  display: none;
+}
+.persona__area .check__box-list input:checked + label {
+  color: #cfee13;
+}
+.persona__area .check__box-list input:checked + label::before {
+  border-color: #cfee13;
+}
+.persona__area .check__box-list input:checked + label::after {
+  opacity: 1;
+}
+
+.modal.product__cart .modal__content.remove__bg-img {
+  background: linear-gradient(149.04deg, rgba(66, 66, 66, 0.95) 31.25%, rgba(0, 0, 0, 0.95) 93.13%);
+}
+
+.not__found {
+  background: #000;
+}
+.not__found .events {
+  padding-top: 0;
+}
+.not__found .events .mushroom__img {
+  max-width: 716px;
+  max-height: 429px;
+  top: unset;
+  bottom: 50px;
+  right: 250px;
+}
+.not__found .events .title {
+  font-size: 40px;
+  line-height: 56px;
+}
+.not__found .events .big__title {
+  padding-bottom: 20px;
+  font-family: "TT Autonomous", sans-serif;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 179.2px;
+  color: #cfee13;
 }
 
 .swiper-pagination {
@@ -4468,7 +4601,7 @@ body.no-scroll {
     -webkit-text-fill-color: #cfee13;
   }
   .tab__item,
-  .tab__link {
+  .tab__itemm .tab__link {
     font-size: 18px;
     line-height: 28.8px;
     white-space: nowrap;
@@ -5206,6 +5339,7 @@ body.no-scroll {
     align-items: start;
   }
   .tab__item,
+  tab__itemm,
   .tab__link,
   .tab__item-three {
     font-size: 18px;
